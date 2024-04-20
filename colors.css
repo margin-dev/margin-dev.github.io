@@ -1,0 +1,326 @@
+.bahis1000 {
+    --primary: #5CB085;
+    --secondary: #3579A5;
+    --primary30: #5CB0854D;
+    --secondary30: #3579A54D;
+    --primary50: #5CB08580;
+    --secondary50: #3579A580;
+}
+.bahiscom {
+    --primary: #00C683;
+    --primary30: #00C6834D;
+    --primary50: #00C68380;
+}
+.bahsegel {
+    --primary: #1095B5;
+    --secondary: #FF9E2C;
+    --primary30: #1095B54D;
+    --secondary30: #FF9E2C4D;
+    --primary50: #1095B580;
+    --secondary50: #FF9E2C80;
+}
+.baywin {
+    --primary: #00FF86;
+    --primary30: #00FF864D;
+    --primary50: #00FF8680;
+}
+.betbox {
+    --primary: #FFA852;
+    --secondary: #CC2D13;
+    --primary30: #FFA8524D;
+    --secondary30: #CC2D134D;
+    --primary50: #FFA85280;
+    --secondary50: #CC2D1380;
+}
+.bethand {
+    --primary: #EB1B4D;
+    --primary30: #EB1B4D4D;
+    --primary50: #EB1B4D80;
+}
+.betine {
+    --primary: #F0B905;
+    --secondary: #54626B;
+    --primary30: #F0B9054D;
+    --secondary30: #54626B4D;
+    --primary50: #F0B90580;
+    --secondary50: #54626B80;
+}
+.betist {
+    --primary: #3FB26E;
+    --secondary: #535D73;
+    --primary30: #3FB26E4D;
+    --secondary30: #535D734D;
+    --primary50: #3FB26E80;
+    --secondary50: #535D7380;
+}
+.betkong {
+    --primary: #EEA828;
+    --primary30: #EEA8284D;
+    --primary50: #EEA82880;
+}
+.betkanyon {
+    --primary: #F35F38;
+    --primary30: #F35F384D;
+    --primary50: #F35F3880;
+}
+.betmatik {
+    --primary: #12BC8C;
+    --primary30: #12BC8C4D;
+    --primary50: #12BC8C80;
+}
+.betmina {
+    --primary: #009FFF;
+    --primary30: #009FFF4D;
+    --primary50: #009FFF80;
+}
+.betorspin {
+    --primary: #FE7A31;
+    --secondary: #FF1508;
+    --primary30: #FE7A314D;
+    --secondary30: #FF15084D;
+    --primary50: #FE7A3180;
+    --secondary50: #FF150880;
+}
+.betosfer {
+    --primary: #FFCC00;
+    --primary30: #FFCC004D;
+    --primary50: #FFCC0080;
+}
+.betpas {
+    --primary: #60B346;
+    --primary30: #60B3464D;
+    --primary50: #60B34680;
+}
+.betpublic {
+    --primary: #A0204B;
+    --primary30: #A0204B4D;
+    --primary50: #A0204B80;
+}
+.bettilt {
+    --primary: #FFC700;
+    --primary30: #FFC7004D;
+    --primary50: #FFC70080;
+}
+.betturkey {
+    --primary: #FFDD3A;
+    --primary30: #FFDD3A4D;
+    --primary50: #FFDD3A80;
+}
+
+.betorder {
+    --primary: #FFFFFF;
+    --secondary: #116466;
+    --primary30: #FFFFFF4D;
+    --secondary30: #1164664D;
+    --primary50: #FFFFFF80;
+    --secondary50: #11646680;
+}
+.betwoon {
+    --primary: #129D48;
+    --primary30: #129D484D;
+    --primary50: #129D4880;
+}
+.bycasino {
+    --primary: #FF6600;
+    --primary30: #FF66004D;
+    --primary50: #FF660080;
+}
+.casibom {
+    --primary: #FDAB0F;
+    --primary30: #FDAB0F4D;
+    --primary50: #FDAB0F80;
+}
+.casinomhub {
+    --primary: #E4672D;
+    --primary30: #E4672D4D;
+    --primary50: #E4672D80;
+}
+.cratosroyal {
+    --primary: #EBDF9D;
+    --primary30: #EBDF9D4D;
+    --primary50: #EBDF9D80;
+}
+.fenomenbet {
+    --primary: #FFC700;
+    --primary30: #FFC7004D;
+    --primary50: #FFC70080;
+}
+.fixbet {
+    --primary: #b8f03f;
+    --secondary: #c7cbd4;
+    --primary30: #b8f03f4D;
+    --secondary30: #c7cbd44D;
+    --primary50: #b8f03f80;
+    --secondary50: #c7cbd480;
+}
+.grandpashabet {
+    --primary: #C48A3B;
+    --primary30: #C48A3B4D;
+    --primary50: #C48A3B80;
+}
+.ikimisli {
+    --primary: #FFA000;
+    --secondary: #0A3564;
+    --primary30: #FFA0004D;
+    --secondary30: #0A35644D;
+    --primary50: #FFA00080;
+    --secondary50: #0A356480;
+}
+.kralbet {
+    --primary: #F6E588;
+    --primary30: #F6E5884D;
+    --primary50: #F6E58880;
+}
+.ligobet {
+    --primary: #19AB55;
+    --primary30: #19AB554D;
+    --primary50: #19AB5580;
+}
+.markaj {
+    --primary: #FFE71D;
+    --primary30: #FFE71D4D;
+    --primary50: #FFE71D80;
+}
+.marsbahis {
+    --primary: #C52426;
+    --primary30: #C524264D;
+    --primary50: #C5242680;
+}
+.masterbetting {
+    --primary: #00FF81;
+    --primary30: #00FF814D;
+    --primary50: #00FF8180;
+}
+.matadorbet {
+    --primary: #E52D12;
+    --primary30: #E52D124D;
+    --primary50: #E52D1280;
+}
+.mariobet {
+    --primary: #F1592A;
+    --secondary: #FAA32F;
+    --primary30: #F1592A4D;
+    --secondary30: #FAA32F4D;
+    --primary50: #F1592A80;
+    --secondary50: #FAA32F80;
+}
+.norabahis {
+    --primary: #F0C959;
+    --primary30: #F0C9594D;
+    --primary50: #F0C95980;
+}
+.onwin {
+    --primary: #B910A0;
+    --primary30: #B910A04D;
+    --primary50: #B910A080;
+}
+.palacebet {
+    --primary: #F2E619;
+    --primary30: #F2E6194D;
+    --primary50: #F2E61980;
+}
+.pashagaming {
+    --primary: #FDD12B;
+    --primary30: #FDD12B4D;
+    --primary50: #FDD12B80;
+}
+.paribahis {
+    --primary: #F8FF13;
+    --primary30: #F8FF134D;
+    --primary50: #F8FF1380;
+}
+.piabella {
+    --primary: #E9CA60;
+    --primary30: #E9CA604D;
+    --primary50: #E9CA6080;
+}
+.pusulabet {
+    --primary: #FFAC2C;
+    --primary30: #FFAC2C4D;
+    --primary50: #FFAC2C80;
+}
+.restbet {
+    --primary: #B52726;
+    --primary30: #B527264D;
+    --primary50: #B5272680;
+}
+.roku {
+    --primary: #00BEFF;
+    --secondary: #FF9839;
+    --primary30: #00BEFF4D;
+    --secondary30: #FF98394D;
+    --primary50: #00BEFF80;
+    --secondary50: #FF983980;
+}
+.romabet {
+    --primary: #E22042;
+    --primary30: #E220424D;
+    --primary50: #E2204280;
+}
+.royalbet {
+    --primary: #F6E910;
+    --primary30: #F6E9104D;
+    --primary50: #F6E91080;
+}
+.sahabet {
+    --primary: #49B176;
+    --primary30: #49B1764D;
+    --primary50: #49B17680;
+}
+.stake {
+    --primary: #FFFFFF;
+    --primary30: #FFFFFF4D;
+    --primary50: #FFFFFF80;
+}
+.starzbet {
+    --primary: #FF6D00;
+    --secondary: #4891FF;
+    --primary30: #FF6D004D;
+    --secondary30: #4891FF4D;
+    --primary50: #FF6D0080;
+    --secondary50: #4891FF80;
+}
+.supertotobet {
+    --primary: #ED3338;
+    --primary30: #ED33384D;
+    --primary50: #ED333880;
+}
+.tarafbet {
+    --primary: #1EB154;
+    --primary30: #1EB1544D;
+    --primary50: #1EB15480;
+}
+.tipobet {
+    --primary: #0F853D;
+    --primary30: #0F853D4D;
+    --primary50: #0F853D80;
+}
+
+.venusbet {
+    --primary: #F8B218;
+    --primary30: #F8B2184D;
+    --primary50: #F8B21880;
+}
+.w88 {
+    --primary: #DAB867;
+    --primary30: #DAB8674D;
+    --primary50: #DAB86780;
+}
+.xslot {
+    --primary: #FE9900;
+    --secondary: #2DBCB4;
+    --primary30: #FE99004D;
+    --secondary30: #2DBCB44D;
+    --primary50: #FE990080;
+    --secondary50: #2DBCB480;
+}
+.zbahis {
+    --primary: #1BCFDB;
+    --primary30: #1BCFDB4D;
+    --primary50: #1BCFDB80;
+}
+.vip {
+    --primary: #F8B218;
+    --primary30: #F8B2184D;
+    --primary50: #F8B21880;
+}
