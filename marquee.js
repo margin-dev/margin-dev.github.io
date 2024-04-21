@@ -1,4 +1,4 @@
-window.mrq = (sc, s) => {
+export default function mrq(sc, s){
   const psc = document.querySelector(sc);
   const cl = psc.innerHTML; 
   const fe = psc.children[0]; 
