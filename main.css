@@ -3,7 +3,7 @@
     display: none !important;
 }
 .color-primary {
-    color: var(--primary)
+    color: var(--primary) !important;
 }
 /*Shine*/
 .shine {
