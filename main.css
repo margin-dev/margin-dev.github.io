@@ -1,5 +1,9 @@
+@import url("colors.css");
 .hidden {
     display: none !important;
+}
+.color-primary {
+    color: var(--primary)
 }
 /*Shine*/
 .shine {
