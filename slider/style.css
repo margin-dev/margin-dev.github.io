@@ -6,7 +6,8 @@
 	font-size: 14px;
 	margin: 100px auto;
 	padding: 10px;
-	width: 900px;
+	max-width: 900px;
+	width: 100%;
 }
 .widget .control-links {
 	border-top: 1px dotted #ddd;
