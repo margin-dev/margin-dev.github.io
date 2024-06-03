@@ -78,40 +78,41 @@ function createSwitchers(items) {
 export function initializeSlider(config) {
     console.log("initializing slider")
     try {
-        console.log(config)
         let slides = $('.widget .slideset .slide');
         let switchers = $('.widget ul.switcher li');
         let slidesCount = config.items.length;
+        switchers.first().addClass('active');
         function slide(target) {
             slides.removeClass('active').eq(target).addClass('active');
             switchers.removeClass('active').eq(target).addClass('active');
             let brand = $(".widget").find(".slide.active").data("brand")
             $(".widget").attr("data-brand", brand).find(".active").attr("data-brand", brand);
         }
-        function getTarget(dir) {
-            var ind = $('.widget ul.switcher li.active').index();
-            return (ind + (dir || 1)) % slidesCount;
-        }
-        function resetTimer(timer) {
-            clearInterval(timer);
-            timer = setInterval(function () { slide(getTarget()); }, config.interval);
-        }
 
-        switchers.first().addClass('active');
+
         switchers.on('mouseenter', function () {
             if (!$(this).hasClass('active')) {
                 slide($(this).index());
-                resetTimer(timer);
+                resetTimer();
             }
         });
         $('.widget .btn-prev').click(function () {
             slide(getTarget(-1));
-            resetTimer(timer);
+            resetTimer();
         });
         $('.widget .btn-next').click(function () {
             slide(getTarget());
-            resetTimer(timer);
+            resetTimer();
         });
+        function getTarget(dir) {
+            var ind = $('.widget ul.switcher li.active').index();
+            return (ind + (dir || 1)) % slidesCount;
+        }
+        function resetTimer() {
+            clearInterval(timer);
+            timer = setInterval(function () { slide(getTarget()); }, config.interval);
+        }
+
         var timer = setInterval(function () { slide(getTarget()); }, config.interval);
     } catch (e) {
         console.log(e)
