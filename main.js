@@ -140,4 +140,5 @@ export function createSlider(config) {
         console.log(error)
     }
     console.log("slider created")
+    initializeSlider(config)
 }
