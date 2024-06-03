@@ -81,7 +81,7 @@ function resetTimer(timer, interval) {
     clearInterval(timer);
     timer = setInterval(function () { slide(getTarget()); }, interval);
 }
-function getTarget(dir, slidesCount) {
+function getTarget(dir = 1, slidesCount) {
     var ind = $('.widget ul.switcher li.active').index();
     return (ind + (dir || 1)) % slidesCount;
 }
