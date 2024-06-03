@@ -18,28 +18,35 @@ export const SliderJson = {
         }
     ]
 }
-
+function toTitleCase(str) {
+    return str.replace(
+        /\w\S*/g,
+        function (txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        }
+    );
+}
 function createOffers(offers) {
     return `<div class="bonuswrapper">${offers.map((offer, index) => {
         return `<p>${offer}</p>`
-    })}</div>`
+    }).join(",")}</div>`
 }
 function createSlides(items) {
     return items.map((item, index) => {
         return `
         <a class="slide ${index == 0 ? 'active' : ''}" target="${item.openInNewTab ? '_blank' : '_self'}" data-brand="${item.brand}" href="${item.link}">
             <div class="actionwrapper">
-                <p><img src="https://margin-dev.github.io/brands/${item.brand}.png"/></p>
+                <p><img src="https://margin-dev.github.io/brands/${toTitleCase(item.brand)}.png"/></p>
                 <span class="action">Katıl</span>
             </div>
             ${createOffers(item.offers)}
         </a>`
-    })
+    }).join(",")
 }
 function createSwitchers(items) {
     let controlers = items.map((item, index) => {
         return `<li><button class="${index == 0 ? 'active' : ''}">${item.brand}</button></li>`
-    })
+    }).join(",")
     return `
     <div class="control-links">
         <div class="switcher-holder">
