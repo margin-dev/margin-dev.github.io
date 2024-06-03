@@ -80,7 +80,7 @@ export function initializeSlider(config) {
     try {
         console.log(config)
         let slides = $('.widget ul.slideset li');
-        let switchers = $('.widgeet ul.switcher li');
+        let switchers = $('.widget ul.switcher li');
         let slidesCount = config.items.length;
         function slide(target) {
             slides.removeClass('active').eq(target).addClass('active');
