@@ -73,19 +73,9 @@ function createSwitchers(items) {
     </div>`
 }
 
-function slide(target, slides, switchers) {
-    slides.removeClass('active').eq(target).addClass('active');
-    switchers.removeClass('active').eq(target).addClass('active');
-}
-function resetTimer(timer, interval) {
-    clearInterval(timer);
-    timer = setInterval(function () { slide(getTarget()); }, interval);
-}
-function getTarget(dir, slidesCount) {
-    var ind = $('.widget ul.switcher li.active').index();
-    return (ind + (dir || 1)) % slidesCount;
-}
+
 export function createSlider(config) {
+
     let widget = `
     <div class="widget" data-brand="${config.items[0].brand}" data-controls="false">
         <div class="slideset">
@@ -106,23 +96,35 @@ export function createSlider(config) {
     var slides = $('.widget ul.slideset li');
     var switchers = $('.widgeet ul.switcher li');
     var slidesCount = config.items.length;
+    function slide(target) {
+        slides.removeClass('active').eq(target).addClass('active');
+        switchers.removeClass('active').eq(target).addClass('active');
+    }
+    function resetTimer(timer, interval) {
+        clearInterval(timer);
+        timer = setInterval(function () { slide(getTarget()); }, interval);
+    }
+    function getTarget(dir, slidesCount) {
+        var ind = $('.widget ul.switcher li.active').index();
+        return (ind + (dir || 1)) % slidesCount;
+    }
     switchers.first().addClass('active');
 
     switchers.on('mouseenter', function () {
         if (!$(this).hasClass('active')) {
-            slide($(this).index(), slides, switchers);
+            slide($(this).index());
             resetTimer(timer, config.interval);
         }
     });
     $(document).on("click", '.btn-prev', function () {
-        slide(getTarget(-1, slidesCount), slides, switchers);
+        slide(getTarget(-1, slidesCount));
         resetTimer(timer, config.interval);
     });
     $(document).on("click", '.btn-next', function () {
-        slide(getTarget(undefined, slidesCount), slides, switchers);
+        slide(getTarget(undefined, slidesCount));
         resetTimer(timer, config.interval);
     });
-    var timer = setInterval(function () { slide(getTarget(undefined, slidesCount), slides, switchers); }, config.interval);
+    var timer = setInterval(function () { slide(getTarget(undefined, slidesCount)); }, config.interval);
     console.log("started")
 
 }
