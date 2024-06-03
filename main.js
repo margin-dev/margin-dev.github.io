@@ -1,6 +1,6 @@
 export const SliderJson = {
     interval: 3000,
-    switchers: true,
+    switchers: false,
     loop: true,
     control: "full",
     items: [
@@ -15,25 +15,23 @@ export const SliderJson = {
             ]
         },
         {
-            brand: "fixbet",
-            link: "https://www.fixbet.com",
+            brand: "zbahis",
+            link: "",
             openInNewTab: true,
             vip: true,
             offers: [
-                "100 TL Deneme Bonusu",
-                "100 TL Deneme Bonusu",
-                "100 TL Deneme Bonusu",
+                "500 TL Deneme Bonusu",
+                "%30 Günlük Kayıp Bonusu",
             ]
         },
         {
-            brand: "bahis1000",
-            link: "https://www.bahis1000.com",
+            brand: "fixbet",
+            link: "",
             openInNewTab: true,
             vip: true,
             offers: [
-                "100 TL Deneme Bonusu",
-                "100 TL Deneme Bonusu",
-                "100 TL Deneme Bonusu",
+                "333 TL Deneme Bonusu",
+                "5 Dakikada Çekim & Limitsiz Kazanç",
             ]
         }
     ]
