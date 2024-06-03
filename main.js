@@ -81,7 +81,7 @@ function resetTimer(timer, interval) {
     clearInterval(timer);
     timer = setInterval(function () { slide(getTarget()); }, interval);
 }
-function getTarget(dir = 1, slidesCount) {
+function getTarget(dir, slidesCount) {
     var ind = $('.widget ul.switcher li.active').index();
     return (ind + (dir || 1)) % slidesCount;
 }
@@ -122,7 +122,7 @@ export function createSlider(config) {
         slide(getTarget(undefined, slidesCount), slides, switchers);
         resetTimer(timer, config.interval);
     });
-    var timer = setInterval(function () { slide(getTarget(undefined, slidesCount)); }, config.interval);
+    var timer = setInterval(function () { slide(getTarget(undefined, slidesCount), slides, switchers); }, config.interval);
     console.log("started")
 
 }
