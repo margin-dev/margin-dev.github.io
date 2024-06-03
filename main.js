@@ -5,6 +5,27 @@ export const SliderJson = {
     control: "full",
     items: [
         {
+            brand: "kralbet",
+            link: "",
+            openInNewTab: true,
+            vip: true,
+            offers: [
+                "400 TL Deneme Bonusu",
+                "İsteyene Gizli Üyelik Sistemi!",
+            ]
+        },
+        {
+            brand: "fixbet",
+            link: "https://www.fixbet.com",
+            openInNewTab: true,
+            vip: true,
+            offers: [
+                "100 TL Deneme Bonusu",
+                "100 TL Deneme Bonusu",
+                "100 TL Deneme Bonusu",
+            ]
+        },
+        {
             brand: "bahis1000",
             link: "https://www.bahis1000.com",
             openInNewTab: true,
@@ -14,7 +35,6 @@ export const SliderJson = {
                 "100 TL Deneme Bonusu",
                 "100 TL Deneme Bonusu",
             ]
-
         }
     ]
 }
