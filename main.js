@@ -86,31 +86,31 @@ export function initializeSlider(config) {
             slides.removeClass('active').eq(target).addClass('active');
             switchers.removeClass('active').eq(target).addClass('active');
         }
-        function resetTimer(timer, interval) {
-            clearInterval(timer);
-            timer = setInterval(function () { slide(getTarget()); }, interval);
-        }
-        function getTarget(dir, slidesCount) {
+        function getTarget(dir) {
             var ind = $('.widget ul.switcher li.active').index();
             return (ind + (dir || 1)) % slidesCount;
         }
-        switchers.first().addClass('active');
+        function resetTimer(timer) {
+            clearInterval(timer);
+            timer = setInterval(function () { slide(getTarget()); }, config.interval);
+        }
 
+        switchers.first().addClass('active');
         switchers.on('mouseenter', function () {
             if (!$(this).hasClass('active')) {
                 slide($(this).index());
-                resetTimer(timer, config.interval);
+                resetTimer(timer);
             }
         });
         $('.btn-prev').click(function () {
-            slide(getTarget(-1, slidesCount));
-            resetTimer(timer, config.interval);
+            slide(getTarget(-1));
+            resetTimer(timer);
         });
         $('.btn-next').click(function () {
-            slide(getTarget(undefined, slidesCount));
-            resetTimer(timer, config.interval);
+            slide(getTarget());
+            resetTimer(timer);
         });
-        var timer = setInterval(function () { slide(getTarget(undefined, slidesCount)); }, config.interval);
+        var timer = setInterval(function () { slide(getTarget()); }, config.interval);
     } catch (e) {
         console.log(e)
     }
