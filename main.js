@@ -78,38 +78,46 @@ function createSwitchers(items) {
 
 
 export function initializeSlider(config) {
-    var slides = $('.widget ul.slideset li');
-    var switchers = $('.widgeet ul.switcher li');
-    var slidesCount = config.items.length;
-    function slide(target) {
-        slides.removeClass('active').eq(target).addClass('active');
-        switchers.removeClass('active').eq(target).addClass('active');
-    }
-    function resetTimer(timer, interval) {
-        clearInterval(timer);
-        timer = setInterval(function () { slide(getTarget()); }, interval);
-    }
-    function getTarget(dir, slidesCount) {
-        var ind = $('.widget ul.switcher li.active').index();
-        return (ind + (dir || 1)) % slidesCount;
-    }
-    switchers.first().addClass('active');
-
-    switchers.on('mouseenter', function () {
-        if (!$(this).hasClass('active')) {
-            slide($(this).index());
-            resetTimer(timer, config.interval);
+    console.log("initializing slider")
+    try {
+        console.log(config)
+        var slides = $('.widget ul.slideset li');
+        var switchers = $('.widgeet ul.switcher li');
+        var slidesCount = config.items.length;
+        function slide(target) {
+            slides.removeClass('active').eq(target).addClass('active');
+            switchers.removeClass('active').eq(target).addClass('active');
         }
-    });
-    $(document).on("click", '.btn-prev', function () {
-        slide(getTarget(-1, slidesCount));
-        resetTimer(timer, config.interval);
-    });
-    $(document).on("click", '.btn-next', function () {
-        slide(getTarget(undefined, slidesCount));
-        resetTimer(timer, config.interval);
-    });
-    var timer = setInterval(function () { slide(getTarget(undefined, slidesCount)); }, config.interval);
+        function resetTimer(timer, interval) {
+            clearInterval(timer);
+            timer = setInterval(function () { slide(getTarget()); }, interval);
+        }
+        function getTarget(dir, slidesCount) {
+            var ind = $('.widget ul.switcher li.active').index();
+            return (ind + (dir || 1)) % slidesCount;
+        }
+        switchers.first().addClass('active');
+
+        switchers.on('mouseenter', function () {
+            if (!$(this).hasClass('active')) {
+                slide($(this).index());
+                resetTimer(timer, config.interval);
+            }
+        });
+        $(document).on("click", '.btn-prev', function () {
+            slide(getTarget(-1, slidesCount));
+            resetTimer(timer, config.interval);
+        });
+        $(document).on("click", '.btn-next', function () {
+            slide(getTarget(undefined, slidesCount));
+            resetTimer(timer, config.interval);
+        });
+        var timer = setInterval(function () { slide(getTarget(undefined, slidesCount)); }, config.interval);
+    } catch (e) {
+        console.log(e)
+    }
+    console.log("slider initialized")
+
 }
 export function createSlider(config) {
 
