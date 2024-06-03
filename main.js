@@ -72,23 +72,54 @@ function createSwitchers(items) {
         </div>
     </div>`
 }
-
 export function createSlider(config) {
-    var switchers = createSwitchers(config.items);
-    let slider = `
+    let widget = `
     <div class="widget" data-brand="${config.items[0].brand}" data-controls="false">
         <div class="slideset">
             ${createSlides(config.items)}
             <button class="btn-prev ${config.control}"></button>
             <button class="btn-next ${config.control}"></button>
         </div>
-        ${config.switchers ? switchers : ''}
+        ${config.switchers ? createSwitchers(config.items) : ''}
     </div>    
     `
     let block = `
     <div id="biolink_block_id_${9999}" data-biolink-block-id="${9999}" class="col-12 my-2">
-        ${slider}
+        ${widget}
     </div>`
     let links = document.querySelector("#links > .row");
     links.insertAdjacentHTML('beforeend', block);
+    var slides = $('.widget ul.slideset li');
+    var switchers = $('.widgeet ul.switcher li');
+    var slidesCount = config.items.length;
+    switchers.first().addClass('active');
+    function slide(target) {
+        slides.removeClass('active').eq(target).addClass('active');
+        switchers.removeClass('active').eq(target).addClass('active');
+    }
+    switchers.on('mouseenter', function () {
+        if (!$(this).hasClass('active')) {
+            slide($(this).index());
+            resetTimer();
+        }
+    });
+    $(document).on("click", '.btn-prev', function () {
+        slide(getTarget(-1));
+        resetTimer();
+    });
+    $(document).on("click", '.btn-next', function () {
+        slide(getTarget());
+        resetTimer();
+    });
+
+    function getTarget(dir) {
+        var ind = $('.widget ul.switcher li.active').index();
+        return (ind + (dir || 1)) % slidesCount;
+    }
+
+    function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(function () { slide(getTarget()); }, 3000);
+    }
+    var timer = setInterval(function () { slide(getTarget()); }, 3000);
 }
