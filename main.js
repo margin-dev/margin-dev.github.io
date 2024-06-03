@@ -79,9 +79,9 @@ export function initializeSlider(config) {
     console.log("initializing slider")
     try {
         console.log(config)
-        var slides = $('.widget ul.slideset li');
-        var switchers = $('.widgeet ul.switcher li');
-        var slidesCount = config.items.length;
+        let slides = $('.widget ul.slideset li');
+        let switchers = $('.widgeet ul.switcher li');
+        let slidesCount = config.items.length;
         function slide(target) {
             slides.removeClass('active').eq(target).addClass('active');
             switchers.removeClass('active').eq(target).addClass('active');
