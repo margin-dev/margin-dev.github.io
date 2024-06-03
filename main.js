@@ -124,7 +124,7 @@ export function createSlider(config) {
     console.log("creating slider")
     try {
         let widget = `
-        <div class="widget" data-brand="${config.items[0].brand}" data-controls="false">
+        <div class="widget col-12" data-brand="${config.items[0].brand}" data-controls="false">
             <div class="slideset">
                 ${createSlides(config.items)}
                 <button class="btn-prev ${config.control}"></button>

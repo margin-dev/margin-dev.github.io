@@ -4,9 +4,7 @@
 }
 .widget {
 	border-radius: 5px;
-	background: #0F0F0F;
 	font-size: 14px;
-	max-width: 600px;
 	width: 100%;
 	position: relative;
 }
@@ -67,6 +65,7 @@
 }
 .widget .slideset {
 	position: relative;
+	background: #0F0F0F;
 	list-style: none;
 	min-height: 130px;
 	padding: 10px;
