@@ -1,6 +1,6 @@
 export const SliderJson = {
     interval: 3000,
-    switchers: false,
+    switchers: true,
     loop: true,
     control: "full",
     items: [
@@ -76,7 +76,7 @@ function createSwitchers(items) {
 export function createSlider(config) {
     var switchers = createSwitchers(config.items);
     let slider = `
-    <div class="widget" data-brand="${config.items[0].brand}" data-controls="${config.switchers}">
+    <div class="widget" data-brand="${config.items[0].brand}" data-controls="false">
         <div class="slideset">
             ${createSlides(config.items)}
             <button class="btn-prev ${config.control}"></button>
