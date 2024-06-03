@@ -85,6 +85,8 @@ export function initializeSlider(config) {
         function slide(target) {
             slides.removeClass('active').eq(target).addClass('active');
             switchers.removeClass('active').eq(target).addClass('active');
+            let brand = $(".widget").find(".slide.active").data("brand")
+            $(".widget").attr("data-brand", brand).find(".active").attr("data-brand", brand);
         }
         function getTarget(dir) {
             var ind = $('.widget ul.switcher li.active').index();
