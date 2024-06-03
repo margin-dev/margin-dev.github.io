@@ -29,7 +29,7 @@ function toTitleCase(str) {
 function createOffers(offers) {
     return `<div class="bonuswrapper">${offers.map((offer, index) => {
         return `<p>${offer}</p>`
-    }).join(",")}</div>`
+    }).join("")}</div>`
 }
 function createSlides(items) {
     return items.map((item, index) => {
@@ -41,16 +41,16 @@ function createSlides(items) {
             </div>
             ${createOffers(item.offers)}
         </a>`
-    }).join(",")
+    }).join("")
 }
 function createSwitchers(items) {
     let controlers = items.map((item, index) => {
         return `<li><button class="${index == 0 ? 'active' : ''}">${item.brand}</button></li>`
-    }).join(",")
+    }).join("")
     return `
     <div class="control-links">
         <div class="switcher-holder">
-            <ul class="switcher">${controlers.join('')}</ul>
+            <ul class="switcher">${controlers}</ul>
         </div>
     </div>`
 }
