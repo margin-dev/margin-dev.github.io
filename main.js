@@ -79,7 +79,7 @@ export function initializeSlider(config) {
     console.log("initializing slider")
     try {
         console.log(config)
-        let slides = $('.widget ul.slideset li');
+        let slides = $('.widget .slideset .slide');
         let switchers = $('.widget ul.switcher li');
         let slidesCount = config.items.length;
         function slide(target) {
@@ -102,11 +102,11 @@ export function initializeSlider(config) {
                 resetTimer(timer);
             }
         });
-        $('.btn-prev').click(function () {
+        $('.widget .btn-prev').click(function () {
             slide(getTarget(-1));
             resetTimer(timer);
         });
-        $('.btn-next').click(function () {
+        $('.widget .btn-next').click(function () {
             slide(getTarget());
             resetTimer(timer);
         });
