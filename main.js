@@ -75,25 +75,9 @@ function createSwitchers(items) {
 }
 
 
-export function createSlider(config) {
 
-    let widget = `
-    <div class="widget" data-brand="${config.items[0].brand}" data-controls="false">
-        <div class="slideset">
-            ${createSlides(config.items)}
-            <button class="btn-prev ${config.control}"></button>
-            <button class="btn-next ${config.control}"></button>
-        </div>
-        ${config.switchers ? createSwitchers(config.items) : ''}
-    </div>    
-    `
-    let block = `
-    <div id="biolink_block_id_${9999}" data-biolink-block-id="${9999}" class="col-12 my-2">
-        ${widget}
-    </div>`
-    let links = document.querySelector("#links > .row");
-    links.insertAdjacentHTML('beforeend', block);
-    console.log("links injected")
+
+export function initializeSlider(config) {
     var slides = $('.widget ul.slideset li');
     var switchers = $('.widgeet ul.switcher li');
     var slidesCount = config.items.length;
@@ -126,6 +110,24 @@ export function createSlider(config) {
         resetTimer(timer, config.interval);
     });
     var timer = setInterval(function () { slide(getTarget(undefined, slidesCount)); }, config.interval);
-    console.log("started")
+}
+export function createSlider(config) {
 
+    let widget = `
+    <div class="widget" data-brand="${config.items[0].brand}" data-controls="false">
+        <div class="slideset">
+            ${createSlides(config.items)}
+            <button class="btn-prev ${config.control}"></button>
+            <button class="btn-next ${config.control}"></button>
+        </div>
+        ${config.switchers ? createSwitchers(config.items) : ''}
+    </div>    
+    `
+    let block = `
+    <div id="biolink_block_id_${9999}" data-biolink-block-id="${9999}" class="col-12 my-2">
+        ${widget}
+    </div>`
+    let links = document.querySelector("#links > .row");
+    links.insertAdjacentHTML('beforeend', block);
+    console.log("links injected")
 }
