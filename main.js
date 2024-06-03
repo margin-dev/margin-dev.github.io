@@ -1,4 +1,5 @@
 import 'https://code.jquery.com/jquery-3.7.1.min.js'
+
 export const SliderJson = {
     interval: 3000,
     switchers: true,
@@ -74,9 +75,6 @@ function createSwitchers(items) {
     </div>`
 }
 
-
-
-
 export function initializeSlider(config) {
     console.log("initializing slider")
     try {
@@ -120,22 +118,26 @@ export function initializeSlider(config) {
 
 }
 export function createSlider(config) {
-
-    let widget = `
-    <div class="widget" data-brand="${config.items[0].brand}" data-controls="false">
-        <div class="slideset">
-            ${createSlides(config.items)}
-            <button class="btn-prev ${config.control}"></button>
-            <button class="btn-next ${config.control}"></button>
-        </div>
-        ${config.switchers ? createSwitchers(config.items) : ''}
-    </div>    
-    `
-    let block = `
-    <div id="biolink_block_id_${9999}" data-biolink-block-id="${9999}" class="col-12 my-2">
-        ${widget}
-    </div>`
-    let links = document.querySelector("#links > .row");
-    links.insertAdjacentHTML('beforeend', block);
-    console.log("links injected")
+    console.log("creating slider")
+    try {
+        let widget = `
+        <div class="widget" data-brand="${config.items[0].brand}" data-controls="false">
+            <div class="slideset">
+                ${createSlides(config.items)}
+                <button class="btn-prev ${config.control}"></button>
+                <button class="btn-next ${config.control}"></button>
+            </div>
+            ${config.switchers ? createSwitchers(config.items) : ''}
+        </div>    
+        `
+        let block = `
+        <div id="biolink_block_id_${9999}" data-biolink-block-id="${9999}" class="col-12 my-2">
+            ${widget}
+        </div>`
+        let links = document.querySelector("#links > .row");
+        links.insertAdjacentHTML('beforeend', block);
+    } catch (error) {
+        console.log(error)
+    }
+    console.log("slider created")
 }
