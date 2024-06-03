@@ -1,48 +1,35 @@
 @import "https://margin-dev.github.io/colors.css";
-/* widget styles */
+* {
+	box-sizing: border-box
+}
 .widget {
-	border: 1px solid #bababa;
 	border-radius: 5px;
 	background: #0F0F0F;
 	font-size: 14px;
-	/* padding: 10px; */
-	max-width: 900px;
+	max-width: 600px;
 	width: 100%;
+	position: relative;
+}
+.widget[data-controls="true"] .control-links {
+	display: flex;
 }
 .widget .control-links {
-	border-top: 1px solid #aeaeae;
 	text-align: center;
 	overflow: hidden;
-	padding: 10px;
-	display: flex;
-	justify-content: space-between;
+	display: none;
+	justify-content: center;
 	align-items: center;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background-image: linear-gradient(180deg, #000000bd, transparent);
+	z-index: 3;
+	height: 50px;
 }
 .widget .control-links .switcher-holder {
 	display: inline-block;
 }
-.widget .btn-prev, .widget .btn-next {
-	border-radius: 5px;
-	border: 1px solid #ccc;
-	width: 26px;
-	height: 26px;
-	color: #ccc;
-	font-size: 24px;
-	line-height: 28px;
-	text-align: center;
-	float: left;
-}
-.widget .btn-next {
-	float: right;
-}
-.widget .btn-prev:hover, .widget .btn-next:hover {
-	text-decoration: none;
-	border-color: #000;
-	color: #000;
-}
-.widget .btn-prev:active, .widget .btn-next:active {
-	margin: 1px -1px -1px 1px;
-}
+
 .widget .switcher {
 	overflow: hidden;
 	list-style: none;
@@ -53,48 +40,43 @@
 	margin: 0 5px 0 0;
 	float: left;
 }
-.widget .switcher li a {
+.widget .switcher li button {
 	border: 1px solid transparent;
 	border-radius: 5px;
 	text-align: center;
 	float: left;
-	color: #000;
+	color: #FFF;
 	padding: 0 10px;
 	height: 26px;
 	line-height: 26px;
+	background: #0F0F0F4D;
 }
-.widget .switcher li a:hover {
+.widget .switcher li button:hover {
 	border-color: #eee;
 	text-decoration: none;
 }
 .widget .switcher li a:active {
 	line-height: 28px;
 }
-.widget .switcher .active a {
-	background: #777;
+.widget .switcher .active button {
+	background: var(--primary);
 	color: #fff;
 }
 .widget .switcher .active a:hover {
 	border-color: transparent;
 }
-.widget .switcher .lava-item a {
-	text-indent: -9999px;
-	display: block;
-	float: none;
-}
-.widget .switcher .lava-anim-to a {
-	border-color: transparent !important;
-}
-/* slideset styles */
 .widget .slideset {
 	position: relative;
 	list-style: none;
-	min-height: 100px;
-	max-height: 256px;
+	min-height: 130px;
 	padding: 10px;
 	margin: 0;
+	padding-bottom: 50px;
 }
-.widget .slideset li {
+.widget[data-controls="true"] .slideset {
+	min-height: 160px;
+}
+.widget .slideset > .slide {
 	position: absolute;
 	overflow: hidden;
 	top: 0;
@@ -108,10 +90,21 @@
 	height: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	padding-left: 60px;
+	padding-right: 60px;
+	gap: 20px;
+	justify-content: space-between;
 	color: white;
+	cursor: pointer;
+	text-decoration: none;
 }
-.widget .slideset li:after {
+.widget .slideset > .slide.vips {
+	box-shadow: 0 0 20px var(--primary);
+}
+.widget[data-controls="true"] .slideset > .slide {
+	padding-bottom: 50px;
+}
+.widget .slideset > .slide:after {
 	z-index: -1;
 	content: "";
 	position: absolute;
@@ -125,16 +118,135 @@
 	opacity: 0.5;
 	pointer-events: none;
 }
-.widget .slideset li.active {
+.widget .slideset > .slide.active {
 	z-index: 3;
 	opacity: 1;
 }
-.widget .slideset li img {
-	margin: 0 0 0 25px;
-	height: 256px;
-	width: auto;
+
+.widget button:is(.btn-prev, .btn-next) {
+	position: absolute;
+	display: grid;
+	place-items: center;
+	background-color: #FFFFFF4D;
+	outline: none;
+	border: none;
+	width: 40px;
+	min-width: 40px;
+	height: 40px;
+	cursor: pointer;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 4;
 }
 
+.widget button.btn-prev {
+	left: 10px;
+}
+.widget button.btn-next {
+	right: 10px;
+}
+
+
+.widget button:is(.btn-prev, .btn-next):is(:hover, :focus-visible) {
+	background-color: #FFFFFF;
+}
+.widget button:is(.btn-prev, .btn-next):is(:hover, :focus-visible):after {
+	border-color: #000;
+}
+.widget button:is(.btn-prev, .btn-next):after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	border: 2px solid var(--primary);
+}
+.widget button.btn-prev:after {
+	margin-left: 5px;
+	border-right: transparent;
+	border-top: transparent;
+	transform: rotate(45deg);
+}
+.widget button.btn-next:after {
+	margin-right: 5px;
+	border-left: transparent;
+	border-top: transparent;
+	transform: rotate(-45deg);
+}
+
+.widget button:is(.btn-prev, .btn-next).rounded {
+	border-radius: 40px;
+}
+.widget button:is(.btn-prev, .btn-next).full {
+	height: 100%;
+}
+.widget button.btn-prev.full {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	left: 0;
+	background-color: transparent;
+	background-image: linear-gradient(-90deg, #00000000 0%, var(--primary30) 100%);
+}
+.widget button.btn-next.full {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	right: 0;
+	background-color: transparent;
+	background-image: linear-gradient(90deg, #00000000 0%, var(--primary30) 100%);
+}
+.widget button:is(.btn-prev, .btn-next).full:is(:hover, :focus-visible):after {
+	border-color: var(--primary);
+	scale: 1.2;
+}
+
+
+.widget .slideset > .slide img {
+	max-width: 160px;
+	height: auto;
+}
+.widget .slideset > .slide > .bonuswrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 0;
+}
+.widget .slideset > .slide > .bonuswrapper p {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: normal;
+}
+.widget .slideset > .slide > .bonuswrapper p:nth-child(even) {
+	font-weight: bold;
+	color: var(--primary);
+}
+.widget .slideset > .slide > .actionwrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+}
+.widget .slideset > .slide > .actionwrapper > p {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 65px;
+}
+.widget .slideset > .slide > .actionwrapper > .action {
+	width: 100%;
+	height: 30px;
+	background-color: var(--primary);
+	color: #FFF;
+	border: 0;
+	outline: none;
+	border-radius: 4px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 @media only screen and (max-width: 990px) {
 	.widget .slideset > .slide {
