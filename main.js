@@ -65,5 +65,5 @@ export function createSlider(config) {
         ${slider}
     </div>`
     let links = document.querySelector("#links > .row");
-    links.appendChild(block);
+    links.insertAdjacentHTML('beforeend', block);
 }
