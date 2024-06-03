@@ -90,42 +90,37 @@ export function createSlider(config) {
     let links = document.querySelector("#links > .row");
     links.insertAdjacentHTML('beforeend', block);
 
-
-    jQuery(document).ready(function ($) {
-
-
-        var slides = $('.widget ul.slideset li');
-        var switchers = $('.widgeet ul.switcher li');
-        var slidesCount = config.items.length;
-        switchers.first().addClass('active');
-        function slide(target) {
-            slides.removeClass('active').eq(target).addClass('active');
-            switchers.removeClass('active').eq(target).addClass('active');
-        }
-        switchers.on('mouseenter', function () {
-            if (!$(this).hasClass('active')) {
-                slide($(this).index());
-                resetTimer();
-            }
-        });
-        $(document).on("click", '.btn-prev', function () {
-            slide(getTarget(-1));
+    var slides = $('.widget ul.slideset li');
+    var switchers = $('.widgeet ul.switcher li');
+    var slidesCount = config.items.length;
+    switchers.first().addClass('active');
+    function slide(target) {
+        slides.removeClass('active').eq(target).addClass('active');
+        switchers.removeClass('active').eq(target).addClass('active');
+    }
+    switchers.on('mouseenter', function () {
+        if (!$(this).hasClass('active')) {
+            slide($(this).index());
             resetTimer();
-        });
-        $(document).on("click", '.btn-next', function () {
-            slide(getTarget());
-            resetTimer();
-        });
-
-        function getTarget(dir) {
-            var ind = $('.widget ul.switcher li.active').index();
-            return (ind + (dir || 1)) % slidesCount;
         }
-
-        function resetTimer() {
-            clearInterval(timer);
-            timer = setInterval(function () { slide(getTarget()); }, 3000);
-        }
-        var timer = setInterval(function () { slide(getTarget()); }, 3000);
     });
+    $(document).on("click", '.btn-prev', function () {
+        slide(getTarget(-1));
+        resetTimer();
+    });
+    $(document).on("click", '.btn-next', function () {
+        slide(getTarget());
+        resetTimer();
+    });
+
+    function getTarget(dir) {
+        var ind = $('.widget ul.switcher li.active').index();
+        return (ind + (dir || 1)) % slidesCount;
+    }
+
+    function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(function () { slide(getTarget()); }, 3000);
+    }
+    var timer = setInterval(function () { slide(getTarget()); }, 3000);
 }
