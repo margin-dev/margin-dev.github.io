@@ -212,7 +212,7 @@
 .widget .slideset > .slide > .bonuswrapper p {
 	margin: 0;
 	padding: 0;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: normal;
 }
 .widget .slideset > .slide > .bonuswrapper p:nth-child(even) {
@@ -293,6 +293,6 @@
 	}
 
 	.widget .slideset > .slide > .bonuswrapper p {
-		font-size: 14px;
+		font-size: 12px;
 	}
 }
