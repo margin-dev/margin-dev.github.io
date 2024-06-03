@@ -72,6 +72,19 @@ function createSwitchers(items) {
         </div>
     </div>`
 }
+
+function slide(target, slides, switchers) {
+    slides.removeClass('active').eq(target).addClass('active');
+    switchers.removeClass('active').eq(target).addClass('active');
+}
+function resetTimer(timer, interval) {
+    clearInterval(timer);
+    timer = setInterval(function () { slide(getTarget()); }, interval);
+}
+function getTarget(dir, slidesCount) {
+    var ind = $('.widget ul.switcher li.active').index();
+    return (ind + (dir || 1)) % slidesCount;
+}
 export function createSlider(config) {
     let widget = `
     <div class="widget" data-brand="${config.items[0].brand}" data-controls="false">
@@ -89,38 +102,27 @@ export function createSlider(config) {
     </div>`
     let links = document.querySelector("#links > .row");
     links.insertAdjacentHTML('beforeend', block);
-
+    console.log("links injected")
     var slides = $('.widget ul.slideset li');
     var switchers = $('.widgeet ul.switcher li');
     var slidesCount = config.items.length;
     switchers.first().addClass('active');
-    function slide(target) {
-        slides.removeClass('active').eq(target).addClass('active');
-        switchers.removeClass('active').eq(target).addClass('active');
-    }
+
     switchers.on('mouseenter', function () {
         if (!$(this).hasClass('active')) {
-            slide($(this).index());
-            resetTimer();
+            slide($(this).index(), slides, switchers);
+            resetTimer(timer, config.interval);
         }
     });
     $(document).on("click", '.btn-prev', function () {
-        slide(getTarget(-1));
-        resetTimer();
+        slide(getTarget(-1, slidesCount), slides, switchers);
+        resetTimer(timer, config.interval);
     });
     $(document).on("click", '.btn-next', function () {
-        slide(getTarget());
-        resetTimer();
+        slide(getTarget(undefined, slidesCount), slides, switchers);
+        resetTimer(timer, config.interval);
     });
+    var timer = setInterval(function () { slide(getTarget(undefined, slidesCount)); }, config.interval);
+    console.log("started")
 
-    function getTarget(dir) {
-        var ind = $('.widget ul.switcher li.active').index();
-        return (ind + (dir || 1)) % slidesCount;
-    }
-
-    function resetTimer() {
-        clearInterval(timer);
-        timer = setInterval(function () { slide(getTarget()); }, 3000);
-    }
-    var timer = setInterval(function () { slide(getTarget()); }, 3000);
 }
