@@ -102,11 +102,11 @@ export function initializeSlider(config) {
                 resetTimer(timer, config.interval);
             }
         });
-        $(document).on("click", '.btn-prev', function () {
+        $('.btn-prev').click(function () {
             slide(getTarget(-1, slidesCount));
             resetTimer(timer, config.interval);
         });
-        $(document).on("click", '.btn-next', function () {
+        $('.btn-next').click(function () {
             slide(getTarget(undefined, slidesCount));
             resetTimer(timer, config.interval);
         });
