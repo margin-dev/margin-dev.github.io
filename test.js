@@ -3,6 +3,7 @@ import 'https://code.jquery.com/jquery-3.7.1.min.js'
 export const config = {
     interval: 3000,
     switchers: true,
+    position: "bottom",
     loop: true,
     control: "full",
     items: [
@@ -57,13 +58,13 @@ function createOffers(offers) {
 function createItems(config) {
     return config.items.map((item, index) => {
         return `
-        <a href="${item.link}" target="${item.openInNewTab ? '_blank' : '_self'}}" class="popup ${config.position} ${item.brand}} ${index == 0 ? 'active' : ''}">
+        <a href="${item.link}" target="${item.openInNewTab ? '_blank' : '_self'}" class="popup ${config.position} ${item.brand} ${index == 0 ? 'active' : ''}">
             ${config.close ?? `<button class="close-popup">X</button> `}
             ${!item.image ? `<img src="https://margin-dev.github.io/brands/${toTitleCase(item.brand)}.png">` : item.image}
             ${createOffers(item.offers)}
             <span>${config.action}</span>
         </a>`
-    })
+    }).join("")
 }
 
 export function initializePopupSlider(config) {
