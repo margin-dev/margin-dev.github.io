@@ -82,6 +82,15 @@ export function initializePopupSlider(config) {
             var ind = $('.popups .popup.active').index();
             return (ind + (dir || 1)) % slidesCount;
         }
+
+        const xs = document.querySelectorAll(".popup > .close-popup");
+        xs.forEach((x) => {
+            x.addEventListener("click", xe, !1);
+            function xe(ev) {
+                ev.preventDefault();
+                this.parentElement.remove()
+            }
+        })
         setInterval(function () { slide(getTarget()); }, config.interval);
     } catch (e) {
         console.log(e)
