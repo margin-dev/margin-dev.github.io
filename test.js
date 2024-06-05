@@ -55,7 +55,7 @@ function createOffers(offers) {
 
 
 function createItems(config) {
-    config.items.map((item, index) => {
+    return config.items.map((item, index) => {
         return `
         <a href="${item.link}" target="${item.openInNewTab ? '_blank' : '_self'}}" class="popup ${config.position} ${item.brand}} ${index == 0 ? 'active' : ''}">
             ${config.close ?? `<button class="close-popup">X</button> `}
