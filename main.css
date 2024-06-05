@@ -1,4 +1,7 @@
-@import url("colors.css");
+@import "https://margin-dev.github.io/colors.css";
+* {
+    box-sizing: border-box
+}
 .hidden {
     display: none !important;
 }
