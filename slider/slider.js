@@ -1,6 +1,7 @@
 import 'https://code.jquery.com/jquery-3.7.1.min.js'
 
-export const SliderJson = {
+
+export const config = {
     interval: 3000,
     switchers: true,
     loop: true,
@@ -14,7 +15,7 @@ export const SliderJson = {
             offers: [
                 "400 TL Deneme Bonusu",
                 "İsteyene Gizli Üyelik Sistemi!",
-            ]
+            ],
         },
         {
             brand: "zbahis",
@@ -24,7 +25,7 @@ export const SliderJson = {
             offers: [
                 "500 TL Deneme Bonusu",
                 "%30 Günlük Kayıp Bonusu",
-            ]
+            ],
         },
         {
             brand: "fixbet",
@@ -34,7 +35,8 @@ export const SliderJson = {
             offers: [
                 "333 TL Deneme Bonusu",
                 "5 Dakikada Çekim & Limitsiz Kazanç",
-            ]
+            ],
+
         }
     ]
 }
