@@ -54,8 +54,8 @@ function createOffers(config, offers) {
 }
 
 
-function createItems(config, items) {
-    items.map((item, index) => {
+function createItems(config) {
+    config.items.map((item, index) => {
         return `
         <a href="${item.link}" target="${item.openInNewTab ? '_blank' : '_self'}}" class="popup ${config.position} ${item.brand}} ${index == 0 ? 'active' : ''}">
             ${config.close ?? `<button class="close-popup">X</button> `}
@@ -91,7 +91,7 @@ export function createPopup(config) {
     try {
         let popups = `
         <div class="popups col-12" data-brand="${config.items[0].brand}">
-            ${createItems(config.items)}
+            ${createItems(config)}
         </div>    
         `
         let block = `
