@@ -47,7 +47,7 @@ function toTitleCase(str) {
         }
     );
 }
-function createOffers(config, offers) {
+function createOffers(offers) {
     return `<div class="bonus-wrapper">${offers.map((offer, index) => {
         return `<span>${offer}</span>`
     }).join("")}</div>`
