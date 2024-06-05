@@ -4,6 +4,7 @@ export const config = {
     interval: 3000,
     switchers: true,
     position: "bottom",
+    action: "Giriş Yap",
     loop: true,
     control: "full",
     items: [
