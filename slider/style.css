@@ -1,7 +1,5 @@
 @import "https://margin-dev.github.io/main.css";
-* {
-	box-sizing: border-box
-}
+
 .widget {
 	border-radius: 5px;
 	font-size: 14px;

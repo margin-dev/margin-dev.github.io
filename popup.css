@@ -8,9 +8,9 @@
     pointer-events: none;
 }
 .popup {
-    --bg-color: "#181D27";
-    --bg-image: "";
-    --bg-filter: "blur(5px)";
+    --bg-color: #181D27;
+    --bg-image: url();
+    --bg-filter: blur(5px);
     position: fixed;
     top: 50%;
     transform: translatex(-50%);
