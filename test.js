@@ -61,7 +61,7 @@ function createItems(config) {
             ${config.close ?? `<button class="close-popup">X</button> `}
             ${item.image?.enabled && item.image.enabled != false ? `<img src=${item.image?.link ? item.image.link : `https://margin-dev.github.io/brands/${toTitleCase(item.brand)}.png`}>` : ""}
             ${createOffers(item.offers)}
-            ${item.action.enabled ?? `<span>${item.action.text}</span>`}
+            ${item.action?.enabled ?? `<span>${item.action.text}</span>`}
         </a>`
     })
 }
