@@ -65,7 +65,7 @@
 	position: relative;
 	background: #0F0F0F;
 	list-style: none;
-	min-height: 130px;
+	min-height: 110px;
 	padding: 10px;
 	margin: 0;
 	padding-bottom: 50px;
@@ -196,7 +196,7 @@
 
 
 .widget .slideset > .slide img {
-	max-width: 160px;
+	max-width: 140px;
 	height: auto;
 }
 .widget .slideset > .slide > .bonuswrapper {
@@ -229,7 +229,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 65px;
+	height: 50px;
 }
 .widget .slideset > .slide > .actionwrapper > .action {
 	width: 100%;
