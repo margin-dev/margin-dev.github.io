@@ -140,8 +140,8 @@ export function createSlider(config) {
         <div id="biolink_block_id_${9999}" data-biolink-block-id="${9999}" class="col-12 my-2">
             ${widget}
         </div>`
-        let links = document.querySelector("#links > .row");
-        links.insertAdjacentHTML(`${config.position && config.position == "top" ? "afterbegin" : "beforeend"}`, block);
+        let parent = document.querySelector("script[id='slider']").parentNode
+        parent.insertAdjacentHTML(`${config.position && config.position == "top" ? "afterbegin" : "beforeend"}`, block);
     } catch (error) {
         console.log(error)
     }
