@@ -1,7 +1,13 @@
 @import "https://margin-dev.github.io/main.css";
 
-.color-primary {
-    color: var(--primary) !important
+
+.popup-parent {
+    margin: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .popups > .popup:not(.active) {
     opacity: 0;
@@ -107,7 +113,7 @@
 }
 .popup > .bonus-wrapper {
     line-height: 1em;
-    font-size: 12px;
+    font-size: 14px;
     display: flex;
     flex-direction: column;
     font-weight: 300

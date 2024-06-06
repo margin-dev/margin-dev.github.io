@@ -5,6 +5,7 @@ export const config = {
     switchers: true,
     position: "bottom",
     action: "Giriş Yap",
+    background: "#181D27",
     loop: true,
     control: "full",
     items: [
@@ -59,7 +60,7 @@ function createOffers(offers) {
 function createItems(config) {
     return config.items.map((item, index) => {
         return `
-        <a href="${item.link}" target="${item.openInNewTab ? '_blank' : '_self'}" class="popup ${config.position} ${item.brand} ${index == 0 ? 'active' : ''}">
+        <a href="${item.link}" target="${item.openInNewTab ? '_blank' : '_self'}" class="popup ${config.position} ${item.brand} ${index == 0 ? 'active' : ''}" ${config.background ?? `style="background:${config.background}"`}>
             ${config.close ?? `<button class="close-popup">X</button> `}
             ${!item.image ? `<img src="https://margin-dev.github.io/brands/${toTitleCase(item.brand)}.png">` : item.image}
             ${createOffers(item.offers)}
@@ -106,7 +107,7 @@ export function createPopup(config) {
         </div>    
         `
         let parent = document.querySelector("script[id='popups']").parentNode
-        parent.insertAdjacentHTML("beforeend", popups);
+        parent.insertAdjacentHTML("beforeend", popups).classList.add("popup-parent");
     } catch (error) {
         console.log(error)
     }
