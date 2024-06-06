@@ -101,16 +101,12 @@ export function createPopup(config) {
     console.log("creating popup")
     try {
         let popups = `
-        <div class="popups col-12" data-brand="${config.items[0].brand}">
+        <div class="popups" data-brand="${config.items[0].brand}">
             ${createItems(config)}
         </div>    
         `
-        let block = `
-        <div id="biolink_block_id_${9999}" data-biolink-block-id="${9999}" class="col-12 my-2">
-            ${popups}
-        </div>`
-        let links = document.querySelector("#links > .row");
-        links.insertAdjacentHTML('beforeend', block);
+        let parent = document.querySelector("script[id='popups']").parentNode
+        parent.insertAdjacentHTML("beforeend", popups);
     } catch (error) {
         console.log(error)
     }
