@@ -127,7 +127,7 @@ export function createSlider(config) {
     console.log("creating slider")
     try {
         let widget = `
-        <div class="widget col-12" data-brand="${config.items[0].brand}" data-controls="false">
+        <div class="widget" data-brand="${config.items[0].brand}" data-controls="false">
             <div class="slideset">
                 ${createSlides(config.items)}
                 <button class="btn-prev ${config.control}"></button>
@@ -141,7 +141,7 @@ export function createSlider(config) {
             ${widget}
         </div>`
         let links = document.querySelector("#links > .row");
-        links.insertAdjacentHTML(`${config.position && config.position == "top" ? "beforeend" : "afterbegin"}`, block);
+        links.insertAdjacentHTML(`${config.position && config.position == "top" ? "afterbegin" : "beforeend"}`, block);
     } catch (error) {
         console.log(error)
     }
