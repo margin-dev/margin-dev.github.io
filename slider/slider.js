@@ -136,12 +136,8 @@ export function createSlider(config) {
             ${config.switchers ? createSwitchers(config.items) : ''}
         </div>    
         `
-        let block = `
-        <div id="biolink_block_id_${9999}" data-biolink-block-id="${9999}" class="col-12 my-2">
-            ${widget}
-        </div>`
         let parent = document.querySelector("script[id='slider']").parentNode
-        parent.insertAdjacentHTML(`${config.position && config.position == "top" ? "afterbegin" : "beforeend"}`, block);
+        parent.insertAdjacentHTML("beforeend", widget);
     } catch (error) {
         console.log(error)
     }
