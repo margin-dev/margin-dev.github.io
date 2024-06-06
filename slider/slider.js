@@ -5,6 +5,7 @@ export const config = {
     interval: 3000,
     switchers: true,
     loop: true,
+    position: "top",
     control: "full",
     items: [
         {
@@ -140,7 +141,7 @@ export function createSlider(config) {
             ${widget}
         </div>`
         let links = document.querySelector("#links > .row");
-        links.insertAdjacentHTML('beforeend', block);
+        links.insertAdjacentHTML(`${config.position && config.position == "top" ? "beforeend" : "afterbegin"}`, block);
     } catch (error) {
         console.log(error)
     }
