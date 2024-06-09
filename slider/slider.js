@@ -12,6 +12,7 @@ export const config = {
             brand: "kralbet",
             link: "",
             openInNewTab: true,
+            action: "Kayıt Ol",
             vip: true,
             offers: [
                 "400 TL Deneme Bonusu",
@@ -22,6 +23,7 @@ export const config = {
             brand: "zbahis",
             link: "",
             openInNewTab: true,
+            action: "Kayıt Ol",
             vip: true,
             offers: [
                 "500 TL Deneme Bonusu",
@@ -32,6 +34,7 @@ export const config = {
             brand: "fixbet",
             link: "",
             openInNewTab: true,
+            action: "Kayıt Ol",
             vip: true,
             offers: [
                 "333 TL Deneme Bonusu",
@@ -60,7 +63,7 @@ function createSlides(items) {
         <a class="slide ${index == 0 ? 'active' : ''}" target="${item.openInNewTab ? '_blank' : '_self'}" data-brand="${item.brand}" href="${item.link}">
             <div class="actionwrapper">
                 <p><img src="https://margin-dev.github.io/brands/${toTitleCase(item.brand)}.png"/></p>
-                <span class="action">Katıl</span>
+                <span class="action">${item.action ? item.action : "Katıl"}</span>
             </div>
             ${createOffers(item.offers)}
         </a>`
