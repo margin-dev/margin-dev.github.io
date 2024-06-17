@@ -62,7 +62,7 @@ function createItems(config) {
         return `
         <a href="${item.link}" target="${item.openInNewTab ? '_blank' : '_self'}" class="popup ${config.position} ${item.brand} ${index == 0 ? 'active' : ''}" ${config.background ? `style="background:${config.background}"` : ""}>
             ${config.close ?? `<button class="close-popup">X</button> `}
-            ${!item.image ? `<img src="https://margin-dev.github.io/brands/${toTitleCase(item.brand)}.png">` : item.image}
+            ${!item.image ? `<img src="https://margin-dev.github.io/brands/${toTitleCase(item.logo ? item.logo : item.brand)}.png">` : item.image}
             ${createOffers(item.offers)}
             <span>${config.action}</span>
         </a>`
