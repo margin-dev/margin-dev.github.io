@@ -1,4 +1,5 @@
 import 'https://code.jquery.com/jquery-3.7.1.min.js'
+import { toTitleCase } from '../utils.js';
 
 export const config = {
     interval: 3000,
@@ -42,14 +43,7 @@ export const config = {
         }
     ]
 }
-function toTitleCase(str) {
-    return str.replace(
-        /\w\S*/g,
-        function (txt) {
-            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-        }
-    );
-}
+
 function createOffers(offers) {
     return `<div class="bonus-wrapper">${offers.map((offer, index) => {
         return `<span>${offer}</span>`
