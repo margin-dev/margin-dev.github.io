@@ -25,15 +25,18 @@
 .alert-wrapper .alert-item {
 	position: absolute;
 	padding: var(--padding);
-	border: 1px solid var(--primary);
+	border: 3px solid var(--primary);
 	border-radius: var(--alert-radius);
 	background: var(--alert-background);
 	backdrop-filter: var(--alert-backdrop);
-	min-height: 160px;
+	max-height: 200px;
+	height: 100%;
 	display: grid;
 	place-items: center;
 }
-
+.alert-wrapper .alert-item.active {
+	z-index: 1;
+}
 .alert-wrapper .alert-close {
 	position: absolute;
 	top: var(--padding);
