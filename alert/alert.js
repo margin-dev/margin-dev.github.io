@@ -82,13 +82,17 @@ export function initializeAlertSlider(config) {
             var ind = $('.alert-wrapper .alert-item.active').index();
             return (ind + (dir || 1)) % slidesCount;
         }
-
-        document.querySelector(".alert-wrapper .alert-close").addEventListener("click", function () {
-            this.parentElement.remove()
-            if (document.querySelector(".alert-wrapper").children.length == 0) {
-                document.querySelector(".alert-wrapper").remove();
+        const closeButtons = document.querySelectorAll(".alert-wrapper .alert-close");
+        closeButtons.forEach((button) => {
+            button.addEventListener("click", closeFunction, !1);
+            function closeFunction(ev) {
+                this.parentElement.remove()
+                if (document.querySelectorAll(".alert-item").length == 0) {
+                    document.querySelector(".alert-wrapper").remove();
+                }
             }
         })
+
         setInterval(function () { slide(getTarget()); }, config.interval);
     } catch (e) {
         console.log(e)
