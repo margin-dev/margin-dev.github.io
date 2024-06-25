@@ -98,11 +98,11 @@ export function initializeAlertSlider(config) {
     console.log("popupslider initialized")
 }
 export function createAlerts(config) {
-    console.log("creating alert")
+    console.log("creating alerts")
     try {
         let alerts = `
         <div class="alerts alert-wrapper" data-brand="${config.items[0].brand}">
-            ${createItems(config)}
+            ${createItems(config.items)}
         </div>    
         `
         let parent = document.querySelector("script[id='alerts']").parentNode
