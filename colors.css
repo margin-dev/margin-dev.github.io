@@ -117,6 +117,14 @@
     --primary30: #EEA8284D;
     --primary50: #EEA82880;
 }
+[data-brand='betloto'], .betloto {
+    --primary: #009260;
+    --secondary: #01774A;
+    --primary30: #0092604D;
+    --secondary30: #01774A4D;
+    --primary50: #00926080;
+    --secondary50: #01774A80;
+}
 [data-brand='betmatik'], .betmatik {
     --primary: #12BC8C;
     --primary30: #12BC8C4D;
