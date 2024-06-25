@@ -97,7 +97,7 @@ export function initializeAlertSlider(config) {
     }
     console.log("popupslider initialized")
 }
-export function createAlert(config) {
+export function createAlerts(config) {
     console.log("creating alert")
     try {
         let alerts = `
