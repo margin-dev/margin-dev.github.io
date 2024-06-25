@@ -69,39 +69,37 @@ function createItems(items) {
 }
 
 export function initializeAlertSlider(config) {
-    console.log("initializing popupslider")
+    console.log("initializing alertslider")
     try {
-        let slides = $('.popups .popup');
+        let slides = $('.alert-wrapper .alert-item');
         let slidesCount = config.items.length;
         function slide(target) {
             slides.removeClass('active').eq(target).addClass('active');
-            let brand = $(".popups").find(".popup.active").data("brand")
-            $(".popups").attr("data-brand", brand).find(".active").attr("data-brand", brand);
+            let brand = $(".alert-wrapper").find(".alert-item.active").data("brand")
+            $(".alert-wrapper").attr("data-brand", brand).find(".active").attr("data-brand", brand);
         }
         function getTarget(dir) {
-            var ind = $('.popups .popup.active').index();
+            var ind = $('.alert-wrapper .alert-item.active').index();
             return (ind + (dir || 1)) % slidesCount;
         }
 
-        const xs = document.querySelectorAll(".popup > .close-popup");
-        xs.forEach((x) => {
-            x.addEventListener("click", xe, !1);
-            function xe(ev) {
-                ev.preventDefault();
-                this.parentElement.remove()
+        document.querySelector(".alert-wrapper .alert-close").addEventListener("click", function () {
+            this.parentElement.remove()
+            if (document.querySelector(".alert-wrapper").children.length == 0) {
+                document.querySelector(".alert-wrapper").remove();
             }
         })
         setInterval(function () { slide(getTarget()); }, config.interval);
     } catch (e) {
         console.log(e)
     }
-    console.log("popupslider initialized")
+    console.log("alertslider initialized")
 }
 export function createAlerts(config) {
     console.log("creating alerts")
     try {
         let alerts = `
-        <div class="alerts alert-wrapper" data-brand="${config.items[0].brand}">
+        <div class="alert-wrapper" data-brand="${config.items[0].brand}">
             ${createItems(config.items)}
         </div>    
         `
