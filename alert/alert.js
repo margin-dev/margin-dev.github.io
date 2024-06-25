@@ -85,8 +85,8 @@ export function initializeAlertSlider(config) {
         const closeButtons = document.querySelectorAll(".alert-wrapper .alert-close");
         closeButtons.forEach((button) => {
             button.addEventListener("click", closeFunction, !1);
-            function closeFunction(ev) {
-                this.nextSibling.classList.add("active");
+            function closeFunction() {
+                this.parentElement.nextSibling.classList.add("active");
                 this.parentElement.remove()
                 if (document.querySelectorAll(".alert-item").length == 0) {
                     document.querySelector(".alert-wrapper").remove();
