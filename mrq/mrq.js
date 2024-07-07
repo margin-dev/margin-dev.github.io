@@ -72,7 +72,7 @@ export function initializeMrqSlider(config) {
     }
     config.items.map((item, index) => {
       setTimeout(() => {
-        mrq(`.mrqs > .mrq.${item.brand}`, config.speed);
+        mrq(`.mrqs > .mrq.${item.brand} .mrq_content`, .3);
       }, 100);
     });
     setInterval(function () {
