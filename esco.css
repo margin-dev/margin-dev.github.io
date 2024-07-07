@@ -26,8 +26,8 @@ main {
   grid-template-columns: var(--grid-columns);
   grid-auto-rows: var(--grid-rows);
   gap: 4px;
-  max-height: calc(88px * 6);
-  overflow: hidden;
+  /* max-height: calc(88px * 6); */
+  /* overflow: hidden; */
 }
 .block > img {
   width: 100%;
@@ -58,7 +58,7 @@ header {
 nav {
   border: 1px solid red;
   position: sticky;
-  top: 40px;
+  top: 50px;
   background: lightcoral;
 }
 
