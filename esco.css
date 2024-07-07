@@ -10,6 +10,7 @@ body {
   display: flex;
   justify-content: center;
   height: 100vh;
+  height: 100dvh;
   width: 100%;
 }
 main {
@@ -17,7 +18,7 @@ main {
   grid-template-rows: 40px 80px 1fr 80px;
   max-width: 768px;
   margin: 0;
-  gap: 10px;
+  gap: 4px;
 }
 
 .blocks {
@@ -58,7 +59,7 @@ header {
 nav {
   border: 1px solid red;
   position: sticky;
-  top: 50px;
+  top: 44px;
   background: lightcoral;
 }
 
