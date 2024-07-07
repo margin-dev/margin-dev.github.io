@@ -26,6 +26,7 @@
   height: var(--height);
   text-decoration: none !important;
   z-index: 99;
+  transition: 2s ease opacity;
 }
 .mrq * {
   margin: 0;
