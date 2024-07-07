@@ -2,6 +2,7 @@ import "https://code.jquery.com/jquery-3.7.1.min.js";
 
 export const config = {
   interval: 3000,
+  speed: 3000,
   position: "top",
   background: "#181D27",
   loop: true,
@@ -39,6 +40,21 @@ function createItems(config) {
     })
     .join("");
 }
+function mrq(sc, s) {
+  const psc = document.querySelector(sc);
+  const cl = psc.innerHTML;
+  const fe = psc.children[0];
+  let i = 0;
+  psc.insertAdjacentHTML("beforeend", cl);
+  psc.insertAdjacentHTML("beforeend", cl);
+  setInterval(function () {
+    fe.style.marginLeft = `-${i}px`;
+    if (i > fe.clientWidth) {
+      i = 0;
+    }
+    i = i + s;
+  }, 0);
+}
 
 export function initializeMrqSlider(config) {
   console.log("initializing mrqslider");
@@ -54,6 +70,11 @@ export function initializeMrqSlider(config) {
       var ind = $(".mrqs .mrq.active").index();
       return (ind + (dir || 1)) % slidesCount;
     }
+    config.items.map((item, index) => {
+      setTimeout(() => {
+        mrq(`.mrqs > .mrq.${item.brand}`, config.speed);
+      }, 100);
+    });
     setInterval(function () {
       slide(getTarget());
     }, config.interval);
@@ -79,4 +100,3 @@ export function createMrq(config) {
   console.log("mrq created");
   initializeMrqSlider(config);
 }
-("");
