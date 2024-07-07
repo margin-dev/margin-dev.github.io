@@ -1,0 +1,82 @@
+import "https://code.jquery.com/jquery-3.7.1.min.js";
+
+export const config = {
+  interval: 3000,
+  position: "top",
+  background: "#181D27",
+  loop: true,
+  items: [
+    {
+      brand: "kralbet",
+      link: "",
+      openInNewTab: true,
+      leftImage: "",
+      rightImage: "",
+      offers: ["400 TL Deneme Bonusu", "İsteyene Gizli Üyelik Sistemi!"],
+    },
+  ],
+};
+
+function createOffers(offers) {
+  return `<div class="mrq_items">${offers
+    .map((offer, index) => {
+      return `<h1>${offer}</h1>`;
+    })
+    .join("")}</div>`;
+}
+
+function createItems(config) {
+  return config.items
+    .map((item, index) => {
+      return `
+        <a href="${item.link}" class=" mrq full ${config.position} ${item.brand} ${index == 0 ? "active" : ""}" target="${item.openInNewTab ? "_blank" : "_self"}" ${config.background ? `style="background:${config.background}"` : ""}>
+            ${item.leftImage ? `<img class="mrq_brand left" src="${item.leftImage}"/>` : ""}
+            <div class="mrq_content">
+                ${createOffers(item.offers)}
+            </div>
+            ${item.rightImage ? `<img class="mrq_brand right" src="${item.rightImage}"/>` : ""}
+        </a>`;
+    })
+    .join("");
+}
+
+export function initializeMrqSlider(config) {
+  console.log("initializing mrqslider");
+  try {
+    let slides = $(".mrqs .mrq");
+    let slidesCount = config.items.length;
+    function slide(target) {
+      slides.removeClass("active").eq(target).addClass("active");
+      let brand = $(".mrqs").find(".mrq.active").data("brand");
+      $(".mrqs").attr("data-brand", brand).find(".active").attr("data-brand", brand);
+    }
+    function getTarget(dir) {
+      var ind = $(".mrqs .mrq.active").index();
+      return (ind + (dir || 1)) % slidesCount;
+    }
+    setInterval(function () {
+      slide(getTarget());
+    }, config.interval);
+  } catch (e) {
+    console.log(e);
+  }
+  console.log("mrqslider initialized");
+}
+export function createMrq(config) {
+  console.log("creating mrq");
+  try {
+    let mrqs = `
+        <div class="mrqs" data-brand="${config.items[0].brand}">
+            ${createItems(config)}
+        </div>    
+        `;
+    let parent = document.querySelector("script[id='mrqs']").parentNode;
+    parent.insertAdjacentHTML("beforeend", mrqs);
+    parent.classList.add("mrq-parent");
+  } catch (error) {
+    console.log(error);
+  }
+  console.log("mrq created");
+  initializeMrqSlider(config);
+}
+("");
