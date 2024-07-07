@@ -23,7 +23,7 @@
     left: 50%;
     width: 200px;
     height: 600px;
-    z-index: 2;
+    z-index: 100;
     border: 2px solid var(--primary);
     background-image: url(--bg-image);
     background-color: var(--bg-color);
