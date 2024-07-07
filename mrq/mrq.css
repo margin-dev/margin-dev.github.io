@@ -55,6 +55,10 @@
   color: var(--color);
   padding: 0 1rem;
 }
+.mrq_items > *:nth-child(even) {
+  color: var(--primary);
+  font-weight: 600;
+}
 .mrq_brand {
   position: absolute;
   height: 100%;
