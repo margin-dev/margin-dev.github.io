@@ -2,7 +2,7 @@ import "https://code.jquery.com/jquery-3.7.1.min.js";
 
 export const config = {
   interval: 3000,
-  speed: 3000,
+  speed: 0.3,
   position: "top",
   background: "#181D27",
   loop: true,
@@ -72,7 +72,7 @@ export function initializeMrqSlider(config) {
     }
     config.items.map((item, index) => {
       setTimeout(() => {
-        mrq(`.mrqs > .mrq.${item.brand} .mrq_content`, .3);
+        mrq(`.mrqs > .mrq.${item.brand} .mrq_content`, config.speed);
       }, 100);
     });
     setInterval(function () {
