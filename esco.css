@@ -25,18 +25,27 @@ main {
   width: 100%;
   display: grid;
   grid-template-columns: var(--grid-columns);
-  grid-auto-rows: var(--grid-rows);
   gap: 4px;
   /* max-height: calc(88px * 6); */
   /* overflow: hidden; */
+  justify-content: space-between;
+  /* max-height: calc(100dvh - 40px - 80px - 80px); */
+  /* height: 100%; */
 }
 .block > img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 
 .block {
   display: flex;
+  max-height: calc(calc(calc(100dvh - 40px - 80px - 80px) / 6) - 4px);
+  height: 100%;
+  max-width: calc(100vw / 3);
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
