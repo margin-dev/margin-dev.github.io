@@ -29,9 +29,11 @@ main {
   gap: 4px;
   /* max-height: calc(88px * 6); */
   /* overflow: hidden; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* max-height: calc(100dvh - 40px - 80px - 80px); */
   /* height: 100%; */
+  /* align-items: center; */
+  grid-auto-flow: dense;
 }
 .block > img {
   width: auto;
@@ -42,7 +44,7 @@ main {
   display: flex;
   max-height: calc(calc(calc(100dvh - 40px - 80px - 80px) / 6) - 4px);
   height: 100%;
-  max-width: calc(100vw / 3);
+  /* max-width: calc(100vw / 3); */
   align-items: center;
   justify-content: center;
   border: 1px solid gray;
