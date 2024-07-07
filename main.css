@@ -21,7 +21,7 @@
     background-image: linear-gradient(transparent, var(--primary30), transparent);
     transform: rotate(-45deg);
     animation: shine 2s linear infinite;
-    z-index: 100;
+    z-index: 10;
 }
 @keyframes shine {
     0% {
