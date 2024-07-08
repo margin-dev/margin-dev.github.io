@@ -3,9 +3,11 @@
   margin: 0;
   padding: 0;
 }
+
 :root {
-  --grid-columns: repeat(3, 1fr);
+  --grid-columns: repeat(4, 1fr);
 }
+
 body {
   display: flex;
   justify-content: center;
@@ -14,10 +16,12 @@ body {
   width: 100%;
   padding: 0 4px;
 }
+
 main {
   display: grid;
   grid-template-rows: 40px 80px 1fr 80px;
-  max-width: 768px;
+  max-width: 864px;
+  width: 100%;
   margin: 0;
   gap: 4px;
 }
@@ -35,9 +39,10 @@ main {
   /* align-items: center; */
   grid-auto-flow: dense;
 }
+
 .block > img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .block {
@@ -45,20 +50,10 @@ main {
   max-height: calc(calc(calc(100dvh - 40px - 80px - 80px) / 6) - 4px);
   height: 100%;
   /* max-width: calc(100vw / 3); */
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   border: 1px solid gray;
   overflow: hidden;
-}
-
-@media (max-width: 768px) {
-  :root {
-    --grid-rows: auto;
-  }
-}
-@media (max-width: 425px) {
-}
-@media (max-width: 320px) {
 }
 
 header {
@@ -91,7 +86,8 @@ aside {
   top: 0;
   bottom: 0;
   background: lightblue;
-  width: 200px;
+  width: 320px;
+  z-index: 1;
 }
 
 aside.right {
@@ -102,8 +98,22 @@ aside.left {
   left: 0;
 }
 
+@media (max-width: 1540px) {
+  aside {
+    width: 200px;
+  }
+}
+
 @media (max-width: 980px) {
   aside {
     display: none;
+  }
+
+  main {
+    max-width: 620px;
+  }
+
+  :root {
+    --grid-columns: repeat(3, 1fr);
   }
 }
