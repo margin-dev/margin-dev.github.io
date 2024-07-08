@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>ESCO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="esco.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="template.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="popup.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/colors.css" />
     <script src="main.js"></script>
   </head>
   <body>
@@ -93,8 +95,104 @@
           <img src="/escobar/img/Superbet.png" />
         </a>
       </section>
-      <footer>Reklam alanı</footer>
+      <footer></footer>
     </main>
     <aside class="right">Reklam alanı</aside>
+    <script type="module">
+      import { createPopup } from "./popup.js";
+      const config = {
+        interval: 3000,
+        position: "bottom",
+        action: "Giriş Yap",
+        loop: true,
+        items: [
+          {
+            brand: "fixbet",
+            link: "hhttps://cutt.ly/7wBZif9S",
+            openInNewTab: true,
+            vip: false,
+            offers: ["555 TL Deneme Bonusu", "10.000 TL İlk Yatırım Bonusu"],
+          },
+          {
+            brand: "tipobet",
+            link: "https://cutt.ly/7wtwHxAi",
+            openInNewTab: true,
+            vip: false,
+            offers: ["50 TL veya 250 Freespin", "Her Yatırıma 100 Freespin"],
+          },
+          {
+            brand: "supertotobet",
+            link: "https://cutt.ly/P3iOMaU",
+            openInNewTab: true,
+            vip: false,
+            offers: ["250 TL veya 250 Freespin", "Her Gün %100 Slot Bonusu"],
+          },
+          {
+            brand: "matadorbet",
+            link: "https://cutt.ly/0wbAoPGQ",
+            openInNewTab: true,
+            vip: false,
+            offers: ["250 TL veya 250 Freespin", "6000 TL Yatırım Bonusu"],
+          },
+          {
+            brand: "grandpashabet",
+            link: "https://tinyurl.com/escobargrandpasha",
+            openInNewTab: true,
+            vip: false,
+            offers: ["300 TL Deneme Bonusu", "3000 TL Hoşgeldin Bonusu"],
+          },
+          {
+            brand: "onwin",
+            link: "https://cutt.ly/n9laiLB",
+            openInNewTab: true,
+            vip: false,
+            offers: ["250 TL veya 250 Freespin", "Sınırsız Çekim İmkanı"],
+          },
+          {
+            brand: "sahabet",
+            link: "https://cutt.ly/69vpPm9",
+            openInNewTab: true,
+            vip: false,
+            offers: ["250 TL veya 250 Freespin", "10.000.000 TL Günlük Çekim"],
+          },
+          {
+            brand: "starzbet",
+            link: "https://cutt.ly/swNZBYWG",
+            openInNewTab: true,
+            vip: false,
+            offers: ["300 TL Yatırımsız Deneme Bonusu", "Çevrimsiz %30 Yatırım Bonusu"],
+          },
+          {
+            brand: "betpublic",
+            link: "https://cutt.ly/lw9gSFPp",
+            openInNewTab: true,
+            vip: false,
+            offers: ["300 TL Deneme Bonusu", "%100 3000 TL Casino Bonusu"],
+          },
+          {
+            brand: "bycasino",
+            link: "https://cutt.ly/Qw9esdmZ",
+            openInNewTab: true,
+            vip: false,
+            offers: ["300 TL Deneme Bonusu", "Sınırsız Çekim İmkanı"],
+          },
+          {
+            brand: "betmatik",
+            link: "https://cutt.ly/RwYVFfT8",
+            openInNewTab: true,
+            vip: false,
+            offers: ["500 TL veya 500 Freespin", "%100 5000 TL & 5000 Freespin"],
+          },
+          {
+            brand: "kralbet",
+            link: "https://cutt.ly/fee5g348",
+            openInNewTab: true,
+            vip: false,
+            offers: ["400 Deneme Bonusu", "5000 TL İlk Yatırım Bonusu"],
+          },
+        ],
+      };
+      createPopup(config);
+    </script>
   </body>
 </html>
