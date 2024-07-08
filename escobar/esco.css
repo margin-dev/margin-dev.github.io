@@ -52,12 +52,11 @@ main {
   /* max-width: calc(100vw / 3); */
   /* align-items: center; */
   /* justify-content: center; */
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   overflow: hidden;
 }
 
 header {
-  border: 1px solid green;
   position: sticky;
   top: 0;
   background: lightgreen;
@@ -71,12 +70,11 @@ nav {
 }
 
 section.blocks {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 footer {
   position: sticky;
-  border: 1px solid orange;
   bottom: 0;
   background: lightsalmon;
 }
