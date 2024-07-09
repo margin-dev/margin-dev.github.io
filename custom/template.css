@@ -114,7 +114,7 @@ header > .contact > .contact-links > a > img {
 /*nav*/
 nav {
   position: sticky;
-  top: 44px;
+  top: 40px;
   background: #171c26;
   display: flex;
   align-items: center;
