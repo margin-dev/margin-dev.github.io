@@ -61,12 +61,12 @@ header {
   background: #171d26e3;
   padding: 0 8px;
   backdrop-filter: blur(5px);
+  gap: 10px;
 }
 header > .page-brand {
   font-size: 16px;
   font-weight: bolder;
   max-width: 120px;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -118,6 +118,9 @@ nav {
   align-items: center;
   justify-content: center;
   box-shadow: inset 0 0 20px 10px #273147;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 /*nav*/
 footer {
@@ -160,6 +163,7 @@ aside > .close-aside {
   align-items: center;
   justify-content: center;
   border-radius: 4px;
+  display: none;
 }
 aside > .close-aside:before,
 aside > .close-aside:after {
@@ -178,7 +182,16 @@ aside.left > .close-aside {
   right: 8px;
   left: unset;
 }
+aside span {
+  transform: rotate(90deg);
+  font-size: 40px;
+  white-space: nowrap;
+  font-weight: 500;
+}
 
+aside.right span {
+  transform: rotate(-90deg);
+}
 /*aside*/
 /*media*/
 @media (max-width: 1540px) {
