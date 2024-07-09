@@ -34,7 +34,7 @@ function createItems(config) {
       item.openInNewTab = item.openInNewTab ? item.openInNewTab : true;
       return `
         <a class="block ${item.shine ? "shine" : ""} ${item.brand}" href="${item.link}" target="${item.openInNewTab ? "_blank" : "_self"}">
-            ${!item.image ? `<img src="/escobar/img/${toTitleCase(item.brand)}.png">` : item.image}
+            ${!item.image ? `<img src="/custom/img/${toTitleCase(item.brand)}.png">` : item.image}
         </a>`;
     })
     .join("");
