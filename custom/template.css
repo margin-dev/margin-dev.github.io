@@ -48,7 +48,7 @@ section .block > img {
 }
 section .block {
   display: flex;
-  max-height: calc(calc(calc(100dvh - 40px - 80px - 80px) / 6) - 4px);
+  /* max-height: calc(calc(calc(100dvh - 40px - 80px - 80px) / 6) - 4px); */
   height: 100%;
   overflow: hidden;
 }
