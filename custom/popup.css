@@ -19,6 +19,7 @@
 }
 .popup:hover {
   text-decoration: none;
+  color: unset;
 }
 .popup .close-popup {
   position: absolute;
