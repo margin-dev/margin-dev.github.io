@@ -83,6 +83,7 @@ header > .contact {
 header > .contact > span {
   margin-right: 8px;
   padding-right: 8px;
+  display: none;
   border-right: 1px solid white;
 }
 header > .contact > .contact-links {
@@ -95,14 +96,16 @@ header > .contact > .contact-links > a {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 100%;
-  height: 100%;
+  height: 24px;
+  padding-left: 14px;
   color: white;
+  background: #303a4e;
+  border-radius: 31px;
+  font-size: 14px;
 }
 header > .contact > .contact-links > a > img {
   width: 100%;
-  height: 100%;
-  max-width: 24px;
+  max-width: 20px;
 }
 /*header*/
 /*nav*/
