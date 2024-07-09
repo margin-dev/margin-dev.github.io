@@ -7,100 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="template.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="popup.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/colors.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
     <script src="main.js"></script>
   </head>
   <body>
-    <aside class="left">Reklam alanı</aside>
+    <aside class="left">
+      Reklam alanı
+      <button class="close-aside"></button>
+    </aside>
     <main>
-      <header>Reklam alanı</header>
+      <header>
+        <span class="page-brand">ESCOBAR</span>
+        <div class="contact">
+          <span>İletişim</span>
+          <div class="contact-links">
+            <a href="#"><img src="/escobar/img/icons/telegram.png" /></a>
+            <a href="#"><img src="/escobar/img/icons/skype.png" /></a>
+          </div>
+        </div>
+      </header>
       <nav>Reklam alanı</nav>
-      <section class="blocks">
-        <a class="block" href="#">
-          <img src="/escobar/img/Matadorbet.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Supertotobet.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Tipobet.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Onwin.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Sahabet.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Betturkey.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Betmatik.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Xslot.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Fixbet.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Grandpasha.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Starzbet.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Betpublic.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Bycasino.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Zbahis.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Kralbet.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Xlwin.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Marsbahis.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Casibom.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Bethand.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Restbet.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Betpas.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/İkimisli.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Markaj.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Fenomenbet.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Spinco.png" />
-        </a>
-        <a class="block" href="#">
-          <img src="/escobar/img/Superbet.png" />
-        </a>
-      </section>
+      <section></section>
       <footer></footer>
     </main>
-    <aside class="right">Reklam alanı</aside>
+    <aside class="right">
+      Reklam alanı
+      <button class="close-aside"></button>
+    </aside>
     <script type="module">
       import { createPopup } from "./popup.js";
-      const config = {
+      import { createBlocks } from "./blocks.js";
+      const popupConfig = {
         interval: 3000,
         position: "bottom",
         action: "Giriş Yap",
@@ -192,7 +129,116 @@
           },
         ],
       };
-      createPopup(config);
+      const blocksConfig = {
+        items: [
+          {
+            brand: "matadorbet",
+            link: "",
+          },
+          {
+            brand: "supertotobet",
+            link: "",
+          },
+          {
+            brand: "tipobet",
+            link: "",
+          },
+          {
+            brand: "onwin",
+            link: "",
+          },
+          {
+            brand: "sahabet",
+            link: "",
+          },
+          {
+            brand: "betturkey",
+            link: "",
+          },
+          {
+            brand: "betmatik",
+            link: "",
+          },
+          {
+            brand: "xslot",
+            link: "",
+          },
+          {
+            brand: "fixbet",
+            link: "",
+          },
+          {
+            brand: "grandpasha",
+            link: "",
+          },
+          {
+            brand: "starzbet",
+            link: "",
+          },
+          {
+            brand: "betpublic",
+            link: "",
+          },
+          {
+            brand: "bycasino",
+            link: "",
+          },
+          {
+            brand: "zbahis",
+            link: "",
+          },
+          {
+            brand: "kralbet",
+            link: "",
+          },
+          {
+            brand: "xlwin",
+            link: "",
+          },
+          {
+            brand: "marsbahis",
+            link: "",
+          },
+          {
+            brand: "casibom",
+            link: "",
+          },
+          {
+            brand: "bethand",
+            link: "",
+          },
+          {
+            brand: "restbet",
+            link: "",
+          },
+          {
+            brand: "betpas",
+            link: "",
+          },
+          {
+            brand: "ikimisli",
+            link: "",
+          },
+          {
+            brand: "markaj",
+            link: "",
+          },
+          {
+            brand: "fenomenbet",
+            link: "",
+          },
+          {
+            brand: "spinco",
+            link: "",
+          },
+          {
+            brand: "superbet",
+            link: "",
+          },
+        ],
+      };
+      createPopup(popupConfig);
+      createBlocks(blocksConfig);
     </script>
   </body>
 </html>
