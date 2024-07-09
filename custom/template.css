@@ -152,6 +152,9 @@ aside:not(:has(> img)) {
   box-shadow: inset 0 0 100px 10px #273147;
   background: #171c26;
 }
+aside:has(> img) > span {
+  display: none;
+}
 aside.right {
   right: 0;
   justify-content: flex-end;
