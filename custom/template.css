@@ -43,6 +43,7 @@ section {
   gap: 4px;
   grid-auto-flow: dense;
   place-items: center;
+  height: 100%;
 }
 section .block > img {
   width: 100%;
