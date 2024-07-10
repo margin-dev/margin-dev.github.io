@@ -148,11 +148,16 @@ aside {
   overflow: hidden;
   background: transparent;
 }
-aside:not(:has(> img)) {
+aside a {
+  display: flex;
+  height: 100%;
+}
+
+aside:not(:has(> a)) {
   box-shadow: inset 0 0 100px 10px #273147;
   background: #171c26;
 }
-aside:has(> img) > span {
+aside:has(> a) > span {
   display: none;
 }
 aside.right {
@@ -163,6 +168,7 @@ aside.left {
   left: 0;
   justify-content: flex-start;
 }
+
 aside > .close-aside {
   position: absolute;
   top: 8px;
@@ -196,7 +202,7 @@ aside.left > .close-aside {
   right: 8px;
   left: unset;
 }
-aside > img {
+aside > a > img {
   width: auto;
   height: 100%;
 }
