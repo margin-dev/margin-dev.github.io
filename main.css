@@ -15,6 +15,7 @@ a:hover {
 /*Shine*/
 .shine {
   overflow: hidden;
+  position: relative;
 }
 .shine:before {
   content: "";
