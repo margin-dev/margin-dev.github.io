@@ -144,6 +144,7 @@ nav:not(:has(> a)) {
 nav:has(> a) > span {
   display: none;
 }
+
 /*nav*/
 footer {
   position: sticky;
@@ -254,6 +255,16 @@ aside.right span {
 
   :root {
     --col: 3;
+  }
+}
+@media (max-width: 500px) {
+  nav a {
+    height: unset;
+  }
+
+  nav a img {
+    height: auto;
+    width: 100%;
   }
 }
 /*media*/
