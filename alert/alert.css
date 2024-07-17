@@ -1,4 +1,12 @@
 @import "https://margin-dev.github.io/main.css";
+.alerts-parent {
+    margin: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 .alert-wrapper {
 	--bg-blur: 10px;
 	--bonus-gap: 0px;
