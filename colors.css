@@ -60,6 +60,12 @@
     --primary50: #1095B580;
     --secondary50: #FF9E2C80;
 }
+[data-brand='bankobet'], .bankobet {
+    --primary: #FF1376;
+    --primary30: #FF13764D;
+    --primary50: #FF137680;
+}
+
 [data-brand='baymavi'], .baymavi {
     --primary: #2E71DC;
     --secondary: #021D49;
