@@ -79,6 +79,11 @@
     --primary30: #00FF864D;
     --primary50: #00FF8680;
 }
+[data-brand='bayspin'], .bayspin {
+    --primary: #36EF32;
+    --primary30: #36EF324D;
+    --primary50: #36EF3280;
+}
 [data-brand='betbox'], .betbox {
     --primary: #FFA852;
     --secondary: #CC2D13;
