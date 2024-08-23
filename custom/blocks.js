@@ -40,12 +40,10 @@ function createItems(config) {
     .join("");
 }
 export function createBlocks(config) {
-  console.log("creating blocks");
   try {
     let parent = document.querySelector("section");
     parent.insertAdjacentHTML("beforeend", createItems(config));
   } catch (error) {
     console.log(error);
   }
-  console.log("blocks created");
 }

@@ -57,7 +57,6 @@ function createItems(config) {
 }
 
 export function initializePopupSlider(config) {
-  console.log("initializing popupslider");
   try {
     let slides = $(".popups .popup");
     let slidesCount = config.items.length;
@@ -85,10 +84,8 @@ export function initializePopupSlider(config) {
   } catch (e) {
     console.log(e);
   }
-  console.log("popupslider initialized");
 }
 export function createPopup(config) {
-  console.log("creating popup");
   try {
     let parent = document.querySelector("footer");
     parent.insertAdjacentHTML("beforeend", createItems(config));
@@ -97,6 +94,5 @@ export function createPopup(config) {
   } catch (error) {
     console.log(error);
   }
-  console.log("popup created");
   initializePopupSlider(config);
 }

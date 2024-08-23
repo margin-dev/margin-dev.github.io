@@ -69,7 +69,6 @@ function createItems(items) {
 }
 
 export function initializeAlertSlider(config) {
-    console.log("initializing alertslider")
     try {
         let slides = $('.alert-wrapper .alert-item');
         let slidesCount = config.items.length;
@@ -100,10 +99,8 @@ export function initializeAlertSlider(config) {
     } catch (e) {
         console.log(e)
     }
-    console.log("alertslider initialized")
 }
 export function createAlerts(config) {
-    console.log("creating alerts")
     try {
         let alerts = `
         <div class="alert-wrapper" data-brand="${config.items[0].brand}">
@@ -116,6 +113,5 @@ export function createAlerts(config) {
     } catch (error) {
         console.log(error)
     }
-    console.log("alerts created")
     initializeAlertSlider(config)
 }

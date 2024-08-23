@@ -57,7 +57,6 @@ function mrq(sc, s) {
 }
 
 export function initializeMrqSlider(config) {
-  console.log("initializing mrqslider");
   try {
     let slides = $(".mrqs .mrq");
     let slidesCount = config.items.length;
@@ -81,10 +80,8 @@ export function initializeMrqSlider(config) {
   } catch (e) {
     console.log(e);
   }
-  console.log("mrqslider initialized");
 }
 export function createMrq(config) {
-  console.log("creating mrq");
   try {
     let mrqs = `
         <div class="mrqs" data-brand="${config.items[0].brand}">
@@ -97,6 +94,5 @@ export function createMrq(config) {
   } catch (error) {
     console.log(error);
   }
-  console.log("mrq created");
   initializeMrqSlider(config);
 }

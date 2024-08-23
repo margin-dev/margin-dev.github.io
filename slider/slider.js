@@ -75,7 +75,6 @@ function createSwitchers(items) {
 }
 
 export function initializeSlider(config) {
-    console.log("initializing slider")
     try {
         let slides = $('.widget .slideset .slide');
         let switchers = $('.widget ul.switcher li');
@@ -116,11 +115,8 @@ export function initializeSlider(config) {
     } catch (e) {
         console.log(e)
     }
-    console.log("slider initialized")
-
 }
 export function createSlider(config) {
-    console.log("creating slider")
     try {
         let widget = `
         <div class="widget" data-brand="${config.items[0].brand}" data-controls="false">
@@ -137,6 +133,5 @@ export function createSlider(config) {
     } catch (error) {
         console.log(error)
     }
-    console.log("slider created")
     initializeSlider(config)
 }
