@@ -496,6 +496,11 @@
     --primary30: #1BCFDB4D;
     --primary50: #1BCFDB80;
 }
+[data-brand='zlot'], .zlot {
+    --primary: #949494;
+    --primary30: #9494944D;
+    --primary50: #94949480;
+}
 [data-brand='vip'], .vip {
     --primary: #F8B218;
     --primary30: #F8B2184D;
