@@ -92,6 +92,11 @@
     --primary50: #FFA85280;
     --secondary50: #CC2D1380;
 }
+[data-brand='betgar'], .betgar {
+    --primary: #036CDC;
+    --primary30: #036CDC4D;
+    --primary50: #036CDC80;
+}
 [data-brand='bethand'], .bethand {
     --primary: #EB1B4D;
     --primary30: #EB1B4D4D;
