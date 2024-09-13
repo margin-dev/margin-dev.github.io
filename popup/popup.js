@@ -7,6 +7,7 @@ export const config = {
     position: "bottom",
     action: "Giriş Yap",
     background: "#181D27",
+    parent:"script[id='popups']",
     loop: true,
     control: "full",
     items: [
@@ -91,13 +92,14 @@ export function initializePopupSlider(config) {
     }
 }
 export function createPopup(config) {
+    config.parent = config.parent ? config.parent: "script[id='popups']";
     try {
         let popups = `
         <div class="popups" data-brand="${config.items[0].brand}">
             ${createItems(config)}
         </div>    
         `
-        let parent = document.querySelector("script[id='popups']").parentNode
+        let parent = document.querySelector(config.parent).parentNode
         parent.insertAdjacentHTML("beforeend", popups)
         parent.classList.add("popup-parent");
     } catch (error) {
