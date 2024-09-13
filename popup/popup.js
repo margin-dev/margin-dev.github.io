@@ -99,9 +99,9 @@ export function createPopup(config) {
             ${createItems(config)}
         </div>    
         `
-        let parent = document.querySelector(config.parent).parentNode
+        let parent = config.parent?document.querySelector(config.parent): document.querySelector("script[id='popups']").parentNode;
         parent.insertAdjacentHTML("beforeend", popups)
-        parent.classList.add("popup-parent");
+        !config.parent && parent.classList.add("popup-parent");
     } catch (error) {
         console.log(error)
     }
