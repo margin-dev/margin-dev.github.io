@@ -51,7 +51,6 @@ h6 {
   height: 100vh;
   height: 100dvh;
   inset: 0;
-  background: gray;
   display: grid;
   place-items: center;
   --gap: 1rem;
@@ -157,6 +156,10 @@ h6 {
   border: 2px solid var(--primary);
   background-color: var(--primary30);
 }
+#bzh .item .offers {
+  height: max-content;
+  text-align: left;
+}
 #bzh .item span {
   padding: 6px 12px;
   white-space: nowrap;
@@ -173,6 +176,7 @@ h6 {
 
 #bzh .item p {
   line-height: normal;
+  margin: 0;
   font-size: 0.7rem;
 }
 #bzh .item p:nth-child(even) {
