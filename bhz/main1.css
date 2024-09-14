@@ -55,6 +55,7 @@ h6 {
   display: grid;
   place-items: center;
   --gap: 1rem;
+  --primary: #FFF;
 }
 #bzh section {
   max-width: 1366px;
