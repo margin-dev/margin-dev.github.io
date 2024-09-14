@@ -92,7 +92,6 @@ export function initializePopupSlider(config) {
     }
 }
 export function createPopup(config) {
-    config.parent = config.parent ? config.parent: "script[id='popups']";
     try {
         let popups = `
         <div class="popups" data-brand="${config.items[0].brand}">
