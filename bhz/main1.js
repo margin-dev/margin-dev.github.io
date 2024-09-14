@@ -101,7 +101,7 @@ function createMain(config) {
   let title = `
     <h1>${config.title}</h1>
   `;
-  let main = document.querySelector("main");
+  let main = document.querySelector("#bzh main");
   main.insertAdjacentHTML("beforeend", title);
 
   let items = "";
@@ -120,12 +120,12 @@ function createMain(config) {
 
 function createAside(config) {
   let title = `<h1>${config.title}</h1>`;
-  let aside = document.querySelector("aside");
+  let aside = document.querySelector("#bzh aside");
   aside.insertAdjacentHTML("afterBegin", title);
-  let header = document.querySelector("aside > header");
+  let header = document.querySelector("#bzh aside > header");
   header.insertAdjacentHTML("beforeend", createHeader(config.header));
   initializeSlider(config.header);
-  let banners = document.querySelector("aside > .banners");
+  let banners = document.querySelector("#bzh aside > .banners");
   banners.insertAdjacentHTML("beforeend", createBanners(config.banners));
 }
 
@@ -135,20 +135,20 @@ export function initializeSlider(config) {
     let slidesCount = config.items.length;
     function slide(target) {
       slides.removeClass("active").eq(target).addClass("active");
-      let brand = $("header").find(".slide.active").data("brand");
-      $("header").attr("data-brand", brand).find(".active").attr("data-brand", brand);
+      let brand = $("#bzh header").find(".slide.active").data("brand");
+      $("#bzh header").attr("data-brand", brand).find(".active").attr("data-brand", brand);
     }
 
-    $("header .btn-prev").click(function () {
+    $("#bzh header .btn-prev").click(function () {
       slide(getTarget(-1));
       resetTimer();
     });
-    $("header .btn-next").click(function () {
+    $("#bzh header .btn-next").click(function () {
       slide(getTarget());
       resetTimer();
     });
     function getTarget(dir) {
-      var ind = $("header .slideset .slide.active").index();
+      var ind = $("#bzh header .slideset .slide.active").index();
       return (ind + (dir || 1)) % slidesCount;
     }
     function resetTimer() {
