@@ -59,7 +59,7 @@ function createSlides(items) {
         <a class="slide ${index == 0 ? 'active' : ''}" target="${item.openInNewTab ? '_blank' : '_self'}" data-brand="${item.brand}" href="${item.link}">
             <div class="actionwrapper">
                 <p>${!item.image ? `<img src="https://margin-dev.github.io/brands/${toTitleCase(item.brand ? item.brand : item.logo)}.png">` : item.image}</p>
-                <span class="action">${item.action ? item.action : "Katıl"}</span>
+                <span class="action ${item.actionShine ? 'shine' : ''}">${item.action ? item.action : "Katıl"}</span>
             </div>
             ${createOffers(item.offers)}
         </a>`
