@@ -1,5 +1,9 @@
-@import url("../main.css");
+@import url("https://margin-dev.github.io/main.css");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+body * {
+  scrollbar-color: #000000c4 #0000004d !important;
+  scrollbar-width: thin !important;
+}
 body {
   overflow: hidden;
 }

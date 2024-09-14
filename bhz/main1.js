@@ -108,7 +108,7 @@ function createMain(config) {
   config.items.forEach((item) => {
     item = { ...defaultItem, ...item };
     items += `
-    <a href="${item.link}" class="item ${item.vip ? "vip" : ""} ${item.shine ? "shine" : ""} ${item.brand}" target="_blank">
+    <a href="${item.link}" class="item ${item.vip ? "vip" : ""} ${item.shine ? "shine" : ""} ${item.brand.toLowerCase()}" target="_blank">
         <img src="${item.image ? item.image : `https://margin-dev.github.io/brands/${toTitleCase(item.brand)}.png`}" alt="${item.brand}">
         <div class="offers">${createOffers(item.offers)}</div>
         <span class="action ${item.action.shine ? "shine" : ""}">${item.action.text}</span>
