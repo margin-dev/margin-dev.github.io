@@ -1,9 +1,5 @@
 @import url("https://margin-dev.github.io/main.css");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
-body * {
-  scrollbar-color: #000000c4 #0000004d !important;
-  scrollbar-width: thin !important;
-}
 body {
   overflow: hidden;
 }
@@ -93,6 +89,7 @@ h6 {
   align-items: center;
   font-size: 1rem;
   height: 40px;
+  margin: 0;
 }
 #bzh main a {
   background: #000;
@@ -112,7 +109,9 @@ h6 {
 #bzh aside h1 {
   color: #fff;
   display: flex;
+  font-size: 1rem;
   align-items: center;
+  margin: 0;
 }
 #bzh aside header {
   background-color: #000;
@@ -128,8 +127,7 @@ h6 {
   grid-template-columns: 1fr 1fr;
   gap: var(--gap);
 }
-#bzh aside .banners div {
-}
+#bzh aside .banners div {}
 @media screen and (max-width: 1100px) {
   #bzh section {
     grid-template-columns: 1fr;
