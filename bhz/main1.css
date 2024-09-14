@@ -56,6 +56,10 @@ h6 {
   --gap: 1rem;
   --primary: #FFF;
 }
+#bzh * {
+  scrollbar-color: #00000080 #0000004d !important;
+  scrollbar-width: thin !important;
+}
 #bzh section {
   max-width: 1366px;
   max-height: 90dvh;
