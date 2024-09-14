@@ -16,6 +16,7 @@ export const config = {
             link: "",
             openInNewTab: true,
             vip: true,
+            actionShine: true,
             offers: [
                 "400 TL Deneme Bonusu",
                 "İsteyene Gizli Üyelik Sistemi!",
@@ -26,6 +27,7 @@ export const config = {
             link: "",
             openInNewTab: true,
             vip: true,
+            actionShine: true,
             offers: [
                 "500 TL Deneme Bonusu",
                 "%30 Günlük Kayıp Bonusu",
@@ -59,7 +61,7 @@ function createItems(config) {
             ${config.close ?? `<button class="close-popup">X</button> `}
             ${!item.image ? `<img src="https://margin-dev.github.io/brands/${toTitleCase(item.logo ? item.logo : item.brand)}.png">` : item.image}
             ${createOffers(item.offers)}
-            <span>${config.action}</span>
+            <span class="${item.actionShine ? 'shine' : ''}">${config.action}</span>
         </a>`
     }).join("")
 }
