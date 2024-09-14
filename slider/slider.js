@@ -6,13 +6,14 @@ export const config = {
     switchers: true,
     loop: true,
     position: "top",
-    control: "full",
+    control: "full",    
     items: [
         {
             brand: "kralbet",
             link: "",
             openInNewTab: true,
             action: "Kayıt Ol",
+            actionShine: true,
             vip: true,
             offers: [
                 "400 TL Deneme Bonusu",
@@ -24,6 +25,7 @@ export const config = {
             link: "",
             openInNewTab: true,
             action: "Kayıt Ol",
+            actionShine: true,
             vip: true,
             offers: [
                 "500 TL Deneme Bonusu",
@@ -35,6 +37,7 @@ export const config = {
             link: "",
             openInNewTab: true,
             action: "Kayıt Ol",
+            actionShine: true,
             vip: true,
             offers: [
                 "333 TL Deneme Bonusu",
