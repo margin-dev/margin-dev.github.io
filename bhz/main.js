@@ -1,35 +1,209 @@
-const getSiblings = function (elem) {
-	var siblings = [];
-	var sibling = elem.nextElementSibling;
-	while (sibling) {
-		if (sibling.nodeType === 1 && sibling !== elem) {siblings.push(sibling);}
-		sibling = sibling.nextSibling
-	}
-	return siblings;
+import { toTitleCase } from "../utils.js";
+import "https://code.jquery.com/jquery-3.7.1.slim.js";
+const defaultAction = {
+  text: "Giriş Yap",
+  shine: false,
+};
+const defaultItem = {
+  color: {
+    primary: "#000",
+    secondary: "#FFF",
+  },
+  brand: "w88",
+  link: "#",
+  vip: false,
+  shine: false,
+  offers: ["Bonus-1", "Bonus-2"],
+  action: {
+    text: "Giriş Yap",
+    shine: false,
+  },
 };
 
-    document.getElementById("footer").remove();
-    const main = document.getElementById("links");
-main.children[0].className = "left-brands"
-    main.parentElement.className = ""
-    main.parentElement.parentElement.className = ""
-main.parentElement.parentElement.parentElement.classList.remove("container");
+export const defaultConfig = {
+  main: {
+    action: "Giriş Yap",
+    title: "title",
+    items: [
+      {
+        brand: "w88",
+        link: "#",
+      },
+      {
+        brand: "w88",
+        link: "#",
+        shine: true,
+      },
+      {
+        brand: "w88",
+        link: "#",
+      },
+      {
+        brand: "w88",
+        link: "#",
+      },
+      {
+        brand: "w88",
+        link: "#",
+        action: {
+          text: "Giriş Yap",
+          shine: true,
+        },
+      },
+    ],
+  },
+  aside: {
+    title: "title",
+    header: {
+      action: "Giriş Yap",
+      interval: 3000,
+      items: [
+        {
+          brand: "w88",
+          link: "#w88",
+        },
+        {
+          brand: "zlot",
+          link: "#w88",
+          shine: true,
+        },
+      ],
+    },
+    banners: {
+      left: {
+        brand: "w88",
+        link: "/bzh-left-link",
+        image: "https://placehold.co/180x440",
+      },
+      right: {
+        brand: "sahabet",
+        link: "/bzh-right-link",
+        image: "https://placehold.co/180x440",
+      },
+    },
+  },
+};
 
-const splitter_one = document.querySelector(".col-12.mt-4.mb-4");
-//const splitter_two = document.querySelector(".col-12.mt-5.mb-5");
-const right_brands = document.createElement("div");
-right_brands.className ="right-brands";
-const head_brand = document.createElement("div");
-head_brand.className ="head-brand";
-const def_brands = document.createElement("div");
-def_brands.className ="def-brands";
-//const head_brand_clone = splitter_one.nextElementSibling
-//head_brand.appendChild(head_brand_clone)
-const def_brands_clone = getSiblings(splitter_one)
-def_brands_clone.forEach((node)=>def_brands.appendChild(node))
-right_brands.appendChild(head_brand);
-right_brands.appendChild(def_brands);
-main.appendChild(right_brands);
+function createOffers(offers) {
+  let items = "";
+  offers.forEach((offer) => {
+    items += `<p>${offer}</p>`;
+  });
+  return items;
+}
 
-splitter_one.remove()
-//splitter_two.remove();
+export function init(config) {
+  createMain(config.main);
+  createAside(config.aside);
+}
+
+function createMain(config) {
+  let main = document.querySelector("#bzh main");
+  if(config.title){
+    let title = `<h1>${config.title}</h1>`;
+    main.insertAdjacentHTML("beforeend", title);
+    }
+  let items = "";
+  config.items.forEach((item) => {
+    item = { ...defaultItem, ...item };
+    item.action = { ...defaultAction, ...item.action };
+
+    items += `
+    <a href="${item.link}" class="item ${item.vip ? "vip" : ""} ${item.shine ? "shine" : ""} ${item.brand.toLowerCase()}" target="_blank">
+        <img src="${item.image ? item.image : `https://margin-dev.github.io/brands/${toTitleCase(item.brand)}.png`}" alt="${item.brand}">
+        <div class="offers">${createOffers(item.offers)}</div>
+        <span class="action ${item.action.shine ? "shine" : ""}">${item.action.text}</span>
+    </a>
+    `;
+  });
+  main.insertAdjacentHTML("beforeend", items);
+}
+
+function createAside(config) {
+  let aside = document.querySelector("#bzh aside");
+  if(config.title){
+    let title = `<h1>${config.title}</h1>`;
+    aside.insertAdjacentHTML("afterBegin", title);
+    aside.classList.add("hastitle")
+  }
+  let header = document.querySelector("#bzh aside > header");
+  header.insertAdjacentHTML("beforeend", createHeader(config.header));
+  initializeSlider(config.header);
+  let banners = document.querySelector("#bzh aside > .banners");
+  banners.insertAdjacentHTML("beforeend", createBanners(config.banners));
+}
+
+export function initializeSlider(config) {
+  try {
+    let slides = $("header .slide");
+    let slidesCount = config.items.length;
+    function slide(target) {
+      slides.removeClass("active").eq(target).addClass("active");
+      let brand = $("#bzh header").find(".slide.active").data("brand");
+      $("#bzh header").attr("data-brand", brand).find(".active").attr("data-brand", brand);
+    }
+
+    $("#bzh header .btn-prev").click(function () {
+      slide(getTarget(-1));
+      resetTimer();
+    });
+    $("#bzh header .btn-next").click(function () {
+      slide(getTarget());
+      resetTimer();
+    });
+    function getTarget(dir) {
+      var ind = $("#bzh header .slideset .slide.active").index();
+      return (ind + (dir || 1)) % slidesCount;
+    }
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(function () {
+        slide(getTarget());
+      }, config.interval);
+    }
+
+    var timer = setInterval(function () {
+      slide(getTarget());
+    }, config.interval);
+  } catch (e) {
+    console.log(e);
+  }
+}
+function createSlides(items) {
+  return items
+    .map((item, index) => {
+      item = { ...defaultItem, ...item };
+      item.action = { ...defaultAction, ...item.action };
+
+      return `
+        <a href="${item.link}" class="slide item ${index == 0 ? "active" : ""} ${item.vip ? "vip" : ""} ${item.shine ? "shine" : ""} ${item.brand.toLowerCase()}" data-brand="${item.brand.toLowerCase()}" target="_blank">
+            <img src="${item.image ? item.image : `https://margin-dev.github.io/brands/${toTitleCase(item.brand)}.png`}" alt="${item.brand}">
+            <div class="offers">${createOffers(item.offers)}</div>
+            <span class="action ${item.action.shine ? "shine" : ""}">${item.action.text}</span>
+        </a>`;
+    })
+    .join("");
+}
+function createHeader(config) {
+  let widget = `
+    <div class="slideset">
+        ${createSlides(config.items)}
+    </div>
+    <button class="btn-prev control"></button>
+    <button class="btn-next control"></button>`;
+  return widget;
+}
+
+function createBanners(config) {
+  let items = "";
+  Object.keys(config).forEach((key) => {
+    let item = config[key];
+    item = { ...defaultItem, ...item };
+    items += `
+    <a href="${item.link}" class="${key} item ${item.vip ? "vip" : ""} ${item.shine ? "shine" : ""} ${item.brand.toLowerCase()}" target="_blank">
+        <img src="${item.image}" alt="${item.brand}">
+    </a>
+    `;
+  });
+  return items;
+}
