@@ -215,6 +215,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #bzh .item.slide:not(.active) {
   opacity: 0;
+  pointer-events: none;
   position: absolute;
 }
 
