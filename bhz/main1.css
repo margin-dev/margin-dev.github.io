@@ -95,8 +95,8 @@ h6 {
   height: 40px;
   margin: 0;
 }
-#bzh main a {
-  background: #000;
+#bzh main a, #bzh aside a {
+  background: #00000090;
   width: 100%;
   height: 100%;
   display: block;
@@ -118,7 +118,6 @@ h6 {
   margin: 0;
 }
 #bzh aside header {
-  background-color: #000;
   margin: var(--gap) 0;
   position: sticky;
   top: 0;
@@ -132,19 +131,19 @@ h6 {
   gap: var(--gap);
 }
 @media screen and (max-width: 1100px) {
-  
+
   #bzh section {
     padding: 0;
-      background: none;
+    background: none;
       overflow: hidden;
       border-radius: 0;
       max-height: unset;
     grid-template-columns: 1fr;
   }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                #bzh main {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  border-radius: 0;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                #bzh aside {
+    #bzh main {
+      border-radius: 0;
+    }
+    #bzh aside {
     display: none;
   }
 }
@@ -168,7 +167,7 @@ h6 {
   color: #fff;
   border-radius: calc(var(--gap) / 2);
   border: 1px solid var(--primary);
-    /* background-color: var(--primary30); */
+  /* background-color: var(--primary30); */
 }
 #bzh .item .offers {
   height: max-content;
@@ -297,7 +296,7 @@ h6 {
   #bzh .item {
     flex-direction: column;
     gap: calc(var(--gap)/2);
-      padding: calc(var(--gap)/2);
+    padding: calc(var(--gap)/2);
   }
 
   #bzh .item span {
