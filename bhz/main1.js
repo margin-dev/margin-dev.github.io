@@ -98,12 +98,11 @@ export function init(config) {
 }
 
 function createMain(config) {
-  let title = `
-    <h1>${config.title}</h1>
-  `;
   let main = document.querySelector("#bzh main");
-  main.insertAdjacentHTML("beforeend", title);
-
+  if(config.title){
+    let title = `<h1>${config.title}</h1>`;
+    main.insertAdjacentHTML("beforeend", title);
+    }
   let items = "";
   config.items.forEach((item) => {
     item = { ...defaultItem, ...item };
@@ -121,9 +120,12 @@ function createMain(config) {
 }
 
 function createAside(config) {
-  let title = `<h1>${config.title}</h1>`;
   let aside = document.querySelector("#bzh aside");
-  aside.insertAdjacentHTML("afterBegin", title);
+  if(config.title){
+    let title = `<h1>${config.title}</h1>`;
+    aside.insertAdjacentHTML("afterBegin", title);
+    aside.classList.add("hastitle")
+  }
   let header = document.querySelector("#bzh aside > header");
   header.insertAdjacentHTML("beforeend", createHeader(config.header));
   initializeSlider(config.header);
