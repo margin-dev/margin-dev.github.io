@@ -131,12 +131,20 @@ h6 {
   grid-template-columns: 1fr 1fr;
   gap: var(--gap);
 }
-#bzh aside .banners div {}
 @media screen and (max-width: 1100px) {
+  
   #bzh section {
+    padding: 0;
+      background: none;
+      overflow: hidden;
+      border-radius: 0;
+      max-height: unset;
     grid-template-columns: 1fr;
   }
-  #bzh aside {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                #bzh main {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  border-radius: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                #bzh aside {
     display: none;
   }
 }
@@ -159,8 +167,8 @@ h6 {
   text-decoration: none;
   color: #fff;
   border-radius: calc(var(--gap) / 2);
-  border: 2px solid var(--primary);
-  background-color: var(--primary30);
+  border: 1px solid var(--primary);
+    /* background-color: var(--primary30); */
 }
 #bzh .item .offers {
   height: max-content;
@@ -273,15 +281,29 @@ h6 {
   padding: 0;
   overflow: hidden;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 425px) {
+  #bzh section {
+    padding: 0;
+    overflow: hidden;
+    max-height: unset;
+    border-radius: 0;
+  }
+
+  #bzh main {
+    border-radius: 0;
+    padding: calc(var(--gap)/2);
+    gap: calc(var(--gap)/2);
+  }
   #bzh .item {
     flex-direction: column;
-    gap: var(--gap);
+    gap: calc(var(--gap)/2);
+      padding: calc(var(--gap)/2);
   }
 
   #bzh .item span {
     margin: 0;
     width: 100%;
+    text-align: center;
   }
 
   #bzh .item .offers {
