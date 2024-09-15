@@ -55,12 +55,15 @@ p, h1, h2, h3, h4, h5, h6 {
   scrollbar-color: #00000080 #0000004d !important;
   scrollbar-width: thin !important;
 }
+
 #bzh nav {
   background: #0000004D;
   width: 100%;
   height: 100%;
   max-width: 1366px;
+  position: relative;
 }
+
 #bzh section {
   max-width: 1366px;
   max-height: max-content;
@@ -342,10 +345,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 @media screen and (max-width: 768px) {
-  #bzh {
-    padding: 0;
-  
-}
+
   #bzh main {
     grid-template-columns: 1fr;
     grid-auto-flow: row;
@@ -368,6 +368,9 @@ p, h1, h2, h3, h4, h5, h6 {
     width: 100%;
     overflow: hidden;
   }
+                                                                                                                                #bzh {
+                                                                                                                                  padding: 0;
+                                                                                                                                }
 }
 
 @media screen and (max-width: 425px) {
