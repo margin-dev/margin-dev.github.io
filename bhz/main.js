@@ -117,6 +117,7 @@ function createMain(config) {
     `;
   });
   main.insertAdjacentHTML("beforeend", items);
+  main.style.gridTemplateRows =`repeat(${Math.ceil(items.length/2)},1fr)`
 }
 
 function createAside(config) {
