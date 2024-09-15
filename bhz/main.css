@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 body {
   background: url(https://youlink.fra1.digitaloceanspaces.com/uploads/backgrounds/2486880e948c7e83f5963a55b57df533.svg);
-    background-color: #181D27 !important;
+  background-color: #181D27 !important;
     background-repeat: repeat !important;
     background-size: 400px !important;
   overflow: hidden;
@@ -296,7 +296,7 @@ h6 {
 }
 @media screen and (max-width: 425px) {
   #bzh {
-      padding: 0;
+    padding: 0;
     }
   #bzh section {
     padding: 0;
@@ -315,23 +315,21 @@ h6 {
     column-gap: var(--gap);
     padding: calc(var(--gap)/2);
     display: grid;
-      grid-template-columns: max-content 1fr;
+    grid-template-columns: max-content 1fr 60px;
+      min-height: 50px;
   }
 
   #bzh .item span {
     margin: 0;
     width: 100%;
-    /* grid-row: 1; */
-      grid-column: 1;
     text-align: center;
-    padding: 2px 6px;
+    padding: 2px;
+      font-size: 0.7rem;
   }
 
-  #bzh .item .offers {
-    text-align: right;
-      /* grid-column: span 2; */
-      grid-row: span 2;
-      white-space: nowrap;
+    #bzh .item .offers {
+    white-space: nowrap;
   }
+
 
 }
