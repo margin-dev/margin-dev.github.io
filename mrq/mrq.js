@@ -26,7 +26,8 @@ function createOffers(offers) {
     .join("")}</div>`;
 }
 
-function createItems(config) {
+
+export function createItems(config) {
   return config.items
     .map((item, index) => {
       return `
