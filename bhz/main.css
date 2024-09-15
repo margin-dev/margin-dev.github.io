@@ -143,32 +143,7 @@ h6 {
   grid-template-columns: 1fr 1fr;
   gap: var(--gap);
 }
-@media screen and (max-width: 1100px) {
 
-  #bzh section {
-    padding: 0;
-    background: none;
-    overflow: hidden;
-    border-radius: 0;
-    max-height: unset;
-    grid-template-columns: 1fr;
-    height: 100%;
-  }
-    #bzh main {
-      border-radius: 0;
-    }
-    #bzh aside {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  #bzh main {
-    grid-template-columns: 1fr;
-  }
-  #bzh main h1 {
-    grid-column: span 1;
-  }
-}
 
 #bzh .item {
   display: flex;
@@ -294,6 +269,43 @@ h6 {
   padding: 0;
   overflow: hidden;
 }
+@media screen and (max-width: 1100px) {
+
+  #bzh section {
+    padding: 0;
+    background: none;
+    overflow: hidden;
+    border-radius: 0;
+    max-height: unset;
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+  #bzh main {
+    border-radius: 0;
+  }
+  #bzh aside {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #bzh main {
+    grid-template-columns: 1fr;
+  }
+  #bzh main h1 {
+    grid-column: span 1;
+  }
+  #bzh .item span {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 2px;
+    font-size: 0.7rem;
+  }
+
+  #bzh .item .offers {
+    white-space: nowrap;
+  }
+}
 @media screen and (max-width: 425px) {
   #bzh {
     padding: 0;
@@ -319,17 +331,7 @@ h6 {
       min-height: 50px;
   }
 
-  #bzh .item span {
-    margin: 0;
-    width: 100%;
-    text-align: center;
-    padding: 2px;
-      font-size: 0.7rem;
-  }
 
-    #bzh .item .offers {
-    white-space: nowrap;
-  }
 
 
 }
