@@ -473,6 +473,11 @@
     --primary30: #1EB1544D;
     --primary50: #1EB15480;
 }
+[data-brand='telegram'], .telegram {
+    --primary: #2AABEE;
+    --primary30: #2AABEE4D;
+    --primary50: #2AABEE80;
+}
 [data-brand='tipobet'], .tipobet {
     --primary: #0F853D;
     --primary30: #0F853D4D;
