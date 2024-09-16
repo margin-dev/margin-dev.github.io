@@ -332,6 +332,11 @@
     --primary30: #FFE71D4D;
     --primary50: #FFE71D80;
 }
+[data-brand='markobet'], .markobet {
+    --primary: #93ED3B;
+    --primary30: #93ED3B4D;
+    --primary50: #93ED3B80;
+}
 [data-brand='marsbahis'], .marsbahis {
     --primary: #C52426;
     --primary30: #C524264D;
