@@ -405,15 +405,15 @@ h6 {
 
   #bzh .item {
     gap: calc(var(--gap) / 2);
-    column-gap: var(--gap);
+    column-gap: calc(var(--gap) / 2);
     padding: calc(var(--gap) / 2);
     display: grid;
     grid-template-columns: max-content 1fr 40px;
-    min-height: 50px;
+    min-height: 40px;
   }
 
   #bzh .item img {
-    max-width: 60px;
+    max-width: 40px;
   }
 
   #bzh .item p {
