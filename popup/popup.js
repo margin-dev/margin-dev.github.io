@@ -16,6 +16,7 @@ export const config = {
             link: "",
             openInNewTab: true,
             vip: true,
+            className:"",
             actionShine: true,
             offers: [
                 "400 TL Deneme Bonusu",
@@ -57,7 +58,7 @@ function createOffers(offers) {
 function createItems(config) {
     return config.items.map((item, index) => {
         return `
-        <a href="${item.link}" target="${item.openInNewTab ? '_blank' : '_self'}" class="popup ${config.position} ${item.brand} ${index == 0 ? 'active' : ''}" ${config.background ? `style="background:${config.background}"` : ""}>
+        <a href="${item.link}" target="${item.openInNewTab ? '_blank' : '_self'}" class="popup ${config.className} ${config.position} ${item.brand} ${index == 0 ? 'active' : ''}" ${config.background ? `style="background:${config.background}"` : ""}>
             ${config.close ?? `<button class="close-popup">X</button> `}
             ${!item.image ? `<img src="https://margin-dev.github.io/brands/${toTitleCase(item.logo ? item.logo : item.brand)}.png">` : item.image}
             ${createOffers(item.offers)}
