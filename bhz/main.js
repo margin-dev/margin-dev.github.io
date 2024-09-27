@@ -93,8 +93,8 @@ function createOffers(offers) {
 }
 
 export function init(config) {
-  createMain(config.main);
-  createAside(config.aside);
+  if(config.main) createMain(config.main);
+  if(config.aside)  createAside(config.aside);
 }
 
 function createMain(config) {
