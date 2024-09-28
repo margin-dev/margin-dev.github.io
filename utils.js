@@ -34,3 +34,10 @@ export function getPrevSiblings(elem, hideElement, filter) {
   }
   return sibs;
 }
+
+export function addClassToElements(elements, classNames) {
+  elements.forEach((elem) => {
+    //slet parent = elem.parentElement.parentElement;
+    elem.className = elem.className + " " + classNames;
+  });
+}
