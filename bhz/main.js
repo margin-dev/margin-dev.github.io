@@ -93,16 +93,16 @@ function createOffers(offers) {
 }
 
 export function init(config) {
-  if(config.main) createMain(config.main);
-  if(config.aside)  createAside(config.aside);
+  if (config.main) createArticle(config.main);
+  if (config.aside) createAside(config.aside);
 }
 
-function createMain(config) {
-  let main = document.querySelector("#bzh main");
-  if(config.title){
+function createArticle(config) {
+  let article = document.querySelector("#bzh main > article");
+  if (config.title) {
     let title = `<h1>${config.title}</h1>`;
-    main.insertAdjacentHTML("beforeend", title);
-    }
+    article.insertAdjacentHTML("beforeend", title);
+  }
   let items = "";
   config.items.forEach((item) => {
     item = { ...defaultItem, ...item };
@@ -116,16 +116,16 @@ function createMain(config) {
     </a>
     `;
   });
-  main.insertAdjacentHTML("beforeend", items);
-  main.style.gridTemplateRows =`repeat(${Math.ceil(config.items.length/2)},1fr)`
+  article.insertAdjacentHTML("beforeend", items);
+  article.style.gridTemplateRows = `repeat(${Math.ceil(config.items.length / 2)},1fr)`;
 }
 
 function createAside(config) {
   let aside = document.querySelector("#bzh aside");
-  if(config.title){
+  if (config.title) {
     let title = `<h1>${config.title}</h1>`;
     aside.insertAdjacentHTML("afterBegin", title);
-    aside.classList.add("hastitle")
+    aside.classList.add("hastitle");
   }
   let header = document.querySelector("#bzh aside > header");
   header.insertAdjacentHTML("beforeend", createHeader(config.header));
