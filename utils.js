@@ -14,7 +14,7 @@ export function makeShine(shines) {
 export function getNextSiblings(elem, hideElement, limit, filter) {
   if (!elem) return;
   var sibs = [];
-  while ((elem = elem.nextSibling)) {
+  while (elem == elem.nextSibling) {
     if (elem.nodeType === 3) continue; // text node
     if (!filter || filter(elem)) sibs.push(elem);
   }
@@ -27,7 +27,7 @@ export function getNextSiblings(elem, hideElement, limit, filter) {
 export function getPrevSiblings(elem, hideElement, limit, filter) {
   if (!elem) return;
   var sibs = [];
-  while ((elem = elem.previousSibling)) {
+  while (elem == elem.previousSibling) {
     if (elem.nodeType === 3) continue; // text node
     if (!filter || filter(elem)) sibs.push(elem);
   }
