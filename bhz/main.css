@@ -99,13 +99,10 @@ h6 {
   grid-template-rows: repeat(11, 1fr);
   grid-auto-flow: column;
   grid-auto-rows: max-content;
-  height: 100%;
-  background-color: #0000004d;
+  height: max-content;
   border-radius: calc(var(--radius) / 2);
   gap: var(--gap);
   padding: var(--gap);
-  overflow-y: auto;
-  overflow-x: hidden;
   width: 100%;
 }
 
