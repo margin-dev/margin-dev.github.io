@@ -15,28 +15,28 @@ export function getNextSiblings(selector, hideElement, limit, filter) {
   var elem = document.querySelector(selector);
   if (!elem) return;
   var sibs = [];
-  while ((elem = elem.previousSibling) && limit != sibs.length) {
+  while ((elem = elem.nextSibling)) {
     if (elem.nodeType === 3) continue; // text node
     if (!filter || filter(elem)) sibs.push(elem);
   }
   if (hideElement) {
     elem.remove();
   }
-  return sibs;
+  return limit && sibs.length > limit ? sibs.slice(0, limit) : sibs;
 }
 
 export function getPrevSiblings(selector, hideElement, limit, filter) {
   var elem = document.querySelector(selector);
   if (!elem) return;
   var sibs = [];
-  while ((elem = elem.previousSibling) && limit != sibs.length) {
+  while ((elem = elem.previousSibling)) {
     if (elem.nodeType === 3) continue; // text node
     if (!filter || filter(elem)) sibs.push(elem);
   }
   if (hideElement) {
     elem.remove();
   }
-  return sibs;
+  return limit && sibs.length > limit ? sibs.slice(0, limit) : sibs;
 }
 
 export function addClassToElements(elements, classNames) {
