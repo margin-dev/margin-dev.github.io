@@ -74,19 +74,6 @@ export function initializeAlertSlider(config) {
       var ind = $(".alert-wrapper .alert-item.active").index();
       return (ind + (dir || 1)) % slidesCount;
     }
-    const closeButtons = document.querySelectorAll(".alert-wrapper .alert-close");
-    closeButtons.forEach((button) => {
-      button.addEventListener("click", closeFunction, !1);
-      function closeFunction() {
-        if (document.querySelectorAll(".alert-item:not(.active)").length != 0) {
-          document.querySelector(".alert-wrapper .alert-item:not(.active)").classList.add("active");
-        }
-        this.parentElement.remove();
-        if (document.querySelectorAll(".alert-item").length == 0) {
-          document.querySelector(".alert-wrapper").remove();
-        }
-      }
-    });
 
     setInterval(function () {
       slide(getTarget());
@@ -108,5 +95,18 @@ export function createAlerts(config) {
   } catch (error) {
     console.log(error);
   }
+  const closeButtons = document.querySelectorAll(".alert-wrapper .alert-close");
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", closeFunction, !1);
+    function closeFunction() {
+      if (document.querySelectorAll(".alert-item:not(.active)").length != 0) {
+        document.querySelector(".alert-wrapper .alert-item:not(.active)").classList.add("active");
+      }
+      this.parentElement.remove();
+      if (document.querySelectorAll(".alert-item").length == 0) {
+        document.querySelector(".alert-wrapper").remove();
+      }
+    }
+  });
   if (!config.showMultiple) initializeAlertSlider(config);
 }
