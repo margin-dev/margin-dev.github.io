@@ -11,11 +11,10 @@ export function makeShine(shines) {
     parent.className = shine.getAttribute("alt").toLowerCase() + " " + parent.className;
   });
 }
-export function getNextSiblings(selector, hideElement, limit, filter) {
-  var elem = document.querySelector(selector);
+export function getNextSiblings(elem, hideElement, limit, filter) {
   if (!elem) return;
   var sibs = [];
-  while (elem == elem.nextSibling) {
+  while ((elem = elem.nextSibling)) {
     if (elem.nodeType === 3) continue; // text node
     if (!filter || filter(elem)) sibs.push(elem);
   }
@@ -25,11 +24,10 @@ export function getNextSiblings(selector, hideElement, limit, filter) {
   return limit && sibs.length > limit ? sibs.slice(0, limit) : sibs;
 }
 
-export function getPrevSiblings(selector, hideElement, limit, filter) {
-  var elem = document.querySelector(selector);
+export function getPrevSiblings(elem, hideElement, limit, filter) {
   if (!elem) return;
   var sibs = [];
-  while (elem == elem.previousSibling) {
+  while ((elem = elem.previousSibling)) {
     if (elem.nodeType === 3) continue; // text node
     if (!filter || filter(elem)) sibs.push(elem);
   }
