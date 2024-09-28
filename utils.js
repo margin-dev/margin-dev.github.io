@@ -11,9 +11,9 @@ export function makeShine(shines) {
     parent.className = shine.getAttribute("alt").toLowerCase() + " " + parent.className;
   });
 }
-export function getNextSiblings(elem, hideElement, filter) {
+export function getNextSiblings(elem, hideElement, limit, filter) {
   var sibs = [];
-  while ((elem = elem.nextSibling)) {
+  while ((elem = elem.nextSibling && limit != sibs.length)) {
     if (elem.nodeType === 3) continue; // text node
     if (!filter || filter(elem)) sibs.push(elem);
   }
@@ -23,9 +23,9 @@ export function getNextSiblings(elem, hideElement, filter) {
   return sibs;
 }
 
-export function getPrevSiblings(elem, hideElement, filter) {
+export function getPrevSiblings(elem, hideElement, limit, filter) {
   var sibs = [];
-  while ((elem = elem.previousSibling)) {
+  while ((elem = elem.previousSibling && limit != sibs.length)) {
     if (elem.nodeType === 3) continue; // text node
     if (!filter || filter(elem)) sibs.push(elem);
   }
