@@ -11,30 +11,33 @@ export function makeShine(shines) {
     parent.className = shine.getAttribute("alt").toLowerCase() + " " + parent.className;
   });
 }
-export function getNextSiblings(elem, hideElement, limit, filter) {
+export function getNextSiblings(elem, hideElement, limit, selector) {
   if (!elem) return;
-  var sibs = [];
-  while (elem == elem.nextSibling) {
-    if (elem.nodeType === 3) continue; // text node
-    if (!filter || filter(elem)) sibs.push(elem);
+  var siblings = [];
+  var next = elem.nextElementSibling;
+  while (next) {
+    if (selector && next.matches(selector)) break;
+    siblings.push(next);
+    next = next.nextElementSibling;
   }
   if (hideElement) {
     elem.remove();
   }
-  return limit && sibs.length > limit ? sibs.slice(0, limit) : sibs;
+  return limit && siblings.length > limit ? siblings.slice(0, limit) : siblings;
 }
-
-export function getPrevSiblings(elem, hideElement, limit, filter) {
+export function getPrevSiblings(elem, hideElement, limit, selector) {
   if (!elem) return;
-  var sibs = [];
-  while (elem == elem.previousSibling) {
-    if (elem.nodeType === 3) continue; // text node
-    if (!filter || filter(elem)) sibs.push(elem);
+  var siblings = [];
+  var prev = elem.previousElementSibling;
+  while (prev) {
+    if (selector && prev.matches(selector)) break;
+    siblings.push(prev);
+    prev = prev.previousElementSibling;
   }
   if (hideElement) {
     elem.remove();
   }
-  return limit && sibs.length > limit ? sibs.slice(0, limit) : sibs;
+  return limit && siblings.length > limit ? siblings.slice(0, limit) : siblings;
 }
 
 export function addClassToElements(elements, classNames) {
