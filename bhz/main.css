@@ -92,7 +92,11 @@ h6 {
   gap: var(--gap);
   overflow: hidden;
 }
-
+#bzh main {
+  height: 100%;
+  overflow: auto;
+  background: #0000004d;
+}
 #bzh main > article {
   display: grid;
   grid-template-columns: 1fr 1fr;
