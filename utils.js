@@ -15,7 +15,7 @@ export function getNextSiblings(selector, hideElement, limit, filter) {
   var elem = document.querySelector(selector);
   if (!elem) return;
   var sibs = [];
-  while ((elem = elem.nextSibling && limit != sibs.length)) {
+  while ((elem = elem.previousSibling) && limit != sibs.length) {
     if (elem.nodeType === 3) continue; // text node
     if (!filter || filter(elem)) sibs.push(elem);
   }
@@ -29,7 +29,7 @@ export function getPrevSiblings(selector, hideElement, limit, filter) {
   var elem = document.querySelector(selector);
   if (!elem) return;
   var sibs = [];
-  while ((elem = elem.previousSibling && limit != sibs.length)) {
+  while ((elem = elem.previousSibling) && limit != sibs.length) {
     if (elem.nodeType === 3) continue; // text node
     if (!filter || filter(elem)) sibs.push(elem);
   }
