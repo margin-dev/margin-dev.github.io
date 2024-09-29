@@ -92,24 +92,25 @@ h6 {
   gap: var(--gap);
   overflow: hidden;
 }
-
 #bzh main {
+  height: 100%;
+  overflow: auto;
+  background: #0000004d;
+}
+#bzh main > article {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(11, 1fr);
   grid-auto-flow: column;
   grid-auto-rows: max-content;
-  height: 100%;
-  background-color: #0000004d;
+  height: max-content;
   border-radius: calc(var(--radius) / 2);
   gap: var(--gap);
   padding: var(--gap);
-  overflow-y: auto;
-  overflow-x: hidden;
   width: 100%;
 }
 
-#bzh main h1 {
+#bzh main > article h1 {
   position: sticky;
   top: 0;
   z-index: 1;
@@ -122,13 +123,13 @@ h6 {
   margin: 0;
 }
 
-#bzh main a,
+#bzh main > article a,
 #bzh aside a {
   background: #00000090;
   width: 100%;
   height: 100%;
   display: block;
-  min-height: 60px;
+  /* min-height: 60px; */
 }
 
 #bzh aside {
@@ -320,7 +321,7 @@ h6 {
     height: 100%;
   }
 
-  #bzh main {
+  #bzh main > article {
     border-radius: 0;
   }
 
@@ -361,12 +362,12 @@ h6 {
 }
 
 @media screen and (max-width: 768px) {
-  #bzh main {
+  #bzh main > article {
     grid-template-columns: 1fr;
     grid-auto-flow: row;
   }
 
-  #bzh main h1 {
+  #bzh main > article h1 {
     grid-column: span 1;
   }
 
@@ -397,7 +398,7 @@ h6 {
     border-radius: 0;
   }
 
-  #bzh main {
+  #bzh main > article {
     border-radius: 0;
     padding: calc(var(--gap) / 2);
     gap: calc(var(--gap) / 2);
