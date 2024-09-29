@@ -319,6 +319,11 @@
     --primary30: #19AB554D;
     --primary50: #19AB5580;
 }
+[data-brand='makrobet'], .makrobet {
+    --primary: #FBD12D;
+    --primary30: #FBD12D4D;
+    --primary50: #FBD12D80;
+}
 [data-brand='mariobet'], .mariobet {
     --primary: #F1592A;
     --secondary: #FAA32F;
@@ -381,6 +386,11 @@
     --primary: #FDD12B;
     --primary30: #FDD12B4D;
     --primary50: #FDD12B80;
+}
+[data-brand='perabet'], .perabet {
+    --primary: #F5BB1B;
+    --primary30: #F5BB1B4D;
+    --primary50: #F5BB1B80;
 }
 [data-brand='piabella'], .piabella {
     --primary: #E9CA60;
