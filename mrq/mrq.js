@@ -32,11 +32,13 @@ export function createItems(config) {
     .map((item, index) => {
       return `
         <a href="${item.link}" class=" mrq full ${config.position} ${item.brand} ${index == 0 ? "active" : ""}" target="${item.openInNewTab ? "_blank" : "_self"}" ${config.background ? `style="background:${config.background}"` : ""}>
-            ${item.leftImage ? `<img class="mrq_brand left" src="${item.leftImage}"/>` : ""}
+            ${item.leftImage && !item.leftContent ? `<img class="mrq_brand left" src="${item.leftImage}"/>` : ""}
+            ${item.leftContent ? item.leftContent:""}
             <div class="mrq_content">
                 ${createOffers(item.offers)}
             </div>
-            ${item.rightImage ? `<img class="mrq_brand right" src="${item.rightImage}"/>` : ""}
+            ${item.rightImage && !item.rightContent ? `<img class="mrq_brand right" src="${item.rightImage}"/>` : ""}
+            ${item.rightContent ? item.rightContent:""}
         </a>`;
     })
     .join("");
