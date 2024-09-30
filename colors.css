@@ -263,6 +263,11 @@
     --primary30: #C48A3B4D;
     --primary50: #C48A3B80;
 }
+[data-brand='hepyek'], .hepyek {
+    --primary: #EE2832;
+    --primary30: #EE28324D;
+    --primary50: #EE283280;
+}
 [data-brand='hermesbet'], .hermesbet {
     --primary: #FF6303;
     --primary30: #FF63034D;
@@ -280,6 +285,11 @@
     --secondary30: #F6CC834D;
     --primary50: #DBAD5E80;
     --secondary50: #F6CC8380;
+}
+[data-brand='holeyy'], .holeyy {
+    --primary: #ECE248;
+    --primary30: #ECE2484D;
+    --primary50: #ECE24880;
 }
 [data-brand='holiganbet'], .holiganbet {
     --primary: #FFCD36;
