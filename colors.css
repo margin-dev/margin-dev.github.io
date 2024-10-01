@@ -465,6 +465,21 @@
     --primary30: #ED9B204D;
     --primary50: #ED9B2080;
 }
+[data-brand='showbet'], .showbet {
+    --primary: #60C84C;
+    --primary30: #60C84C4D;
+    --primary50: #60C84C80;
+}
+[data-brand='skype'], .skype {
+    --primary: #00B7F0;
+    --primary30: #00B7F04D;
+    --primary50: #00B7F080;
+}
+[data-brand='slotbahis'], .slotbahis {
+    --primary: #E7C060;
+    --primary30: #E7C0604D;
+    --primary50: #E7C06080;
+}
 [data-brand='spinco'], .spinco {
     --primary: #1CB322;
     --primary30: #1CB3224D;
