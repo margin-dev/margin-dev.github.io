@@ -60,7 +60,7 @@ function createItems(config) {
         return `
         <a href="${item.link}" target="${item.openInNewTab ? '_blank' : '_self'}" class="popup ${item.className} ${config.position} ${item.brand} ${index == 0 ? 'active' : ''}" ${config.background ? `style="background:${config.background}"` : ""}>
             ${config.close ?? `<button class="close-popup">X</button> `}
-            ${!item.image ? `<img src="https://margin-dev.github.io/brands/${toTitleCase(item.logo ? item.logo : item.brand)}.png">` : item.image}
+            ${!item.image ? `<img src="https://margin-dev.github.io/brands/${toTitleCase(item.logo ? item.logo : item.subfix ? item.brand + item.subfix : item.brand )}.png">` : item.image}
             ${createOffers(item.offers)}
             <span class="${item.actionShine ? 'shine' : ''}">${config.action}</span>
         </a>`
@@ -95,6 +95,10 @@ export function initializePopupSlider(config) {
     }
 }
 export function createPopup(config) {
+    const hasFilter = config.activeItems && config.activeItems.length > 0
+    if(hasFilter) {
+        config.items = config.items.filter(item => config.activeItems.includes(item.brand))
+    }
     try {
         let popups = `
         <div class="popups" data-brand="${config.items[0].brand}">

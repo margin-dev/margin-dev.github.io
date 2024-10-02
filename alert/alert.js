@@ -52,7 +52,7 @@ function createItems(items) {
         <div class="alert-item ${index == 0 ? "active" : ""}" data-brand="${item.brand}">
             <button class="alert-close"></button>
             <a class="alert-link" target="${item.openInNewTab ? "_blank" : "_self"}" href="${item.link}">
-                <img src="https://margin-dev.github.io/brands/${toTitleCase(item.brand)}.png" class="alert-brand">
+                <img src="https://margin-dev.github.io/brands/${toTitleCase(item.subfix ? item.brand + item.subfix : item.brand)}.png" class="alert-brand">
                 ${createOffers(item.offers)}
                 <span class="alert-action">${item.action ? item.action : "Giriş yap"}</span>
             </a>
