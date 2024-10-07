@@ -101,7 +101,7 @@ try{
   console.log(error)
 }
 }
-function createArticle(config) {
+export function createArticle(config) {
   let article = document.querySelector("#bzh main > article");
   if (config.title) {
     let title = `<h1>${config.title}</h1>`;
@@ -124,7 +124,7 @@ function createArticle(config) {
   article.style.gridTemplateRows = `repeat(${Math.ceil(config.items.length / 2)},1fr)`;
 }
 
-function createAside(config) {
+export function createAside(config) {
   let aside = document.querySelector("#bzh aside");
   if (config.title) {
     let title = `<h1>${config.title}</h1>`;
