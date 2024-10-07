@@ -125,7 +125,7 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow: auto;
 }
 
-#bzh aside >div {
+#bzh aside header > div {
     height: 100%;
 }
 
