@@ -136,11 +136,11 @@ export function createAside(config) {
   if(config.mobile){
     let header = document.querySelector("#bzh aside > header > #mobile");
     header.insertAdjacentHTML("beforeend", createHeader(config.header));
-    initializeSlider(config.header);
+    initializeSlider(config.header,"mobile");
   }else{
     let header = document.querySelector("#bzh aside > header > #pc");
     header.insertAdjacentHTML("beforeend", createHeader(config.header));
-    initializeSlider(config.header);
+    initializeSlider(config.header,"pc");
   }
   if(config.banners){    
     let banners = document.querySelector("#bzh aside > .banners");
@@ -148,26 +148,27 @@ export function createAside(config) {
   }
 }
 
-export function initializeSlider(config) {
+export function initializeSlider(config,platform ="pc") {
   try {
-    let slides = $("header > #pc .slide");
+    let slides = $(`header > #${platform} .slide`);
+    
     let slidesCount = config.items.length;
     function slide(target) {
       slides.removeClass("active").eq(target).addClass("active");
-      let brand = $("#bzh header > #pc").find(".slide.active").data("brand");
-      $("#bzh header > #pc").attr("data-brand", brand).find(".active").attr("data-brand", brand);
+      let brand = $(`#bzh header > #${platform}`).find(".slide.active").data("brand");
+      $(`#bzh header > #${platform}`).attr("data-brand", brand).find(".active").attr("data-brand", brand);
     }
 
-    $("#bzh header > #pc .btn-prev").click(function () {
+    $(`#bzh header > #${platform} .btn-prev`).click(function () {
       slide(getTarget(-1));
       resetTimer();
     });
-    $("#bzh header > #pc .btn-next").click(function () {
+    $(`#bzh header > #${platform} .btn-next`).click(function () {
       slide(getTarget());
       resetTimer();
     });
     function getTarget(dir) {
-      var ind = $("#bzh header > #pc .slideset .slide.active").index();
+      var ind = $(`#bzh header > #${platform} .slideset .slide.active`).index();
       return (ind + (dir || 1)) % slidesCount;
     }
     function resetTimer() {
