@@ -134,6 +134,7 @@ export function createAside(config) {
     aside.classList.add("hastitle");
   }
   if(config.mobile){
+    document.querySelector("#bzh").className = "mobile-aside";
     let header = document.querySelector("#bzh aside > header > #mobile");
     header.insertAdjacentHTML("beforeend", createHeader(config.header));
     initializeSlider(config.header,"mobile");
