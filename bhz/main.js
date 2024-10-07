@@ -98,7 +98,7 @@ try{
   if (config.main) createArticle(config.main);
   if (config.aside) createAside(config.aside);
 }catch(error){
-  console.log(error)}
+  console.log(error)
 }
 }
 function createArticle(config) {
