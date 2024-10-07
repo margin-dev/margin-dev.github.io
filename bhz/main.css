@@ -334,6 +334,7 @@ h6 {
     grid-template-rows: 1fr;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    overflow:hidden;
   }
 
   #bzh.mobile-aside aside header {
