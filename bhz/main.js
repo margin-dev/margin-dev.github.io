@@ -126,7 +126,7 @@ export function createArticle(config) {
 
 export function createAside(config) {
   let aside = document.querySelector("#bzh aside");
-  if(config.headerMobile) aside.className = "mobile-aside"
+  if(config.mobile) aside.className = "mobile-aside"
 
   if (config.title) {
     let title = `<h1>${config.title}</h1>`;
