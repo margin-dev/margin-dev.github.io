@@ -54,7 +54,6 @@ export const defaultConfig = {
   },
   aside: {
     title: "title",
-    mobile:false,
     header: {
       action: "Giriş Yap",
       interval: 3000,
@@ -97,11 +96,11 @@ export function init(config) {
 try{
   
   if (config.main) createArticle(config.main);
-  if (config.aside && config.aside.mobile == true) createAside(config.aside);
+  if (config.aside) createAside(config.aside);
 }catch(error){
   console.log(error)}
 }
-
+}
 function createArticle(config) {
   let article = document.querySelector("#bzh main > article");
   if (config.title) {
