@@ -136,8 +136,10 @@ export function createAside(config) {
   let header = document.querySelector("#bzh aside > header");
   header.insertAdjacentHTML("beforeend", createHeader(config.header));
   initializeSlider(config.header);
-  let banners = document.querySelector("#bzh aside > .banners");
-  banners.insertAdjacentHTML("beforeend", createBanners(config.banners));
+  if(config.banners){    
+    let banners = document.querySelector("#bzh aside > .banners");
+    banners.insertAdjacentHTML("beforeend", createBanners(config.banners));
+  }
 }
 
 export function initializeSlider(config) {
