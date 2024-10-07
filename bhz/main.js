@@ -126,16 +126,22 @@ export function createArticle(config) {
 
 export function createAside(config) {
   let aside = document.querySelector("#bzh aside");
-  if(config.mobile) document.querySelector("#bzh").className = "mobile-aside"
+  
 
   if (config.title) {
     let title = `<h1>${config.title}</h1>`;
     aside.insertAdjacentHTML("afterBegin", title);
     aside.classList.add("hastitle");
   }
-  let header = document.querySelector("#bzh aside > header");
-  header.insertAdjacentHTML("beforeend", createHeader(config.header));
-  initializeSlider(config.header);
+  if(config.mobile){
+    let header = document.querySelector("#bzh aside > header > #mobile");
+    header.insertAdjacentHTML("beforeend", createHeader(config.header));
+    initializeSlider(config.header);
+  }else{
+    let header = document.querySelector("#bzh aside > header > #pc");
+    header.insertAdjacentHTML("beforeend", createHeader(config.header));
+    initializeSlider(config.header);
+  }
   if(config.banners){    
     let banners = document.querySelector("#bzh aside > .banners");
     banners.insertAdjacentHTML("beforeend", createBanners(config.banners));
