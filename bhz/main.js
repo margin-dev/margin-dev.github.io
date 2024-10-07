@@ -150,24 +150,24 @@ export function createAside(config) {
 
 export function initializeSlider(config) {
   try {
-    let slides = $("header .slide");
+    let slides = $("header > #pc .slide");
     let slidesCount = config.items.length;
     function slide(target) {
       slides.removeClass("active").eq(target).addClass("active");
-      let brand = $("#bzh header").find(".slide.active").data("brand");
-      $("#bzh header").attr("data-brand", brand).find(".active").attr("data-brand", brand);
+      let brand = $("#bzh header > #pc").find(".slide.active").data("brand");
+      $("#bzh header > #pc").attr("data-brand", brand).find(".active").attr("data-brand", brand);
     }
 
-    $("#bzh header .btn-prev").click(function () {
+    $("#bzh header > #pc .btn-prev").click(function () {
       slide(getTarget(-1));
       resetTimer();
     });
-    $("#bzh header .btn-next").click(function () {
+    $("#bzh header > #pc .btn-next").click(function () {
       slide(getTarget());
       resetTimer();
     });
     function getTarget(dir) {
-      var ind = $("#bzh header .slideset .slide.active").index();
+      var ind = $("#bzh header > #pc .slideset .slide.active").index();
       return (ind + (dir || 1)) % slidesCount;
     }
     function resetTimer() {
