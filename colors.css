@@ -382,6 +382,11 @@
     --primary30: #F091204D;
     --primary50: #F0912080;
 }
+[data-brand='otobet'], .otobet {
+    --primary: #FBA200;
+    --primary30: #FBA2004D;
+    --primary50: #FBA20080;
+}
 [data-brand='palacebet'], .palacebet {
     --primary: #F2E619;
     --primary30: #F2E6194D;
