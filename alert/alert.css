@@ -106,7 +106,7 @@
 
 .alert-wrapper .alert-action {
   background-color: var(--primary);
-  max-width: 90px;
+  max-width: calc(100% - var(--max-width)/2);
   border-radius: var(--action-radius);
   font-size: 14px;
   height: 30px;
