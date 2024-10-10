@@ -71,7 +71,7 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 0;
     border-radius: 0;
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr max-content;
     gap: var(--gap);
     overflow: hidden;
 }
@@ -123,6 +123,7 @@ p, h1, h2, h3, h4, h5, h6 {
     grid-template-rows: calc(200px + var(--gap)) 1fr;
     padding: var(--gap);
     overflow: auto;
+    max-width: 400px;
 }
 
 #bzh aside header > div {
@@ -306,9 +307,11 @@ p, h1, h2, h3, h4, h5, h6 {
     .mobile-aside #pc {
         display: none;
     }
+
     #bzh.mobile-aside #mobile {
-    display: block;
+        display: block;
     }
+
     #bzh section {
         padding: 0;
         background: none;
