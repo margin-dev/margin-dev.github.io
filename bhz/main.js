@@ -96,7 +96,12 @@ export function init(config) {
 try{
   
   if (config.main) createArticle(config.main);
-  if (config.aside) createAside(config.aside);
+  if (config.aside){
+    createAside(config.aside);
+   }else{
+    document.querySelector("#bzh aside").classList ="hidden"
+    document.querySelector("#bzh section").classList ="no-aside"
+  }
 }catch(error){
   console.log(error)
 }
