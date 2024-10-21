@@ -141,6 +141,11 @@
     --primary50: #00926080;
     --secondary50: #01774A80;
 }
+[data-brand='betmarko'], .betmarko {
+    --primary: #93ED3B;
+    --primary30: #93ED3B4D;
+    --primary50: #93ED3B80;
+}
 [data-brand='betmatik'], .betmatik {
     --primary: #12BC8C;
     --primary30: #12BC8C4D;
@@ -484,6 +489,11 @@
     --primary: #E7C060;
     --primary30: #E7C0604D;
     --primary50: #E7C06080;
+}
+[data-brand='slotcum'], .slotcum {
+    --primary: #FA626E;
+    --primary30: #FA626E4D;
+    --primary50: #FA626E80;
 }
 [data-brand='spinco'], .spinco {
     --primary: #1CB322;
