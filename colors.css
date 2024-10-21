@@ -490,6 +490,11 @@
     --primary30: #1CB3224D;
     --primary50: #1CB32280;
 }
+[data-brand='spinwon'], .spinwon {
+    --primary: #00FF86;
+    --primary30: #00FF864D;
+    --primary50: #00FF8680;
+}
 [data-brand='stake'], .stake {
     --primary: #FFFFFF;
     --primary30: #FFFFFF4D;
