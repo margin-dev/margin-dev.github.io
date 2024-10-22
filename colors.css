@@ -372,6 +372,11 @@
     --primary30: #E52D124D;
     --primary50: #E52D1280;
 }
+[data-brand='meritbet'], .meritbet {
+    --primary: #d8a951;
+    --primary30: #d8a9514D;
+    --primary50: #d8a95180;
+}
 [data-brand='norabahis'], .norabahis {
     --primary: #F0C959;
     --primary30: #F0C9594D;
