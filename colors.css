@@ -377,6 +377,11 @@
     --primary30: #d8a9514D;
     --primary50: #d8a95180;
 }
+[data-brand='maxwin'], .maxwin {
+    --primary: #b7ff00;
+    --primary30: #b7ff004D;
+    --primary50: #b7ff0080;
+}
 [data-brand='norabahis'], .norabahis {
     --primary: #F0C959;
     --primary30: #F0C9594D;
