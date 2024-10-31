@@ -92,6 +92,11 @@
     --primary50: #FFA85280;
     --secondary50: #CC2D1380;
 }
+[data-brand='betewin'], .betewin {
+    --primary: #FFBD14;
+    --primary30: #FFBD144D;
+    --primary50: #FFBD1480;
+}
 [data-brand='betgar'], .betgar {
     --primary: #036CDC;
     --primary30: #036CDC4D;
