@@ -544,9 +544,9 @@
     --primary50: #ED333880;
 }
 [data-brand='tarafbet'], .tarafbet {
-    --primary: #1EB154;
-    --primary30: #1EB1544D;
-    --primary50: #1EB15480;
+    --primary: #00FF00;
+    --primary30: #00FF004D;
+    --primary50: #00FF0080;
 }
 [data-brand='telegram'], .telegram {
     --primary: #2AABEE;
