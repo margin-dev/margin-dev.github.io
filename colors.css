@@ -402,6 +402,11 @@
     --primary30: #F091204D;
     --primary50: #F0912080;
 }
+[data-brand='orjinbet'], .orjinbet {
+    --primary: #76FF00;
+    --primary30: #76FF004D;
+    --primary50: #76FF0080;
+}
 [data-brand='otobet'], .otobet {
     --primary: #FBA200;
     --primary30: #FBA2004D;
