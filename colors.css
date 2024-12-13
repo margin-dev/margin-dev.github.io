@@ -146,6 +146,11 @@
     --primary50: #00926080;
     --secondary50: #01774A80;
 }
+[data-brand='betmaks'], .betmaks {
+    --primary: ##00FF1D;
+    --primary30: ##00FF1D4D;
+    --primary50: ##00FF1D80;
+}
 [data-brand='betmarko'], .betmarko {
     --primary: #93ED3B;
     --primary30: #93ED3B4D;
