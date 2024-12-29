@@ -252,6 +252,11 @@
     --primary30: #EBDF9D4D;
     --primary50: #EBDF9D80;
 }
+[data-brand='damabet'], .damabet {
+    --primary: #F9C408;
+    --primary30: #F9C4084D;
+    --primary50: #F9C40880;
+}
 [data-brand='etorobet'], .etorobet {
     --primary: #FF8130;
     --secondary: #6415C3;
