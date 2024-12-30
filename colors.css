@@ -293,6 +293,11 @@
     --primary30: #FF63034D;
     --primary50: #FF630380;
 }
+[data-brand='hiltonbet'], .hiltonbet {
+    --primary: #42B866;
+    --primary30: #42B8664D;
+    --primary50: #42B86680;
+}
 [data-brand='hipercasino'], .hipercasino {
     --primary: #FFE100;
     --primary30: #FFE1004D;
