@@ -553,6 +553,11 @@
     --primary50: #FF6D0080;
     --secondary50: #4891FF80;
 }
+[data-brand='sterlinbet'], .sterlinbet {
+    --primary: #FFCA3F;
+    --primary30: #FFCA3F4D;
+    --primary50: #FFCA3F80;
+}
 [data-brand='superbet'], .superbet {
     --primary: #FFC02A;
     --primary30: #FFC02A4D;
