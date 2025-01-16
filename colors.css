@@ -103,9 +103,9 @@
     --primary50: #036CDC80;
 }
 [data-brand='bethand'], .bethand {
-    --primary: #EB1B4D;
-    --primary30: #EB1B4D4D;
-    --primary50: #EB1B4D80;
+    --primary: #FFD700;
+    --primary30: #FFD7004D;
+    --primary50: #FFD70080;
 }
 [data-brand='betine'], .betine {
     --primary: #F0B905;
