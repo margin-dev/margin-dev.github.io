@@ -74,7 +74,9 @@ export function initializeMrqSlider(config) {
     }
     config.items.map((item, index) => {
       setTimeout(() => {
-        mrq(`.mrqs > .mrq.${item.brand} .mrq_content`, config.speed);
+        if (!config.disabled) {
+          mrq(`.mrqs > .mrq.${item.brand} .mrq_content`, config.speed);
+        }
       }, 100);
     });
     setInterval(function () {
