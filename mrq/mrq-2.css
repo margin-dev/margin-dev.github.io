@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-  /* padding-left: 100%; */
+  padding-left: 100%;
   left: 0px;
   box-sizing: content-box;
 }
@@ -46,10 +46,10 @@
   box-sizing: content-box;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  /* -webkit-animation-timing-function: linear; */
-  /* animation-timing-function: linear; */
-  /* -webkit-animation-name: ticker; */
-  /* animation-name: ticker; */
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
   -webkit-animation-duration: 20s;
   height: 100%;
   animation-duration: 20s;
