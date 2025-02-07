@@ -14,7 +14,6 @@
   --font: Outfit, sans-serif;
   --color: #fff;
   --bg: #0f0f0f;
-  --item-bg: linear-gradient(var(--primary),var(--primary));
   --gap:10px;
 }
 .brand-marquee-container {
@@ -34,6 +33,7 @@
   background: var(--bg);
 }
 .brand-marquee {
+  --item-bg: linear-gradient(var(--primary),var(--primary));
   backdrop-filter: blur(5px);
   background: var(--item-bg);
   display: flex;
