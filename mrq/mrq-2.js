@@ -28,11 +28,14 @@ function createItems(config) {
 export function createMrq2(config) {
     try {
         let mrqs = `
+          
           <div class="brand-marquee-container">
           ${config.leftItem ? `<div class="brand-marquee-left">${config.leftItem}</div>` : ""}
             <div class="brand-marquee-wrapper">
                 <div class="brand-marquee-list">
-                    ${createItems(config)}
+                    <div class="brand-marquee-items">
+                        ${createItems(config)}
+                    </div>
                 </div>    
             </div>
             ${config.rightItem ? `<div class="brand-marquee-right">${config.rightItem}</div>` : ""}

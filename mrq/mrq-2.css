@@ -18,17 +18,44 @@
 }
 .brand-marquee-container {
   position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 9999;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  background:var(--bg);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  }
+.brand-marquee-wrapper {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
   display: flex;
-  background: var(--bg);
+  align-items: center;
+  height: 100%;
+  padding-left: 100%;
+  left: 0px;
+  box-sizing: content-box;
 }
 .brand-marquee-list {
-  align-items: center;
-  height: var(--max-h);
   white-space: nowrap;
+  display: flex;
+  padding-right: 100%;
+  box-sizing: content-box;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+}
+.brand-marquee-items{
+  padding: 0 2rem;
+  color: white;
+  font-size: 15px !important;
+  color: white;
   display: flex;
 }
 .brand-marquee {
@@ -69,26 +96,26 @@
   margin: 0;
 }
 
-.brand-marquee-left, .brand-marquee-right {
+.brand-marquee-left{
+  left: 0px;
   position: absolute;
-  z-index: 2;
-  width: auto;
-  background: rebeccapurple;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  background: var(--card);
+  padding: 5px 35px 5px 15px;
+  top: 0px !important;
+  margin: 0px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  height: 100%;
-  color: white;
-  font-weight: bolder;
-  white-space: nowrap;
-
-  font-size: 12px;
+  font-size: 15px;
+  clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+  background: linear-gradient(180deg, rgba(29,3,61,1) 0%, rgba(88,9,185,1) 78%, rgba(104,49,171,1) 100%);
+  overflow-x: hidden;
 }
-.brand-marquee-left svg, .brand-marquee-right svg {
+.brand-marquee-left svg{
   width: 20px;
-  color: white;
-  margin-right: 4px;
 }
 .brand-marquee-left{
   left:0;
@@ -115,18 +142,4 @@
   100% {
     transform: translate3d(-100%, 0, 0);
   }
-}
-.brand-marquee-wrapper {
-  white-space: nowrap;
-  display: flex;
-  padding-right: 100%;
-  box-sizing: content-box;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-name: ticker;
-  animation-name: ticker;
-  -webkit-animation-duration: 20s;
-  animation-duration: 20s;
 }
