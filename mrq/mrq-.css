@@ -1,0 +1,34 @@
+@import "https://margin-dev.github.io/main.css";
+
+.mrq-parent {
+  margin: 0;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.brand-marquee-list > .brand-marquee:not(.active) {
+  opacity: 0;
+  pointer-events: none;
+}
+.brand-marquee {
+  --item: 3;
+  --height: 40px;
+  --font: Outfit, sans-serif;
+  --color: #fff;
+  --bg: #181d27a6;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  overflow: hidden;
+  background-color: var(--bg);
+  display: flex;
+  height: var(--height);
+  text-decoration: none !important;
+  z-index: 99;
+  transition: 2s ease opacity;
+}
+.brand-marquee * {
+  margin: 0;
+}
+
