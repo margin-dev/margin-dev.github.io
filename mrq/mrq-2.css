@@ -54,6 +54,9 @@
   height: 100%;
   animation-duration: 20s;
 }
+.brand-marquee-list:hover {
+  animation-play-state: paused;
+}
 .brand-marquee-items{
   padding: 0 2rem;
   color: white;
