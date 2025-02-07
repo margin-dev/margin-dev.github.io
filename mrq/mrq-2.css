@@ -10,7 +10,7 @@
 }
 
 .brand-marquee-container {
-  --max-h:30px;
+  --max-h:24px;
   --font: Outfit, sans-serif;
   --color: #fff;
   --bg: #0f0f0f;
