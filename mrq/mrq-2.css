@@ -13,7 +13,7 @@
   --max-h:50px;
   --font: Outfit, sans-serif;
   --color: #fff;
-  --bg: #0f0f0f;
+  --bg: #0f0f0f4d;
   --gap:10px;
 }
 .brand-marquee-container {
@@ -102,7 +102,7 @@
 }
 .brand-marquee-left{
   left:0;
-  clip-path: (0 0, 100% 0, 83% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
   padding-left: 20px;
   padding-right: 40px;
 }
