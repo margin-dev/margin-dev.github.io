@@ -28,7 +28,6 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  height: 50px;
   background: var(--bg);
 }
 .brand-marquee {
@@ -36,6 +35,8 @@
   padding-left: 50px;
   background: var(--item-bg);
   display: flex;
+  align-items:center;
+  justify-content: flex-end;
   text-decoration: none !important;
   transition: 2s ease opacity;
   white-space: nowrap;
@@ -43,8 +44,10 @@
   padding:10px;
   border-top-right-radius:9999px;
   border-bottom-right-radius:9999px;
-  align-items:center;
   cursor:pointer;
+  width:100%;
+  max-width: 200px;
+  min-width: 200px;
 }
 .brand-marquee-brand{
   height:auto;
