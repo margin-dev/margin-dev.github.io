@@ -24,10 +24,6 @@
   justify-content: center;
   height: 50px;
 }
-.brand-marquee-container > .brand-marquee-list:not(.active) {
-  opacity: 0;
-  pointer-events: none;
-}
 .brand-marquee {
   --item: 3;
   --height: 40px;
