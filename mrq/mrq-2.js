@@ -38,5 +38,5 @@ export function createMrq2(config) {
     } catch (error) {
         console.log(error);
     }
-    mrq(`.mrqs > .mrq`, config.speed)
+    mrq(`.brand-marquee-list > .brand-marquee`, config.speed)
 }
