@@ -29,15 +29,20 @@ function createOffers(offers) {
 
 export function createItems(config) {
   if (config.style === "style-2") {
-    return config.items
-      .map((item, index) => {
-        return `
-        <a href="${item.link}" class="mrq mrq-style-2 ${item.brand.toLowerCase()} ${index == 0 ? "active" : ""}" target="_blank" ${config.background ? `style="background:${config.background}"` : ""}>
-            <img class="mrq_brand-style-2" src="https://margin-dev.github.io/brands/${item.brand}.png"/>
-            ${item.action && `<div class="mrq_action-style-2">${item.action}</div>`}
-        </a>`;
-      })
-      .join("");
+    return `
+    <div class="mrq">
+    ${config.items
+        .map((item, index) => {
+          return `
+          <a href="${item.link}" class="mrq_content mrq-style-2 ${item.brand.toLowerCase()} ${index == 0 ? "active" : ""}" target="_blank" ${config.background ? `style="background:${config.background}"` : ""}>
+              <img class="mrq_brand-style-2" src="https://margin-dev.github.io/brands/${item.brand}.png"/>
+              ${item.action && `<div class="mrq_action-style-2">${item.action}</div>`}
+          </a>`;
+        })
+        .join("")
+      }
+    </div>
+    `
   }
   return config.items
     .map((item, index) => {
