@@ -83,7 +83,7 @@
   position: absolute;
   z-index: 2;
   width: auto;
-  background: var(--bg);
+  background: rebeccapurple;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,7 +92,7 @@
   color: white;
   font-weight: bolder;
   white-space: nowrap;
-  padding: 0 20px;
+
   font-size: 12px;
 }
 .brand-marquee-left svg, .brand-marquee-right svg {
@@ -100,7 +100,12 @@
   color: white;
   margin-right: 4px;
 }
-.brand-marquee-left{left:0}
+.brand-marquee-left{
+  left:0;
+  clip-path: (0 0, 100% 0, 83% 100%, 0% 100%);
+  padding-left: 20px;
+  padding-right: 40px;
+}
 .brand-marquee-right{right:0}
 
 @-webkit-keyframes ticker {
