@@ -10,6 +10,7 @@
 }
 
 .brand-marquee-container {
+  --top:0px;
   --max-h:50px;
   --font: Outfit, sans-serif;
   --color: #fff;
@@ -19,7 +20,7 @@
 .brand-marquee-container {
   position: fixed;
   left: 0px;
-  top: 0px;
+  top: var(--top);
   right: 0;
   width: 100%;
   background:var(--bg);
