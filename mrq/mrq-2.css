@@ -69,7 +69,7 @@
   margin: 0;
 }
 
-.brand-marquee-left,.brand-marquee-right {
+.brand-marquee-left, .brand-marquee-right {
   position: absolute;
   z-index: 2;
   width: 100px;
@@ -78,6 +78,8 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  color: white;
+  font-weight: bolder;
 }
 .brand-marquee-left{left:0}
 .brand-marquee-right{right:0}
