@@ -28,17 +28,28 @@ function createOffers(offers) {
 
 
 export function createItems(config) {
+  if (config.style === "style-2") {
+    return config.items
+      .map((item, index) => {
+        return `
+        <a href="${item.link}" class="mrq mrq-style-2 ${item.brand} ${index == 0 ? "active" : ""}" target="${item.openInNewTab ? "_blank" : "_self"}" ${config.background ? `style="background:${config.background}"` : ""}>
+            <img class="mrq_brand-style-2" src="${item.leftImage}"/>
+            ${item.action && <div class="mrq_action-style-2">${item.action}</div>}
+        </a>`;
+      })
+      .join("");
+  }
   return config.items
     .map((item, index) => {
       return `
         <a href="${item.link}" class=" mrq full ${config.position} ${item.brand} ${index == 0 ? "active" : ""}" target="${item.openInNewTab ? "_blank" : "_self"}" ${config.background ? `style="background:${config.background}"` : ""}>
             ${item.leftImage && !item.leftContent ? `<img class="mrq_brand left" src="${item.leftImage}"/>` : ""}
-            ${item.leftContent ? item.leftContent:""}
+            ${item.leftContent ? item.leftContent : ""}
             <div class="mrq_content">
                 ${createOffers(item.offers)}
             </div>
             ${item.rightImage && !item.rightContent ? `<img class="mrq_brand right" src="${item.rightImage}"/>` : ""}
-            ${item.rightContent ? item.rightContent:""}
+            ${item.rightContent ? item.rightContent : ""}
         </a>`;
     })
     .join("");
