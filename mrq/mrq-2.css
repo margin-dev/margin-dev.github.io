@@ -9,7 +9,14 @@
   top: 0;
 }
 
-
+.brand-marquee-container {
+  --max-h:30px;
+  --font: Outfit, sans-serif;
+  --color: #fff;
+  --bg: #0f0f0f;
+  --item-bg: linear-gradient(var(--primary),var(--primary));
+  --gap:10px;
+}
 .brand-marquee-container {
   position: fixed;
   left: 0;
@@ -24,15 +31,11 @@
   justify-content: center;
   gap:10px;
   height: 50px;
+  background: var(--bg);
 }
 .brand-marquee {
-  --max-h:30px;
-  --font: Outfit, sans-serif;
-  --color: #fff;
-  --bg: linear-gradient(var(--primary),var(--primary));
-  --gap:10px;
   backdrop-filter: blur(5px);
-  background: var(--bg);
+  background: var(--item-bg);
   display: flex;
   text-decoration: none !important;
   transition: 2s ease opacity;
