@@ -40,5 +40,5 @@ export function createMrq2(config) {
     } catch (error) {
         console.log(error);
     }
-    mrq(`.brand-marquee-container > .brand-marquee-list`, config.speed)
+    mrq(`.brand-marquee-container`, config.speed)
 }
