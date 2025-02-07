@@ -20,10 +20,12 @@
   position: fixed;
   left: 0px;
   top: 0px;
+  right: 0;
   width: 100%;
   background:var(--bg);
   backdrop-filter: blur(4px);
   z-index: 999;
+  height: var(--max-h);
   }
 .brand-marquee-wrapper {
   bottom: 0;
@@ -33,7 +35,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-  padding-left: 100%;
+  /* padding-left: 100%; */
   left: 0px;
   box-sizing: content-box;
 }
@@ -44,11 +46,12 @@
   box-sizing: content-box;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-name: ticker;
-  animation-name: ticker;
+  /* -webkit-animation-timing-function: linear; */
+  /* animation-timing-function: linear; */
+  /* -webkit-animation-name: ticker; */
+  /* animation-name: ticker; */
   -webkit-animation-duration: 20s;
+  height: 100%;
   animation-duration: 20s;
 }
 .brand-marquee-items{
@@ -59,7 +62,7 @@
   display: flex;
 }
 .brand-marquee {
-  --item-bg: linear-gradient(45deg,transparent,var(--primary30));
+  --item-bg: linear-gradient(45deg,transparent,transparent,var(--primary30));
   background: var(--item-bg);
   display: flex;
   align-items:center;
@@ -109,10 +112,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 12px;
   clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
   background: linear-gradient(180deg, rgba(29,3,61,1) 0%, rgba(88,9,185,1) 78%, rgba(104,49,171,1) 100%);
   overflow-x: hidden;
+  color: white;
+  gap: 10px;
 }
 .brand-marquee-left svg{
   width: 20px;
