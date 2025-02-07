@@ -22,14 +22,14 @@
   right: 0;
   top: 40px;
   z-index: 9999;
+  display: flex;
+  background: var(--bg);
 }
 .brand-marquee-list {
   display: flex;
   width: 100%;
   align-items: center;
-  background: var(--bg);
   height: var(--max-h);
-
 }
 .brand-marquee {
   --item-bg: linear-gradient(45deg,transparent,var(--primary30));
