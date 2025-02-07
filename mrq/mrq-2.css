@@ -32,7 +32,6 @@
 }
 .brand-marquee {
   --item-bg: linear-gradient(45deg,transparent,var(--primary30));
-  padding-left: 50px;
   background: var(--item-bg);
   display: flex;
   align-items:center;
@@ -42,6 +41,7 @@
   white-space: nowrap;
   gap: var(--gap);
   padding:10px;
+  padding-left: 50px;
   border-top-right-radius:9999px;
   border-bottom-right-radius:9999px;
   cursor:pointer;
