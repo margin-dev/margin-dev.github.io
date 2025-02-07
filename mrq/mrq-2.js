@@ -28,8 +28,10 @@ function createItems(config) {
 export function createMrq2(config) {
     try {
         let mrqs = `
+          <div class="brand-marquee-container">
           <div class="brand-marquee-list">
               ${createItems(config)}
+          </div>    
           </div>    
           `;
         let parent = document.querySelector("script[id='mrqs']").parentNode;
