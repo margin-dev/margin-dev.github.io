@@ -26,10 +26,20 @@
   background: var(--bg);
 }
 .brand-marquee-list {
-  display: flex;
-  width: 100%;
   align-items: center;
   height: var(--max-h);
+  white-space: nowrap;
+  display: flex;
+  padding-right: 100%;
+  box-sizing: content-box;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
 }
 .brand-marquee {
   --item-bg: linear-gradient(45deg,transparent,var(--primary30));
@@ -92,3 +102,25 @@
 }
 .brand-marquee-left{left:0}
 .brand-marquee-right{right:0}
+
+@-webkit-keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.brand-marquee-wrapper {
+  padding-left: 100%;
+}
