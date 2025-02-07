@@ -74,9 +74,7 @@ export function initializeMrqSlider(config) {
     }
     config.items.map((item, index) => {
       setTimeout(() => {
-        if (!config.disabled) {
-          mrq(`.mrqs > .mrq.${item.brand} .mrq_content`, config.speed);
-        }
+        mrq(`.mrqs > .mrq.${item.brand} .mrq_content`, config.speed);
       }, 100);
     });
     setInterval(function () {
@@ -89,15 +87,17 @@ export function initializeMrqSlider(config) {
 export function createMrq(config) {
   try {
     let mrqs = `
-        <div class="mrqs" data-brand="${config.items[0].brand}">
-            ${createItems(config)}
-        </div>    
-        `;
+    <div class="mrqs" data-brand="${config.items[0].brand}">
+    ${createItems(config)}
+    </div>    
+    `;
     let parent = document.querySelector("script[id='mrqs']").parentNode;
     parent.insertAdjacentHTML("beforeend", mrqs);
     parent.classList.add("mrq-parent");
   } catch (error) {
     console.log(error);
   }
-  initializeMrqSlider(config);
+  if (!config.disabled) {
+    initializeMrqSlider(config);
+  }
 }
