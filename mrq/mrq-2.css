@@ -33,7 +33,6 @@
 }
 .brand-marquee {
   --item-bg: linear-gradient(45deg,transparent,var(--primary30));
-  margin-right: -30px;
   padding-left: 50px;
   background: var(--item-bg);
   display: flex;
