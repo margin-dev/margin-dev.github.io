@@ -29,6 +29,7 @@ export function createMrq2(config) {
     try {
         let mrqs = `
           <div class="brand-marquee-container">
+          ${config.leftItem ? config.leftItem : ""}
           <div class="brand-marquee-list">
               ${createItems(config)}
           </div>    
