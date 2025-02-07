@@ -29,13 +29,13 @@ export function createMrq2(config) {
     try {
         let mrqs = `
           <div class="brand-marquee-container">
+          ${config.leftItem ? `<div class="brand-marquee-left">${config.leftItem}</div>` : ""}
             <div class="brand-marquee-wrapper">
-                ${config.leftItem ? `<div class="brand-marquee-left">${config.leftItem}</div>` : ""}
-            <div class="brand-marquee-list">
-                ${createItems(config)}
-            </div>    
-                ${config.rightItem ? `<div class="brand-marquee-right">${config.rightItem}</div>` : ""}
+                <div class="brand-marquee-list">
+                    ${createItems(config)}
+                </div>    
             </div>
+            ${config.rightItem ? `<div class="brand-marquee-right">${config.rightItem}</div>` : ""}
           </div>    
           `;
         let parent = document.querySelector("script[id='mrqs']").parentNode;
