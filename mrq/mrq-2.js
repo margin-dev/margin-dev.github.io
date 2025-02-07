@@ -18,7 +18,7 @@ function createItems(config) {
     return config.items
         .map((item, index) => {
             return `
-            <a href="${item.link}" class="brand-marquee ${item.brand.toLowerCase()} ${item.class ? item.class : ""} ${index == 0 ? "active" : ""}" target="_blank" ${config.background ? `style="background:${config.background}"` : ""}>
+            <a href="${item.link}" class="brand-marquee ${item.brand.toLowerCase()} ${item.class ? item.class : ""}" target="_blank" ${config.background ? `style="background:${config.background}"` : ""}>
                 <img class="brand-marquee-brand" src="https://margin-dev.github.io/brands/${item.brand}.png"/>
                 ${item.action ? `<div class="brand-marquee-action">${item.action}</div>` : ''}
             </a>`;

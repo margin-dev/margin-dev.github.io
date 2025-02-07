@@ -17,7 +17,7 @@ left: 0;
 right: 0;
 top: 0;
 }
-.brand-marquee-list > .brand-marquee:not(.active) {
+.brand-marquee-container > .brand-marquee-list:not(.active) {
   opacity: 0;
   pointer-events: none;
 }
