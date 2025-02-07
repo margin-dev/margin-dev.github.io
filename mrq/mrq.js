@@ -31,7 +31,7 @@ export function createItems(config) {
   return config.items
     .map((item, index) => {
       return `
-        <a href="${item.link}" class=" mrq full ${config.position} ${item.brand} ${index == 0 ? "active" : ""}" target="${item.openInNewTab ? "_blank" : "_self"}" ${config.background ? `style="background:${config.background}"` : ""}>
+        <a href="${item.link}" class="${config.disabled ? "disabled" : ""} mrq full ${config.position} ${item.brand} ${index == 0 ? "active" : ""}" target="${item.openInNewTab ? "_blank" : "_self"}" ${config.background ? `style="background:${config.background}"` : ""}>
             ${item.leftImage && !item.leftContent ? `<img class="mrq_brand left" src="${item.leftImage}"/>` : ""}
             ${item.leftContent ? item.leftContent : ""}
             <div class="mrq_content">

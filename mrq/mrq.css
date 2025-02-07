@@ -28,6 +28,9 @@
   z-index: 99;
   transition: 2s ease opacity;
 }
+.mrq.disabled{
+  justify-content: center;
+}
 .mrq * {
   margin: 0;
 }
