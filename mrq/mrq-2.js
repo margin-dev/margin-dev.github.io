@@ -35,6 +35,7 @@ export function createMrq2(config) {
                 <div class="brand-marquee-list">
                     <div class="brand-marquee-items">
                         ${createItems(config)}
+                        ${createItems(config)}
                     </div>
                 </div>    
             </div>
