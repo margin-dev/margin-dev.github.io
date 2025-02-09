@@ -2,7 +2,7 @@ import { toTitleCase } from "../utils.js";
 export function createSlides(config) {
     let items = config.items.map((item) => {
         return `
-        <li class="${item.brand}">
+        <li class="${item.brand.toLowerCase()}">
         <a href="${item.link}" target="_blank" class="${item.class}">
         <img src="https://margin-dev.github.io/brands/${toTitleCase(item.brand)}.png">
         <span>${item.action}</span>
