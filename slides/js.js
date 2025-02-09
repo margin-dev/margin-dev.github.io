@@ -13,6 +13,7 @@ export function createSlides(config) {
     <div class="slides">
         <ul class="slides-content">
             ${items.join("")}
+            ${items.join("")}
         </ul>
     </div>
     `
