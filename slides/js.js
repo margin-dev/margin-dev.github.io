@@ -2,19 +2,20 @@ import { toTitleCase } from "../utils.js";
 export function createSlides(config) {
     let items = config.items.map((item) => {
         return `
-        <li class="${item.brand.toLowerCase()}">
-        <a href="${item.link}" target="_blank" class="${item.class}">
-        <img src="https://margin-dev.github.io/brands/${toTitleCase(item.brand)}.png">
-        <span>${item.action}</span>
+        <a href="${item.link}" target="_blank" class="${item.class} ${item.brand.toLowerCase()}">
+            <img src="https://margin-dev.github.io/brands/${toTitleCase(item.brand)}.png">
+            <span>${item.action}</span>
         </a>
-        </li>`
+        `
     })
     return `
     <div class="slides">
-        <ul class="slides-content">
+        <div class="slides__group">
             ${items.join("")}
+        </div>
+        <div class="slides__group">
             ${items.join("")}
-        </ul>
+        </div>
     </div>
     `
 }

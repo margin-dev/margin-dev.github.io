@@ -1,8 +1,9 @@
 @import "https://margin-dev.github.io/main.css";
+/*
 .slides {
     --slides-width: 100vw;
     --slides-height: auto;
-    /* --slides-elements: 12; */ /* defined with JavaScript */
+    /* --slides-elements: 12; */ /* defined with JavaScript 
     --slides-elements-displayed: 4;
     --slides-element-width: calc(var(--slides-width) / var(--slides-elements-displayed));
     --slides-animation-duration: calc(var(--slides-elements) * 3s);
@@ -42,9 +43,9 @@
     animation: scrolling var(--slides-animation-duration) linear infinite;
     margin: 0;
   }
-  /* .slides-content:hover {
+   .slides-content:hover {
     animation-play-state: paused;
-  } */
+  } 
   @keyframes scrolling {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-1 * var(--slides-element-width) * var(--slides-elements))); }
@@ -56,7 +57,7 @@
     flex-shrink: 0;
     width: var(--slides-element-width);
     max-height: 100%;
-    font-size: calc(var(--slides-height)*3/4); /* 5rem; */
+    font-size: calc(var(--slides-height)*3/4);
     white-space: nowrap;
     padding: 10px;
     background: linear-gradient(90deg, transparent, transparent, var(--primary30));
@@ -93,3 +94,65 @@
     }
     .slides:before, .slides:after { width: 5rem; }
   }
+  */
+
+
+.slides {
+    --duration: 10s;
+    --gap: var(--space);
+  
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+  }
+  
+  .slides__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+  }
+  
+
+  .slides__group > a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    object-fit: cover;
+    padding: 3rem;
+    white-space: nowrap;
+    padding: 10px;
+    background: linear-gradient(90deg, transparent, transparent, var(--primary30));
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+  }
+  .slides__group > a > img {
+    width: 100px;
+    height: auto;
+}
+  .slides__group > a > span {
+    font-size: 12px;
+    color: white;
+    background: var(--primary);
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.slides__group:hover{
+    animation-play-state: paused;
+}
+    
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  
