@@ -1,12 +1,6 @@
-
-<div class="marquee">
-    <ul class="marquee-content">
-        <li><i class="fab fa-github"></i></li>
-    </ul>
-</div>
 import { toTitleCase } from "../utils.js";
-export function createSlides(items) {
-    let items = items.map((item) => {
+export function createSlides(config) {
+    let items = config.items.map((item) => {
         return `
         <li class="${item.brand}">
         <a href="${item.link}" target="_blank" class="${item.class}">
@@ -23,8 +17,8 @@ export function createSlides(items) {
     </div>
     `
 }
-export function initializeSlides(items) {
-    const slides = createSlides(items);
+export function initializeSlides(config) {
+    const slides = createSlides(config);
     let parent = document.querySelector("script[id='slides']").parentNode
     parent.insertAdjacentHTML("beforeend", slides);
     const root = document.documentElement;
