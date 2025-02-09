@@ -18,6 +18,7 @@
     background: var(--bg);
     backdrop-filter: blur(var(--blur));
     display: flex;
+    z-index: 999;
   }
   .slides:hover .slides__group{
     animation-play-state: paused;
@@ -73,6 +74,8 @@
     background: linear-gradient(90deg, transparent, transparent, var(--primary30));
     border-top-right-radius: 999px;
     border-bottom-right-radius: 999px;
+    height: 100%;
+    cursor: pointer;
   }
   .slides__group > a > img {
     width: 100px;
