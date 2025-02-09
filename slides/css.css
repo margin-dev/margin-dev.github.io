@@ -113,6 +113,9 @@
     background: var(--bg);
     display: flex;
   }
+  .slides:hover .slides__group{
+    animation-play-state: paused;
+}
   .slides__left{
     left: 0px;
     position: absolute;
@@ -177,9 +180,7 @@
     border-radius: 999px;
 }
 
-.slides__group:hover{
-    animation-play-state: paused;
-}
+
     
   @keyframes scroll {
     0% {
