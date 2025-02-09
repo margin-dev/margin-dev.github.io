@@ -10,8 +10,8 @@ export function createSlides(config) {
         </li>`
     })
     return `
-    <div class="marquee">
-        <ul class="marquee-content">
+    <div class="slides">
+        <ul class="slides-content">
             ${items.join("")}
         </ul>
     </div>
