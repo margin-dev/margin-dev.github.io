@@ -51,9 +51,8 @@
   }
   .slides-content li {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    /* text-align: center; */
     flex-shrink: 0;
     width: var(--slides-element-width);
     max-height: 100%;
@@ -61,6 +60,8 @@
     white-space: nowrap;
     padding: 10px;
     background: linear-gradient(90deg, transparent, transparent, var(--primary30));
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
   }
   
   .slides-content li span {
