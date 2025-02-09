@@ -99,8 +99,9 @@
 
 .slides {
     --duration: 10s;
+    --space: 3rem;
     --gap: var(--space);
-  
+
     display: flex;
     overflow: hidden;
     user-select: none;
