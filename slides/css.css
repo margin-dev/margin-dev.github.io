@@ -1,19 +1,22 @@
 @import "https://margin-dev.github.io/main.css";
 
 .slides {
+    --top:0;
     --duration: 10s;
     --space: 3rem;
     --gap: var(--space);
     --bg: black;
+    --blur:4px;
     display: flex;
     overflow: hidden;
     user-select: none;
     gap: var(--gap);
-    top: 0;
+    top: var(--top);
     left: 0;
     right: 0;
     position: fixed;
     background: var(--bg);
+    backdrop-filter: blur(var(--blur));
     display: flex;
   }
   .slides:hover .slides__group{
