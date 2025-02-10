@@ -275,6 +275,11 @@
     --primary30: #FFC7004D;
     --primary50: #FFC70080;
 }
+[data-brand='festwin'], .festwin {
+    --primary: #FFC202;
+    --primary30: #FFC2024D;
+    --primary50: #FFC20280;
+}
 [data-brand='fixbet'], .fixbet {
     --primary: #b8f03f;
     --secondary: #c7cbd4;
