@@ -482,6 +482,11 @@
     --primary30: #FFAC2C4D;
     --primary50: #FFAC2C80;
 }
+[data-brand='pradabet'], .pradabet {
+    --primary: #F31352;
+    --primary30: #F313524D;
+    --primary50: #F3135280;
+}
 [data-brand='radissonbet'], .radissonbet {
     --primary: #064D9C;
     --primary30: #064D9C4D;
