@@ -237,6 +237,11 @@
     --primary30: #8226FA4D;
     --primary50: #8226FA80;
 }
+[data-brand='casinodior'], .casinodior {
+    --primary: #FFCF11;
+    --primary30: #FFCF114D;
+    --primary50: #FFCF1180;
+}
 [data-brand='casinomhub'], .casinomhub {
     --primary: #E4672D;
     --primary30: #E4672D4D;
@@ -282,6 +287,11 @@
     --primary: #C48A3B;
     --primary30: #C48A3B4D;
     --primary50: #C48A3B80;
+}
+[data-brand='gonebet'], .gonebet {
+    --primary: #31D6A4;
+    --primary30: #31D6A44D;
+    --primary50: #31D6A480;
 }
 [data-brand='hepyek'], .hepyek {
     --primary: #EE2832;
