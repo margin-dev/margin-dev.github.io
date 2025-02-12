@@ -631,6 +631,11 @@
     --primary30: #1BCFDB4D;
     --primary50: #1BCFDB80;
 }
+[data-brand='zegnabet'], .zegnabet {
+    --primary: #22C99D;
+    --primary30: #22C99D4D;
+    --primary50: #22C99D80;
+}
 [data-brand='zlot'], .zlot {
     --primary: #949494;
     --primary30: #9494944D;
