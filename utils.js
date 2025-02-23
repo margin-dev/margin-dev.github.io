@@ -46,3 +46,13 @@ export function addClassToElements(elements, classNames) {
     elem.className = elem.className + " " + classNames;
   });
 }
+
+export function altToClass(){
+  const images = document.querySelectorAll("div>a>img.img-fluid");
+images.forEach((image)=>{const parent = image.parentElement.parentElement.classList;
+let alts = image.getAttribute("alt").split(" ")
+alts.forEach((x)=>parent.add(x.toLowerCase()))
+})
+
+})
+}
