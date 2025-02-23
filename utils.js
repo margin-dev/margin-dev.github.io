@@ -47,12 +47,11 @@ export function addClassToElements(elements, classNames) {
   });
 }
 
-export function altToClass(){
+export function altToClass() {
   const images = document.querySelectorAll("div>a>img.img-fluid");
-images.forEach((image)=>{const parent = image.parentElement.parentElement.classList;
-let alts = image.getAttribute("alt").split(" ")
-alts.forEach((x)=>parent.add(x.toLowerCase()))
-})
-
-})
+  images.forEach((image) => {
+    const parent = image.parentElement.parentElement.classList;
+    let alts = image.getAttribute("alt").split(" ")
+    alts.forEach((x) => parent.add(x.toLowerCase()))
+  })
 }
