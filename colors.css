@@ -422,6 +422,11 @@
     --primary30: #F0C9594D;
     --primary50: #F0C95980;
 }
+[data-brand='okeybaba'], .okeybaba {
+    --primary: #2E7C18;
+    --primary30: #2E7C184D;
+    --primary50: #2E7C1880;
+}
 [data-brand='onwin'], .onwin {
     --primary: #B910A0;
     --primary30: #B910A04D;
