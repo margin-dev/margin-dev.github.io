@@ -202,6 +202,11 @@
     --primary30: #57EEB64D;
     --primary50: #57EEB680;
 }
+[data-brand='betsin'], .betsin {
+    --primary: #E86301;
+    --primary30: #E863014D;
+    --primary50: #E8630180;
+}
 [data-brand='bettilt'], .bettilt {
     --primary: #FFC700;
     --primary30: #FFC7004D;
