@@ -247,6 +247,11 @@
     --primary30: #FFCF114D;
     --primary50: #FFCF1180;
 }
+[data-brand='casinofast'], .casinofast {
+    --primary: #01FFFC;
+    --primary30: #01FFFC4D;
+    --primary50: #01FFFC80;
+}
 [data-brand='casinomhub'], .casinomhub {
     --primary: #E4672D;
     --primary30: #E4672D4D;
