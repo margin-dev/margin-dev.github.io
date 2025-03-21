@@ -46,7 +46,8 @@ a:hover {
 }
 
 
-.spin-border img{
+.spin-border:has(img) > img,
+.spin-border:has(:not(img)) {
   --border-angle: 0turn;
   --main-bg: conic-gradient(
       from var(--border-angle),
