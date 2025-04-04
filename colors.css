@@ -427,6 +427,11 @@
     --primary30: #b7ff004D;
     --primary50: #b7ff0080;
 }
+[data-brand='mostbet'], .mostbet {
+    --primary: #FA4D00;
+    --primary30: #FA4D004D;
+    --primary50: #FA4D0080;
+}
 [data-brand='norabahis'], .norabahis {
     --primary: #F0C959;
     --primary30: #F0C9594D;
