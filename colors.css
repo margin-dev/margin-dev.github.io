@@ -427,6 +427,11 @@
     --primary30: #b7ff004D;
     --primary50: #b7ff0080;
 }
+[data-brand='mistycasino'], .mistycasino {
+    --primary: #FFE93F;
+    --primary30: #FFE93F4D;
+    --primary50: #FFE93F80;
+}
 [data-brand='mostbet'], .mostbet {
     --primary: #FA4D00;
     --primary30: #FA4D004D;
