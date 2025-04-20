@@ -272,6 +272,11 @@
     --primary30: #F9C4084D;
     --primary50: #F9C40880;
 }
+[data-brand='dedebet'], .dedebet {
+    --primary: #D3B768;
+    --primary30: #D3B7684D;
+    --primary50: #D3B76880;
+}
 [data-brand='etorobet'], .etorobet {
     --primary: #FF8130;
     --secondary: #6415C3;
