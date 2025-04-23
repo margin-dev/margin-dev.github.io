@@ -613,6 +613,11 @@
     --primary30: #ED33384D;
     --primary50: #ED333880;
 }
+[data-brand='sanscasino'], .sanscasino {
+    --primary: #97E556;
+    --primary30: #97E5564D;
+    --primary50: #97E55680;
+}
 [data-brand='tarafbet'], .tarafbet {
     --primary: #00FF00;
     --primary30: #00FF004D;
