@@ -24,5 +24,6 @@ export function createSlides(config) {
 export function initializeSlides(config) {
     const slides = createSlides(config);
     let parent = document.querySelector("script[id='slides']").parentNode
+    parent.classList.add("slides-parent")
     parent.insertAdjacentHTML("beforeend", slides);
 }
