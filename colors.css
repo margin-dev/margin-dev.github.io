@@ -591,9 +591,9 @@
     --primary50: #00FF8680;
 }
 [data-brand='stake'], .stake {
-    --primary: #FFFFFF;
-    --primary30: #FFFFFF4D;
-    --primary50: #FFFFFF80;
+    --primary: #1773D5;
+    --primary30: #1773D54D;
+    --primary50: #1773D580;
 }
 [data-brand='starzbet'], .starzbet {
     --primary: #FF6D00;
