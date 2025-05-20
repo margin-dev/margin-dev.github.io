@@ -1,0 +1,153 @@
+@import "https://margin-dev.github.io/main.css";
+
+
+.popup-parent {
+    margin: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.popups > .popup:not(.active) {
+    opacity: 0;
+    pointer-events: none;
+}
+.popup {
+    --bg-color: #181D27;
+    --bg-image: url();
+    --bg-filter: blur(5px);
+    position: fixed;
+    top: 50%;
+    transform: translatex(-50%);
+    left: 50%;
+    width: 200px;
+    height: 600px;
+    z-index: 100;
+    border: 2px solid var(--primary);
+    background-image: url(--bg-image);
+    background-color: var(--bg-color);
+    backdrop-filter: var(--bg-filter);
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: 2s ease opacity;
+}
+.popup > button {
+    position: absolute;
+    top: 0;
+    background: 0;
+    border: 0;
+    color: var(--primary);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    left: 0
+}
+.popup.left {
+    left: 0;
+    border-left: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-image: url
+}
+.popup.left > button {
+    left: unset;
+    right: 0
+}
+.popup.right {
+    right: 0;
+    border-right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: url
+}
+.popup.bottom, .popup.top {
+    bottom: 0;
+    width: 100%;
+    max-width: 730px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    align-items: center;
+    padding: 0 30px;
+    gap: 3px;
+    color: #fff
+}
+.popup.bottom {
+    top: unset;
+    border-bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px
+}
+.popup.top {
+    top: 0;
+    border-top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px
+}
+.popup.bottom > button {
+    right: 0;
+    left: unset
+}
+.popup.top > button {
+    bottom: 0;
+    top: unset;
+    right: 0;
+    left: unset
+}
+.popup > img {
+    max-width: 140px;
+        max-height: 50px;
+}
+.popup > span {
+    width: 140px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 .2em black
+}
+.popup > span.shine:before {
+    background: linear-gradient(transparent, #ffffffbd, transparent);
+}
+.popup > .bonus-wrapper {
+    line-height: 1em;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300
+}
+.popup > .bonus-wrapper > span:nth-child(even) {
+    color: var(--primary);
+    font-weight: 600
+}
+@media only screen and (max-width:700px) {
+    .popup.bottom, .popup.top {
+        max-width: calc(100% - 30px);
+        gap: 4px;
+        padding: 0;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center
+    }
+    .popup > img {
+        max-width: 100px;
+        max-height: 30px;
+    }
+    .popup > span {
+        width: 100px;
+        font-size: 10px !important;
+        height: 30px
+    }
+    .popup > .bonus-wrapper {
+        font-size: 11px;
+        line-height: 16px
+    }
+}
