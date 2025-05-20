@@ -1,0 +1,122 @@
+@import "https://margin-dev.github.io/main.css";
+.alerts-parent {
+  margin: 0;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.alert-wrapper {
+  --bg-blur: 10px;
+  --bonus-gap: 0px;
+  --max-width: 320px;
+  --min-width: 320px;
+  --padding: 10px;
+  --alert-radius: 10px;
+  --action-radius: 10px;
+  --alert-background: #050608;
+  --alert-backdrop: blur(5px);
+  --special-font-size: 14px;
+  --special-text-transform: uppercase;
+  --bonus-item-color: white;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(var(--bg-blur));
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+}
+.alert-wrapper.multiple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.alert-wrapper.multiple .alert-item {
+  position: relative;
+}
+.alert-wrapper .alert-item {
+  position: absolute;
+  padding: var(--padding);
+  border: 3px solid var(--primary);
+  border-radius: var(--alert-radius);
+  background: var(--alert-background);
+  backdrop-filter: var(--alert-backdrop);
+  max-height: 200px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.alert-wrapper .alert-item.active {
+  z-index: 1;
+}
+.alert-wrapper .alert-close {
+  position: absolute;
+  top: var(--padding);
+  right: var(--padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--primary);
+  font-size: 20px;
+}
+.alert-wrapper .alert-close:after {
+  content: "x";
+}
+.alert-wrapper .alert-link {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  max-width: var(--max-width);
+  min-width: var(--min-width);
+  width: 100%;
+  text-decoration: none;
+}
+
+.alert-wrapper .alert-bonus {
+  display: grid;
+  place-items: center;
+  gap: var(--bonus-gap);
+}
+
+.alert-wrapper .alert-bonus-item {
+  font-size: 14px;
+  display: grid;
+  text-align: center;
+  color: var(--bonus-item-color);
+}
+
+.alert-wrapper .alert-bonus-item:nth-child(even) {
+  color: var(--primary);
+}
+.alert-wrapper .alert-bonus-item.special {
+  color: var(--primary);
+  font-size: var(--special-font-size);
+  text-transform: var(--specieal-text-transform);
+}
+
+.alert-wrapper .alert-action {
+  background-color: var(--primary);
+  max-width: calc(100% - var(--max-width)/2);
+  border-radius: var(--action-radius);
+  font-size: 14px;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.alert-wrapper .alert-brand {
+  max-width: 120px;
+}
