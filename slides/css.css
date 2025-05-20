@@ -1,0 +1,110 @@
+@import "https://margin-dev.github.io/main.css";
+.slides-parent {
+    margin: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.slides {
+    --top:0;
+    --duration: 10s;
+    --space: 3rem;
+    --gap: var(--space);
+    --bg: black;
+    --blur:4px;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    top: var(--top);
+    left: 0;
+    right: 0;
+    position: fixed;
+    background: var(--bg);
+    backdrop-filter: blur(var(--blur));
+    display: flex;
+    z-index: 999;
+  }
+  .slides:hover .slides__group{
+    animation-play-state: paused;
+}
+  .slides__left{
+    left: 0px;
+    position: absolute;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    padding: 5px 35px 5px 15px;
+    top: 0px !important;
+    margin: 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 12px;
+    clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+    background: linear-gradient(180deg, rgba(29,3,61,1) 0%, rgba(88,9,185,1) 78%, rgba(104,49,171,1) 100%);
+    overflow-x: hidden;
+    color: white;
+    gap: 10px;
+  }
+  .slides__left svg{
+    width: 20px;
+  }
+  .slides__left{
+    left:0;
+    clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+    padding-left: 20px;
+    padding-right: 40px;
+  }
+  .slides__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+  }
+  
+
+  .slides__group > a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    object-fit: cover;
+    gap: 10px;
+    white-space: nowrap;
+    padding: 10px;
+    background: linear-gradient(90deg, transparent 20%, var(--primary30));
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    height: 100%;
+    cursor: pointer;
+  }
+  .slides__group > a > img {
+    width: 100px;
+    height: auto;
+}
+  .slides__group > a > span {
+    font-size: 12px;
+    color: white;
+    background: var(--primary);
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+
+    
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  
