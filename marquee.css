@@ -1,0 +1,53 @@
+@import "https://margin-dev.github.io/main.css";
+.mrq {
+    --item: 3;
+    --height: 40px;
+    --font: Outfit, sans-serif;
+    --color: #fff;
+    --bg: #181D27A6;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    overflow: hidden;
+    background-color: var(--bg);
+    display: flex;
+    height: var(--height);
+    text-decoration: none !important;
+    z-index: 99
+}
+.mrq * {
+    margin: 0
+}
+.mrq.top {
+    top: 0;
+    border-bottom: 2px solid var(--primary)
+}
+.mrq.bottom {
+    bottom: 0;
+    border-top: 2px solid var(--primary)
+}
+.mrq.full {
+    width: 100%;
+    left: 0
+}
+.mrq_content, .mrq_items {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+.mrq_items > * {
+    min-width: calc(100vw/var(--item));
+    font: var(--font);
+    white-space: nowrap;
+    color: var(--color);
+    padding: 0 1rem
+}
+.mrq_brand {
+    position: absolute;
+    height: 100%
+}
+.mrq_brand.left {
+    left: 0
+}
+.mrq_brand.right {
+    right: 0
+}
