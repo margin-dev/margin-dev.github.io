@@ -1,0 +1,307 @@
+@import "https://margin-dev.github.io/main.css";
+
+.widget {
+	border-radius: 5px;
+	font-size: 14px;
+	width: 100%;
+	position: relative;
+	--bg-1: url('data:image/svg+xml,<svg width="219" height="150" viewBox="0 0 219 150" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M99.7516 0.00500438C99.7516 6.41436 107.556 12.5338 102.285 18.7881C100.036 21.4529 95.9344 22.0928 92.8266 23.2527C88.7895 24.7575 84.7674 26.6623 80.6154 27.8172C71.6818 30.302 70.068 22.3328 67.3549 15.5235C65.6761 11.3189 64.6719 11.3889 61.649 8.69414C59.1508 6.46936 56.9474 3.50965 58.7861 0.00500438C59.7854 0.00500438 60.7847 0.00500438 61.784 0.00500438C61.3393 2.42976 61.1244 5.85942 64.7218 4.86452C65.1915 2.92971 66.5905 1.53485 67.7796 0.00500438H99.7567H99.7516Z" fill="black"/><path d="M181.193 149.99C181.713 144.266 178.72 144.251 173.599 142.206C169.127 140.416 167.463 140.301 169.217 135.361C170.621 131.407 172.359 124.308 176.656 122.783C182.018 120.883 181.668 125.107 184.306 127.867C186.894 130.577 192.89 132.002 196.277 133.372C198.596 134.307 202.063 134.787 203.997 136.446C205.386 137.641 205.036 139.321 206.18 140.411C208.528 142.651 210.837 139.836 212.361 141.471C214.459 143.721 207.289 147.64 207.174 150H181.193V149.99Z" fill="black"/><path d="M207.674 0.00500438C208.304 1.97481 210.262 3.18469 211.481 4.82453C213.385 7.37427 214.449 10.254 214.914 13.3787C215.593 17.9232 215.269 24.0776 210.922 26.8073C206.73 29.4421 200.654 27.1573 196.942 24.5575C192.555 21.4828 193.679 19.558 193.679 14.9235C190.471 15.8234 185.565 13.1337 183.826 10.394C181.628 6.92931 183.716 3.46465 181.688 0C190.346 0 199.01 0 207.669 0L207.674 0.00500438ZM192.185 4.74454C186.779 1.94482 185.69 2.75473 185.69 8.75413C186.929 9.98901 189.157 12.5238 191.291 11.5039C193.604 10.399 191.646 10.6089 191.86 9.62404C191.666 10.4989 190.631 8.17919 190.621 8.00921C190.601 7.75423 192.185 5.87442 192.185 4.74454Z" fill="black"/><path d="M58.7811 149.99C61.1594 144.671 69.2586 147.245 70.098 142.681C70.7375 139.216 67.8046 139.251 72.0066 137.056C73.7254 136.161 79.4812 133.222 81.5447 133.797C83.6632 134.387 83.7682 136.871 84.7924 138.456C85.387 139.376 86.9858 140.991 87.9451 141.491C90.3484 142.741 93.5112 141.461 96.1043 143.511C98.1278 145.11 98.7774 147.595 99.247 149.99H67.7697C67.0801 147.56 63.2529 147.225 62.7732 149.99H58.7761H58.7811Z" fill="black"/><path d="M117.239 121.763C117.239 118.203 117.259 115.768 115.48 112.544C114.431 110.644 111.213 107.699 111.758 105.304C112.463 102.225 118.628 101.235 120.961 99.4401C123.54 97.4553 124.659 94.4006 126.178 91.6358C130.245 84.2466 133.837 91.9408 139.918 93.3457C143.205 94.1056 147.752 92.2158 150.82 93.4906C153.933 94.7905 153.388 97.2403 153.208 100.61C153.018 104.255 152.619 105.879 154.402 109.244C155.472 111.269 158.829 114.659 158.619 117.043C158.25 121.203 148.816 122.963 146.433 127.357C145.409 129.247 144.245 133.937 142.006 134.757C139.308 135.746 135.476 131.537 133.098 130.527C129.076 128.812 125.288 130.112 121.046 129.487C116.17 128.772 117.239 126.687 117.239 121.758V121.763Z" fill="black"/><path d="M17.3509 49.0201C13.3388 47.7402 13.3038 36.8013 8.65216 37.0013C6.76352 35.4914 1.10261 34.1916 0.178271 31.8918C-0.796028 29.477 2.4866 26.5473 3.66075 24.4175C6.32883 19.573 5.1247 16.8383 5.28959 11.7088C5.5494 3.57464 14.1682 8.37917 19.8691 6.58935C25.0404 4.96451 28.6428 -1.69983 32.3102 4.73452C33.5892 6.9843 34.3737 9.81402 36.1724 11.7388C38.076 13.7786 40.9989 14.6785 43.3722 16.0434C50.647 20.218 43.7269 22.7427 41.6884 28.6321C39.9397 33.6916 44.4015 41.9508 37.7013 43.0007C33.904 43.5956 30.0118 42.3058 26.3145 43.6456C23.0818 44.8205 20.4787 47.5652 17.3509 49.0201Z" fill="black"/><path d="M109.979 72.7677C107.126 73.8976 98.6425 75.8324 96.9537 78.2672C95.3398 80.5919 98.1378 81.9218 94.7103 83.7466C95.2099 88.7261 96.2092 92.9007 91.2378 95.8654C89.9637 96.6253 80.3406 98.1052 84.7574 101.745C85.6518 106.874 77.013 109.819 73.2657 110.364C67.6447 111.179 64.4071 108.139 63.098 102.775C61.789 97.4253 63.3878 91.5758 66.7953 87.3413C71.2771 81.7768 70.8225 82.2968 65.7711 77.2473C65.7711 71.7228 66.9553 75.5825 70.2529 74.1276C72.7011 73.0477 71.492 71.5228 73.0259 69.828C74.5248 68.1682 79.5062 66.8383 81.4698 65.9884C84.7424 64.5785 89.609 63.7586 92.4269 61.6088C96.0993 58.8091 97.3284 51.9148 103.344 56.7043C107.156 59.739 108.595 68.1782 109.979 72.7627V72.7677ZM92.7567 88.9911C92.7567 85.7964 89.6789 83.8416 87.0308 86.5364C84.4027 89.2111 87.5155 89.3811 87.5205 91.6309C87.5205 92.5358 83.953 93.0457 86.6161 94.4805C89.2742 95.9104 93.1214 91.3509 92.7517 88.9911H92.7567Z" fill="black"/><path d="M199.79 99.555C195.173 98.3502 190.746 96.4354 186.264 94.7905C181.763 93.1357 176.856 92.1008 173.474 88.5211C172.994 84.7065 172.589 83.1217 174.063 79.2171C175.447 75.5524 176.496 71.5828 178.195 68.0682C181.078 62.1138 185.825 63.6836 190.202 60.5889C192.14 59.2141 192.135 56.6493 193.454 55.5444C195.503 53.8246 197.222 54.9945 199.57 55.8144C201.199 56.3844 207.004 57.5242 207.659 59.534C208.064 60.7789 205.236 63.3887 206.67 64.2436C206.905 66.7983 210.257 65.6334 211.631 65.9734C213.795 66.5134 215.403 67.0433 216.922 68.9281C220.63 73.5276 217.127 77.1823 213.365 79.862C212.036 80.8069 211.836 80.302 210.762 81.7418C209.448 83.5066 208.878 87.2913 208.124 89.4061C206.295 94.5305 205.096 97.6352 199.785 99.55L199.79 99.555ZM209.213 69.2081C208.803 71.5478 213.41 78.2522 215.129 74.1176C216.358 71.1529 211.841 66.9333 209.213 69.2081Z" fill="black"/><path d="M122.196 31.5968C122.835 19.558 133.163 9.48905 145.184 10.444C149.841 10.8139 154.038 12.3588 157.47 15.5184C159.544 17.4233 161.382 19.688 162.342 22.3678C163.456 25.4675 162.012 28.4922 162.706 31.2269C160.608 33.4417 163.94 36.5163 163.326 38.6761C162.586 41.2609 158.305 44.1606 156.421 46.0454C154.982 47.4852 152.164 51.6898 149.681 51.8948C148.617 51.9848 147.762 50.275 146.853 50.18C145.454 50.03 144.629 50.4899 143.255 50.6549C131.364 52.0798 122.745 43.4257 122.196 31.5968ZM159.709 27.7672C159.709 17.8132 144.29 18.9531 146.403 28.6821C147.188 32.2868 150.53 34.8365 154.202 34.4116C158.429 33.9216 159.009 31.3319 159.709 27.7672ZM139.738 48.5001C145.674 49.51 147.727 40.6909 144.534 37.0413C143.645 36.0264 137.5 32.7117 136.47 35.5014C134.487 35.4814 133.952 37.3713 132.723 38.3462C132.533 43.2907 133.163 48.6501 139.733 48.5001H139.738ZM147.782 36.0614C147.462 38.0412 148.092 41.9308 150.36 41.7558C151.914 41.6358 153.993 38.5961 153.613 37.1263C151.779 36.3964 149.916 35.7914 147.782 36.0614ZM141.532 34.0016C142.726 30.7119 139.008 28.9171 136.195 30.507C130.984 33.4617 139.458 34.0016 141.532 34.0016ZM144.345 30.5169C146.578 29.1221 146.963 21.7678 143.075 23.1877C140.962 23.9576 141.931 30.102 144.345 30.5169Z" fill="black"/><path d="M40.7941 103.225C40.7941 113.609 32.6849 123.563 21.6029 122.443C20.3488 122.318 18.9797 121.373 17.6857 121.528C16.5015 121.668 15.5322 122.853 14.5829 122.953C12.0048 123.223 10.9905 121.423 8.90199 119.338C4.68002 115.118 -3.03443 111.084 1.31744 105.049C-1.64543 100.785 0.942706 92.2108 3.84062 88.6711C7.36809 84.3616 13.9384 81.6718 19.3495 81.5069C31.141 81.1419 40.7841 92.0358 40.7841 103.225H40.7941ZM16.8113 98.8601C16.8113 87.1863 -0.50624 92.9757 3.82065 101.265C4.14541 108.964 18.1304 106.639 16.8113 98.8601ZM30.8012 109.744C27.9033 106.844 24.6507 104.68 20.5286 107.294C17.7057 109.084 16.5565 112.449 17.6707 115.613C18.8398 118.928 22.5522 120.803 25.9897 119.688C30.6264 118.188 30.7962 113.729 30.7962 109.744H30.8012ZM15.6921 107.624C8.37238 105.714 9.89128 110.324 13.1839 113.614C15.0026 112.534 16.4865 109.924 15.6921 107.624ZM28.1731 105.494C28.7827 102.71 25.9397 100.04 22.7171 102.005C17.7306 105.045 26.2145 105.494 28.1731 105.494ZM20.5936 94.4956C16.5215 94.4956 17.8106 98.0652 17.8106 101.32C18.4751 101.61 18.9698 101.82 19.1346 101.895C21.8477 101.45 21.7528 96.1204 20.5936 94.4956Z" fill="black"/></svg>');
+	--bg-2: url('data: image/svg+xml, <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" ><path fill-rule="evenodd" clip-rule="evenodd" d="M40.6396 44H34.2071L43.8559 53.6488L40.6396 44ZM41.6937 44H48.3063L45 53.9189L41.6937 44ZM49.3604 44H55.7929L46.1441 53.6488L49.3604 44ZM32.8964 42.8964L36.7929 39H37.6036H52.8964H53.2071L53.4571 39.25L57.1036 42.8964L57.7071 43.5L45.3536 55.8536L45 56.2071L32.2929 43.5L32.8964 42.8964ZM34.2071 43L37 40.2071L39.7929 43H34.2071ZM42.2071 43L45 40.2071L47.7929 43H42.2071ZM50.2071 43L53 40.2071L55.7929 43H50.2071ZM46.2071 40H51.7929L49 42.7929L46.2071 40ZM41 42.7929L43.7929 40H38.2071L41 42.7929ZM8.70711 0L0.353553 8.35355L0 8.70711V0H8.70711ZM2.13962 0L0 6.41886V0H2.13962ZM7.29289 0L1.14412 6.14877L3.19371 0H7.29289ZM90 8.70711L81.2929 0H90V8.70711ZM82.7071 0L88.8559 6.14877L86.8063 0H82.7071ZM90 6.41886L87.8604 0H90V6.41886ZM0 81.5H7.89645H8.20711L8.45711 81.75L12.1036 85.3964L12.7071 86L8.70711 90H0L0 81.5ZM0 86.5H3.30629L2.13962 90H0V86.5ZM7.29289 90L10.7929 86.5H4.36038L3.19371 90H7.29289ZM0 82.7071L2.79289 85.5H0L0 82.7071ZM5.20711 85.5L8 82.7071L10.7929 85.5H5.20711ZM1.20711 82.5H6.79289L4 85.2929L1.20711 82.5ZM90 81.5H82.6036H81.7929L77.8964 85.3964L77.2929 86L81.2929 90H90V81.5ZM82.7071 90L79.2071 86.5H85.6396L86.8063 90H82.7071ZM90 86.5H86.6937L87.8604 90H90V86.5ZM79.2071 85.5L82 82.7071L84.7929 85.5H79.2071ZM90 82.7071L87.2071 85.5H90V82.7071ZM86 85.2929L88.7929 82.5H83.2071L86 85.2929ZM76.4663 12.8266L77.1734 13.5337L60.2028 30.5043L59.4957 29.7972L76.4663 12.8266ZM77.1734 76.4663L76.4663 77.1734L59.4957 60.2028L60.2028 59.4957L77.1734 76.4663ZM13.5337 77.1734L12.8266 76.4663L29.7972 59.4957L30.5043 60.2028L13.5337 77.1734ZM12.8266 13.5337L13.5337 12.8266L30.5043 29.7972L29.7972 30.5043L12.8266 13.5337ZM0 42.5C1.10457 42.5 2 43.3954 2 44.5C2 45.6046 1.10457 46.5 0 46.5V42.5ZM90 42.5C88.8954 42.5 88 43.3954 88 44.5C88 45.6046 88.8954 46.5 90 46.5V42.5ZM47 0C47 1.10457 46.1046 2 45 2C43.8954 2 43 1.10457 43 0H47ZM47 90C47 88.8954 46.1046 88 45 88C43.8954 88 43 88.8954 43 90H47Z" fill="black" /></svg>');
+		--bg: (var(var(--bg-1)));
+	--bg-color: #0F0F0F;
+}
+.widget[data-controls="true"] .control-links {
+	display: flex;
+}
+.widget .control-links {
+	text-align: center;
+	overflow: hidden;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background-image: linear-gradient(180deg, #000000bd, transparent);
+	z-index: 3;
+	height: 50px;
+}
+.widget .control-links .switcher-holder {
+	display: inline-block;
+}
+
+.widget .switcher {
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.widget .switcher li {
+	margin: 0 5px 0 0;
+	float: left;
+}
+.widget .switcher li button {
+	border: 1px solid transparent;
+	border-radius: 5px;
+	text-align: center;
+	float: left;
+	color: #FFF;
+	padding: 0 10px;
+	height: 26px;
+	line-height: 26px;
+	background: #0F0F0F4D;
+}
+.widget .switcher li button:hover {
+	border-color: #eee;
+	text-decoration: none;
+}
+.widget .switcher li a:active {
+	line-height: 28px;
+}
+.widget .switcher .active button {
+	background: var(--primary);
+	color: #fff;
+}
+.widget .switcher .active a:hover {
+	border-color: transparent;
+}
+.widget .slideset {
+	position: relative;
+	background: var(--bg-color);
+	list-style: none;
+	min-height: 110px;
+	padding: 10px;
+	margin: 0;
+	padding-bottom: 50px;
+}
+.widget[data-controls="true"] .slideset {
+	min-height: 160px;
+}
+.widget .slideset > .slide {
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	-webkit-transition: opacity 1.5s;
+	-o-transition: opacity 1.5s;
+	transition: opacity 1.5s;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding-left: 60px;
+	padding-right: 60px;
+	gap: 20px;
+	justify-content: space-between;
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+}
+.widget .slideset > .slide.vips {
+	box-shadow: 0 0 20px var(--primary);
+}
+.widget[data-controls="true"] .slideset > .slide {
+	padding-bottom: 50px;
+}
+.widget .slideset > .slide:after {
+	z-index: -1;
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 200%;
+	height: 200%;
+	background-color: var(--primary);
+	mask-image: var(--bg);
+	opacity: 0.2;
+	pointer-events: none;
+}
+.widget .slideset > .slide.active {
+	z-index: 3;
+	opacity: 1;
+}
+
+.widget button:is(.btn-prev, .btn-next) {
+	position: absolute;
+	display: grid;
+	place-items: center;
+	background-color: #FFFFFF4D;
+	outline: none;
+	border: none;
+	width: 40px;
+	min-width: 40px;
+	height: 40px;
+	cursor: pointer;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 4;
+}
+
+.widget button.btn-prev {
+	left: 10px;
+}
+.widget button.btn-next {
+	right: 10px;
+}
+
+
+.widget button:is(.btn-prev, .btn-next):is(:hover, :focus-visible) {
+	background-color: #FFFFFF;
+}
+.widget button:is(.btn-prev, .btn-next):is(:hover, :focus-visible):after {
+	border-color: #000;
+}
+.widget button:is(.btn-prev, .btn-next):after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	border: 2px solid var(--primary);
+}
+.widget button.btn-prev:after {
+	margin-left: 5px;
+	border-right: transparent;
+	border-top: transparent;
+	transform: rotate(45deg);
+}
+.widget button.btn-next:after {
+	margin-right: 5px;
+	border-left: transparent;
+	border-top: transparent;
+	transform: rotate(-45deg);
+}
+
+.widget button:is(.btn-prev, .btn-next).rounded {
+	border-radius: 40px;
+}
+.widget button:is(.btn-prev, .btn-next).full {
+	height: 100%;
+}
+.widget button.btn-prev.full {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	left: 0;
+	background-color: transparent;
+	background-image: linear-gradient(-90deg, #00000000 0%, var(--primary30) 100%);
+}
+.widget button.btn-next.full {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	right: 0;
+	background-color: transparent;
+	background-image: linear-gradient(90deg, #00000000 0%, var(--primary30) 100%);
+}
+.widget button:is(.btn-prev, .btn-next).full:is(:hover, :focus-visible):after {
+	border-color: var(--primary);
+	scale: 1.2;
+}
+
+
+.widget .slideset > .slide img {
+	max-width: 140px;
+	height: auto;
+}
+.widget .slideset > .slide > .bonuswrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 0;
+}
+.widget .slideset > .slide > .bonuswrapper p {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: normal;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: right;
+}
+.widget .slideset > .slide > .bonuswrapper p:nth-child(even) {
+	font-weight: bold;
+	color: var(--primary);
+}
+.widget .slideset > .slide > .actionwrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+}
+.widget .slideset > .slide > .actionwrapper > p {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+}
+.widget .slideset > .slide > .actionwrapper > .action {
+	width: 100%;
+	height: 30px;
+	background-color: var(--primary);
+	color: #FFF;
+	border: 0;
+	outline: none;
+	border-radius: 4px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.widget .slideset > .slide > .actionwrapper > .action.shine:before {
+	background: linear-gradient(transparent, #ffffffbd, transparent);
+}
+@media only screen and (max-width: 990px) {
+	.widget .slideset > .slide {
+		padding-left: 30px;
+		padding-right: 30px;
+		gap: 10px;
+	}
+
+	.widget .slideset > .slide > .actionwrapper > p {
+		height: 40px;
+	}
+
+	.widget .slideset > .slide img {
+		max-width: 120px;
+		height: auto;
+	}
+
+	.widget .slideset > .slide > .bonuswrapper p {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 460px) {
+	.widget .slideset {
+		min-height: 100px;
+	}
+	.widget .slideset > .slide {
+		padding-left: 30px;
+		padding-right: 30px;
+		gap: 4px;
+		flex-direction: column-reverse;
+		justify-content: center;
+	}
+
+	.widget .slideset > .slide > .actionwrapper {
+		flex-direction: row;
+		width: 100%;
+		gap: 10px;
+		justify-content: space-evenly;
+	}
+	.widget .slideset > .slide > .actionwrapper > .action {
+		width: 120px;
+	}
+	.widget .slideset > .slide img {
+		max-width: 120px;
+		height: auto;
+	}
+
+	.widget .slideset > .slide > .bonuswrapper p {
+		font-size: 12px;
+	}
+}
