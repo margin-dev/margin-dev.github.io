@@ -1,0 +1,155 @@
+@import "https://margin-dev.github.io/main.css";
+
+.mrq-parent {
+  margin: 0;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.brand-marquee-container {
+  --top:0px;
+  --max-h:50px;
+  --font: Outfit, sans-serif;
+  --color: #fff;
+  --bg: #0f0f0f4d;
+  --gap:10px;
+}
+.brand-marquee-container {
+  position: fixed;
+  left: 0px;
+  top: var(--top);
+  right: 0;
+  width: 100%;
+  background:var(--bg);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  height: var(--max-h);
+  }
+.brand-marquee-wrapper {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 100%;
+  left: 0px;
+  box-sizing: content-box;
+}
+.brand-marquee-list {
+  white-space: nowrap;
+  display: flex;
+  padding-right: 100%;
+  box-sizing: content-box;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 30s;
+  height: 100%;
+  animation-duration: 30s;
+}
+.brand-marquee-list:hover {
+  animation-play-state: paused;
+}
+.brand-marquee-items{
+  padding: 0 2rem;
+  color: white;
+  font-size: 15px !important;
+  color: white;
+  display: flex;
+}
+.brand-marquee {
+  --item-bg: linear-gradient(45deg,transparent,transparent,var(--primary30));
+  background: var(--item-bg);
+  display: flex;
+  align-items:center;
+  justify-content: flex-end;
+  text-decoration: none !important;
+  transition: 2s ease opacity;
+  white-space: nowrap;
+  gap: var(--gap);
+  padding:10px;
+  border-top-right-radius:9999px;
+  border-bottom-right-radius:9999px;
+  cursor:pointer;
+  height: 100%;
+  width:100%;
+  max-width: 200px;
+  min-width: 200px;
+}
+.brand-marquee-brand{
+  max-width: 80px;
+  height:auto;
+  width:100%;
+}
+.brand-marquee-action {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:4px 10px;
+  color:white;
+  background:var(--primary);
+  border-radius:999px;
+  font-size:12px;
+}
+.brand-marquee * {
+  margin: 0;
+}
+
+.brand-marquee-left{
+  left: 0px;
+  position: absolute;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  background: var(--card);
+  padding: 5px 35px 5px 15px;
+  top: 0px !important;
+  margin: 0px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 12px;
+  clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+  background: linear-gradient(180deg, rgba(29,3,61,1) 0%, rgba(88,9,185,1) 78%, rgba(104,49,171,1) 100%);
+  overflow-x: hidden;
+  color: white;
+  gap: 10px;
+}
+.brand-marquee-left svg{
+  width: 20px;
+}
+.brand-marquee-left{
+  left:0;
+  clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+  padding-left: 20px;
+  padding-right: 40px;
+}
+.brand-marquee-right{right:0}
+
+@-webkit-keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
