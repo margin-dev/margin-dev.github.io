@@ -648,6 +648,11 @@
     --primary30: #F8B2184D;
     --primary50: #F8B21880;
 }
+[data-brand='vipvbet'], .vipvbet {
+    --primary: #D7C37B;
+    --primary30: #D7C37B4D;
+    --primary50: #D7C37B80;
+}
 [data-brand='w88'], .w88 {
     --primary: #DAB867;
     --primary30: #DAB8674D;
