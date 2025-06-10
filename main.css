@@ -79,3 +79,12 @@ a:hover {
   initial-value: 0turn;
 }
 
+[alt*=gif] {
+  border-radius:20px!important;
+}
+
+@media only screen and (max-width:600px){
+  [alt*=gif] {
+    border-radius:14px!important;
+  }
+}
