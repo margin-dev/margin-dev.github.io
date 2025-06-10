@@ -80,11 +80,11 @@ a:hover {
 }
 
 [alt*=gif] {
-  border-radius:20px!important;
+  border-radius:1.4rem!important;
 }
 
 @media only screen and (max-width:600px){
   [alt*=gif] {
-    border-radius:10px!important;
+    border-radius:0.8rem!important;
   }
 }
