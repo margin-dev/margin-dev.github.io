@@ -120,7 +120,7 @@ export function initializeSlider(config) {
     }
 }
 export function createSlider(config) {
-    if(!not) return
+    if(not) return
     try {
         let widget = `
         <div class="widget" data-brand="${config.items[0].brand}" data-controls="false">
