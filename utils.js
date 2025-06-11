@@ -11,6 +11,7 @@ export function makeShine(shines) {
     parent.className = shine.getAttribute("alt").toLowerCase() + " " + parent.className;
   });
 }
+export const not = !window.location.href.includes("DenemeX");
 export function getNextSiblings(elem, hideElement, limit, selector) {
   if (!elem) return;
   var siblings = [];
