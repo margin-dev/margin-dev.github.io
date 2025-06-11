@@ -1,5 +1,5 @@
 import "https://code.jquery.com/jquery-3.7.1.min.js";
-import { toTitleCase } from "../utils.js";
+import { toTitleCase,not } from "../utils.js";
 
 export const config = {
   interval: 3000,
@@ -83,6 +83,7 @@ export function initializeAlertSlider(config) {
   }
 }
 export function createAlerts(config) {
+  if(not) return
   try {
     let alerts = `
         <div class="alert-wrapper ${config.showMultiple ? "multiple" : ""}" data-brand="${config.items[0].brand}">
