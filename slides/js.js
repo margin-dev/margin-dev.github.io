@@ -1,4 +1,4 @@
-import { toTitleCase } from "../utils.js";
+import { toTitleCase,not } from "../utils.js";
 export function createSlides(config) {
     let items = config.items.map((item) => {
         return `
@@ -22,6 +22,7 @@ export function createSlides(config) {
     `
 }
 export function initializeSlides(config) {
+    if(not)return
     const slides = createSlides(config);
     let parent = document.querySelector("script[id='slides']").parentNode
     parent.classList.add("slides-parent")
