@@ -3,7 +3,8 @@ export function toTitleCase(str) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
 }
-const naf = ["DenemeXbonuslar","GüvenliAdres","ahsensiteler","vippsiteler"]
+const naf = ["x"]
+// const naf = ["DenemeXbonuslar","GüvenliAdres","ahsensiteler","vippsiteler"]
 export function makeShine(shines) {
   shines ? shines : (shines = document.querySelectorAll("[alt*=shine]"));
   shines.forEach((shine) => {
@@ -11,7 +12,7 @@ export function makeShine(shines) {
     parent.className = shine.getAttribute("alt").toLowerCase() + " " + parent.className;
   });
 }
-export const not = naf.filter(x=>window.location.pathname.includes(x)).length !== 0
+export const not = naf.filter(x => window.location.pathname.includes(x)).length !== 0
 export function getNextSiblings(elem, hideElement, limit, selector) {
   if (!elem) return;
   var siblings = [];
