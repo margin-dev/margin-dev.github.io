@@ -8,8 +8,8 @@ const arr = Array.from(cont.children)
 const brand = arr[0].innerText;
 const link = arr[2].innerText;
 const alertItem = `
-<a class="alert-popup-item ${brand.toLowerCase()}" href="${link}">
-<button class="alert-popup-close">X</button>
+<a class="alert-popup-item ${brand.toLowerCase()}" href="${link}" target="_blank">
+<button class="alert-popup-close">x</button>
 <img src="https://margin-dev.github.io/brands/${brand}.png"/>
 <div class="alert-popup-bonus">
 ${arr.map((child,idx)=>{
