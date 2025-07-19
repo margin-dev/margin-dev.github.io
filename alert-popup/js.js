@@ -1,5 +1,6 @@
-let alertPopupConfigDefault = alertPopupConfig || {
-    mode:"normal"
+let alertPopupConfigDefault = {
+    mode:"normal",
+    ...alertPopupConfig
 }
 const items = Array.from(document.querySelectorAll(".card.link-btn-rounded"));
 const alerts = items.map((etr)=>{
