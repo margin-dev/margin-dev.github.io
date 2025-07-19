@@ -15,7 +15,7 @@
 
 
 .alert-popup-item {
-    position:relative;
+    position: relative;
     display: grid;
     grid-template-rows: max-content 1fr max-content;
     background: #000000;
@@ -23,14 +23,14 @@
     align-items: center;
     justify-items: center;
     box-shadow: 0 0 0px 2px var(--primary);
-    font-size: 14px;
+    font-size: 12px;
     line-height: normal;
     letter-spacing: -0.5px;
     border-radius: var(--rad);
-    gap: 10px;
     color: white!important;
-    height: 200px;
+    height: 180px;
     text-decoration: none!important;
+    width: 300px;
 }
 
 .stacked .alert-popup-item {
