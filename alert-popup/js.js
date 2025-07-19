@@ -1,4 +1,4 @@
-function run(config = {
+export default function run(config = {
     mode:"normal"
 }){
 const items = Array.from(document.querySelectorAll(".card.link-btn-rounded"));
