@@ -25,8 +25,10 @@ ${alerts.join("")}
 </div>
 `
 document.querySelector("#links>.row").insertAdjacentHTML("beforeend",alertPopup);
-const close = document.querySelector(".alert-popup-close")
-close.addEventListener("click",(e)=>{
-    e.preventDefault();
-    close.parentElement.remove();
+const close = document.querySelectorAll(".alert-popup-close")
+close.forEach((e)=>{
+    e.addEventListener("click",(ev)=>{
+        ev.preventDefault();
+        e.parentElement.remove();
+    })
 })
