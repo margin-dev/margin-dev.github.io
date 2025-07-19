@@ -2,7 +2,7 @@
 .alert-popup {
     position: fixed;
     z-index: 100;
-    background: #0000004d;
+    background: #00000080;
     display: flex;
     align-items: center;
     justify-content: center;
