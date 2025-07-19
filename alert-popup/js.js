@@ -1,4 +1,4 @@
-let alertPopupConfig = alertPopupConfig || {
+let alertPopupConfigDefault = alertPopupConfig || {
     mode:"normal"
 }
 const items = Array.from(document.querySelectorAll(".card.link-btn-rounded"));
@@ -23,7 +23,7 @@ ${arr.map((child,idx)=>{
 return alertItem
 })
 const alertPopup = `
-<div class="alert-popup ${alertPopupConfig.mode}">
+<div class="alert-popup ${alertPopupConfigDefault.mode}">
 ${alerts.join("")}
 </div>
 `
