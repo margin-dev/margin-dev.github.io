@@ -30,5 +30,8 @@ close.forEach((e)=>{
     e.addEventListener("click",(ev)=>{
         ev.preventDefault();
         e.parentElement.remove();
+        if(document.querySelectorAll(".alert-popup-item").length == 0){
+            document.querySelector(".alert-popup").remove();
+        }
     })
 })
