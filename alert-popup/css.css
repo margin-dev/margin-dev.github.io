@@ -12,7 +12,7 @@
     inset: 0;
 }
 
-.alert-popup.stacked {}
+
 
 .alert-popup-item {
     position:relative;
@@ -31,6 +31,10 @@
     color: white!important;
     height: 200px;
     text-decoration: none!important;
+}
+
+.stacked .alert-popup-item {
+    position: absolute;
 }
 
 .alert-popup-bonus {
