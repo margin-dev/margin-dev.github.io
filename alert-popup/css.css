@@ -1,7 +1,5 @@
 
-.card.link-btn-rounded {
-    display: none;
-}
+
 .alert-popup {
     position: fixed;
     z-index: 100;
