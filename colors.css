@@ -527,6 +527,11 @@
     --primary30: #064D9C4D;
     --primary50: #064D9C80;
 }
+[data-brand='ramadabet'], .ramadabet {
+    --primary: #C4062C;
+    --primary30: #C4062C4D;
+    --primary50: #C4062C80;
+}
 [data-brand='restbet'], .restbet {
     --primary: #B52726;
     --primary30: #B527264D;

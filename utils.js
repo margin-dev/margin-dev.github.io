@@ -3,8 +3,8 @@ export function toTitleCase(str) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
 }
-const naf = ["x"]
-// const naf = ["DenemeXbonuslar","GüvenliAdres","ahsensiteler","vippsiteler"]
+// const naf = ["x"]
+const naf = ["DenemeXbonuslar", "GüvenliAdres", "ahsensiteler", "vippsiteler"];
 export function makeShine(shines) {
   shines ? shines : (shines = document.querySelectorAll("[alt*=shine]"));
   shines.forEach((shine) => {
