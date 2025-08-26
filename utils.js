@@ -4,6 +4,7 @@ export function toTitleCase(str) {
   });
 }
 // const naf = ["x"]
+
 const naf = ["DenemeXbonuslar", "GüvenliAdres", "ahsensiteler", "vippsiteler"];
 export function makeShine(shines) {
   shines ? shines : (shines = document.querySelectorAll("[alt*=shine]"));
